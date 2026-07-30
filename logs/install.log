@@ -1,0 +1,89 @@
+2026-07-30T18:24:44Z INFO: OS: macos
+2026-07-30T18:24:44Z INFO: Package manager: brew
+2026-07-30T18:24:44Z INFO: Installing Homebrew...
+2026-07-30T18:27:35Z INFO: OS: macos
+2026-07-30T18:27:35Z INFO: Package manager: brew
+2026-07-30T18:27:35Z INFO: Installing Homebrew...
+2026-07-30T18:31:00Z INFO: OS: macos
+2026-07-30T18:31:00Z INFO: Package manager: brew
+2026-07-30T18:31:00Z INFO: Installing Homebrew...
+2026-07-30T18:33:17Z INFO: OS: macos
+2026-07-30T18:33:18Z INFO: Package manager: brew
+2026-07-30T18:33:18Z INFO: Installing Homebrew...
+2026-07-30T18:33:18Z ERROR: Homebrew installation failed.
+2026-07-30T18:47:28Z INFO: OS: macos
+2026-07-30T18:47:28Z INFO: Package manager: none
+2026-07-30T18:47:28Z WARNING: Homebrew is not installed. Install it manually or run install after enabling sudo.
+2026-07-30T18:47:45Z INFO: Installing category: devtools
+2026-07-30T18:47:45Z ERROR: No install command defined for Git
+2026-07-30T18:48:07Z INFO: Installing category: devtools
+2026-07-30T18:48:07Z ERROR: No install command defined for Git
+2026-07-30T18:51:25Z INFO: Installing category: devtools
+2026-07-30T18:51:26Z INFO: Installing Git...
+2026-07-30T18:51:27Z INFO: OK: brew install git
+2026-07-30T18:51:27Z COMMAND: brew install git
+OUTPUT: Warning: git 2.55.0 is already installed and up-to-date.
+To reinstall 2.55.0, run:
+  brew reinstall git
+2026-07-30T18:51:27Z INFO: Installing GitHub CLI...
+2026-07-30T18:51:29Z WARNING: FAILED: brew install gh
+2026-07-30T18:51:29Z COMMAND: brew install gh
+OUTPUT: ==> Would install 1 formula:
+gh
+==> Downloading https://ghcr.io/v2/homebrew/core/gh/manifests/2.96.0
+Already downloaded: /Users/anshulyadav/Library/Caches/Homebrew/downloads/c07744c98cd89b7c04de5eb26244a4b695d16761bc10b09c8d9803fe8c363178--gh-2.96.0.bottle_manifest.json
+==> Fetching downloads for: gh
+✘ Bottle gh (2.96.0)
+Error: A `brew install gh` process has already locked /Users/anshulyadav/Library/Caches/Homebrew/downloads/94b72e2ed5538d0487931af9860ef2517027f01b03e98a98524c1308604d5108--gh--2.96.0.arm64_sequoia.bottle.tar.gz.incomplete.
+Please wait for it to finish or terminate it to continue.
+2026-07-30T18:51:29Z WARNING: Install failed for GitHub CLI, attempting doctor checks...
+2026-07-30T18:51:29Z INFO: Running doctor step: gh auth status
+2026-07-30T18:57:22Z INFO: Installing category: devtools
+2026-07-30T18:57:23Z INFO: Installing Git...
+2026-07-30T18:57:24Z INFO: OK: brew install git
+2026-07-30T18:57:24Z COMMAND: brew install git
+OUTPUT: Warning: git 2.55.0 is already installed and up-to-date.
+To reinstall 2.55.0, run:
+  brew reinstall git
+2026-07-30T18:57:24Z INFO: Installing GitHub CLI...
+2026-07-30T18:57:25Z INFO: OK: brew install gh
+2026-07-30T18:57:25Z COMMAND: brew install gh
+OUTPUT: Warning: gh 2.96.0 is already installed and up-to-date.
+To reinstall 2.96.0, run:
+  brew reinstall gh
+2026-07-30T18:57:25Z INFO: Installing jq...
+2026-07-30T18:58:04Z INFO: OK: brew install jq
+2026-07-30T18:58:04Z COMMAND: brew install jq
+OUTPUT: ==> Would install 1 formula:
+jq
+==> Downloading https://ghcr.io/v2/homebrew/core/jq/manifests/1.8.2
+==> Would install 1 dependency for jq:
+oniguruma
+==> Fetching downloads for: jq
+✔︎ Bottle Manifest oniguruma (6.9.10)
+✔︎ Bottle oniguruma (6.9.10)
+✔︎ Bottle jq (1.8.2)
+==> Installing jq dependency: oniguruma
+==> Pouring oniguruma--6.9.10.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/oniguruma/6.9.10: 15 files, 1.5MB
+==> Installing jq
+==> Pouring jq--1.8.2.arm64_sequoia.bottle.tar.gz
+==> Caveats
+The following jq executables are shadowed by other commands earlier in your PATH:
+  jq (shadowed by /usr/bin/jq)
+Running these by name will not invoke the version provided by Homebrew.
+Disable this behaviour by setting `HOMEBREW_NO_PATH_SHADOW_CHECK=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Summary
+🍺  /opt/homebrew/Cellar/jq/1.8.2: 20 files, 1.2MB
+==> Running `brew cleanup jq`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Caveats
+==> jq
+The following jq executables are shadowed by other commands earlier in your PATH:
+  jq (shadowed by /usr/bin/jq)
+Running these by name will not invoke the version provided by Homebrew.
+Disable this behaviour by setting `HOMEBREW_NO_PATH_SHADOW_CHECK=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+2026-07-30T18:58:04Z INFO: Installing Java (OpenJDK)...
