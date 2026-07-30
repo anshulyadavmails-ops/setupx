@@ -71,5 +71,7 @@ configure_environment_for_tool() {
     key="$(echo "$line" | awk -F'\t' '{print $1}')"
     value="$(echo "$line" | awk -F'\t' '{print $2}')"
     ensure_env_entry "$key" "$value"
-  done < <(printf '%s' "$env_json" | python3 -c 'import json,sys; data=json.load(sys.stdin); import os; [print(f"{item["key"]}\t{item["value"]}") for item in data]')
+  done < <(printf '%s' "$env_json" | python3 -c 'import json,sys; data=json.load(sys.stdin);
+for item in data:
+    print("{}\t{}".format(item.get("key",""), item.get("value","")))')
 }

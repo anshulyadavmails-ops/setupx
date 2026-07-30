@@ -43,47 +43,6 @@ run_cmd() {
   return $exit_code
 }
 
-run_cmd_with_retry() {
-  local cmd="$1"
-  local max_attempts="${2:-4}"
-  local delay="${3:-5}"
-  local attempt=1
-  local output
-
-  while true; do
-    output=$(bash -lc "$cmd" 2>&1)
-    local exit_code=$?
-    if [[ $exit_code -eq 0 ]]; then
-      log_info "OK: $cmd"
-      if [[ -n "${LOG_FILE:-}" ]]; then
-        printf '%s COMMAND: %s\nOUTPUT: %s\n' "$(date -u +'%Y-%m-%dT%H:%M:%SZ')" "$cmd" "$output" >>"$LOG_FILE"
-      fi
-      return 0
-    fi
-
-    if [[ $attempt -ge $max_attempts ]]; then
-      log_warn "FAILED: $cmd"
-      if [[ -n "${LOG_FILE:-}" ]]; then
-        printf '%s COMMAND: %s\nOUTPUT: %s\n' "$(date -u +'%Y-%m-%dT%H:%M:%SZ')" "$cmd" "$output" >>"$LOG_FILE"
-      fi
-      return $exit_code
-    fi
-
-    if printf '%s' "$output" | grep -qiE 'already locked|another process is already running|lock.*Homebrew|resource busy|temporarily unavailable|incomplete'; then
-      log_warn "Command locked or busy, retrying in $delay seconds: $cmd"
-      sleep "$delay"
-      attempt=$((attempt + 1))
-      continue
-    fi
-
-    log_warn "FAILED: $cmd"
-    if [[ -n "${LOG_FILE:-}" ]]; then
-      printf '%s COMMAND: %s\nOUTPUT: %s\n' "$(date -u +'%Y-%m-%dT%H:%M:%SZ')" "$cmd" "$output" >>"$LOG_FILE"
-    fi
-    return $exit_code
-  done
-}
-
 run_cmd_as_admin() {
   local cmd="$1"
   if [[ "$(uname -s)" == "Darwin" && -x "$(command -v osascript 2>/dev/null)" ]]; then

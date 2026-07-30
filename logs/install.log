@@ -87,3 +87,356 @@ Running these by name will not invoke the version provided by Homebrew.
 Disable this behaviour by setting `HOMEBREW_NO_PATH_SHADOW_CHECK=1`.
 Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
 2026-07-30T18:58:04Z INFO: Installing Java (OpenJDK)...
+2026-07-30T19:02:21Z INFO: OK: brew install openjdk
+2026-07-30T19:02:21Z COMMAND: brew install openjdk
+OUTPUT: ==> Would install 1 formula:
+openjdk
+==> Downloading https://ghcr.io/v2/homebrew/core/openjdk/manifests/26.0.2
+==> Would install 25 dependencies for openjdk:
+libpng
+freetype
+giflib
+fontconfig
+glib
+xorgproto
+libxau
+libxdmcp
+libxcb
+libx11
+libxext
+libxrender
+lzo
+pixman
+cairo
+graphite2
+icu4c@78
+harfbuzz
+jpeg-turbo
+webp
+xz
+lz4
+zstd
+libtiff
+little-cms2
+==> Fetching downloads for: openjdk
+✔︎ Bottle Manifest libpng (1.6.58)
+✔︎ Bottle Manifest giflib (6.1.3)
+✔︎ Bottle Manifest xorgproto (2025.1)
+✔︎ Bottle Manifest libxau (1.0.12)
+✔︎ Bottle Manifest libxdmcp (1.1.5)
+✔︎ Bottle Manifest glib (2.88.2)
+✔︎ Bottle libxau (1.0.12)
+✔︎ Bottle Manifest libxcb (1.17.0)
+✔︎ Bottle Manifest freetype (2.14.3)
+✔︎ Bottle giflib (6.1.3)
+✔︎ Bottle Manifest fontconfig (2.18.2)
+✔︎ Bottle Manifest libx11 (1.8.13)
+✔︎ Bottle Manifest libxext (1.3.7)
+✔︎ Bottle Manifest libxrender (0.9.12)
+✔︎ Bottle libxdmcp (1.1.5)
+✔︎ Bottle Manifest lzo (2.10)
+✔︎ Bottle Manifest pixman (0.46.4)
+✔︎ Bottle Manifest cairo (1.18.4)
+✔︎ Bottle lzo (2.10)
+✔︎ Bottle libxrender (0.9.12)
+✔︎ Bottle libxext (1.3.7)
+✔︎ Bottle Manifest graphite2 (1.3.15)
+✔︎ Bottle Manifest icu4c@78 (78.3)
+✔︎ Bottle pixman (0.46.4)
+✔︎ Bottle Manifest harfbuzz (14.2.1)
+✔︎ Bottle Manifest jpeg-turbo (3.2.0)
+✔︎ Bottle graphite2 (1.3.15)
+✔︎ Bottle Manifest webp (1.6.0)
+✔︎ Bottle Manifest xz (5.8.3)
+✔︎ Bottle Manifest lz4 (1.10.0)
+✔︎ Bottle Manifest zstd (1.5.7_1)
+✔︎ Bottle lz4 (1.10.0)
+✔︎ Bottle fontconfig (2.18.2)
+✔︎ Bottle Manifest libtiff (4.7.2)
+✔︎ Bottle xorgproto (2025.1)
+✔︎ Bottle Manifest little-cms2 (2.19)
+✔︎ Bottle libpng (1.6.58)
+✔︎ Bottle little-cms2 (2.19)
+✔︎ Bottle libxcb (1.17.0)
+✔︎ Bottle freetype (2.14.3)
+✔︎ Bottle xz (5.8.3)
+✔︎ Bottle webp (1.6.0)
+✔︎ Bottle jpeg-turbo (3.2.0)
+✔︎ Bottle zstd (1.5.7_1)
+✔︎ Bottle cairo (1.18.4)
+✔︎ Bottle libx11 (1.8.13)
+✔︎ Bottle libtiff (4.7.2)
+✔︎ Bottle harfbuzz (14.2.1)
+✔︎ Bottle glib (2.88.2)
+✔︎ Bottle icu4c@78 (78.3)
+✔︎ Bottle openjdk (26.0.2)
+==> Installing dependencies for openjdk: libpng, freetype, giflib, fontconfig, glib, xorgproto, libxau, libxdmcp, libxcb, libx11, libxext, libxrender, lzo, pixman, cairo, graphite2, icu4c@78, harfbuzz, jpeg-turbo, webp, xz, lz4, zstd, libtiff and little-cms2
+==> Installing openjdk dependency: libpng
+==> Pouring libpng--1.6.58.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libpng/1.6.58: 28 files, 1.4MB
+==> Installing openjdk dependency: freetype
+==> Pouring freetype--2.14.3.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/freetype/2.14.3: 68 files, 2.7MB
+==> Installing openjdk dependency: giflib
+==> Pouring giflib--6.1.3.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/giflib/6.1.3: 19 files, 494.5KB
+==> Installing openjdk dependency: fontconfig
+==> Pouring fontconfig--2.18.2.arm64_sequoia.bottle.tar.gz
+[34m==>[0m [1mRegenerating font cache, this may take a while[0m
+[34m==>[0m [1m/opt/homebrew/Cellar/fontconfig/2.18.2/bin/fc-cache --force --really-force -[0m
+🍺  /opt/homebrew/Cellar/fontconfig/2.18.2: 102 files, 1.8MB
+==> Installing openjdk dependency: glib
+==> Pouring glib--2.88.2.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/glib/2.88.2: 506 files, 39.7MB
+==> Installing openjdk dependency: xorgproto
+==> Pouring xorgproto--2025.1.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/xorgproto/2025.1: 268 files, 4.1MB
+==> Installing openjdk dependency: libxau
+==> Pouring libxau--1.0.12.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libxau/1.0.12: 21 files, 117.2KB
+==> Installing openjdk dependency: libxdmcp
+==> Pouring libxdmcp--1.1.5.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libxdmcp/1.1.5: 12 files, 123.0KB
+==> Installing openjdk dependency: libxcb
+==> Pouring libxcb--1.17.0.arm64_sequoia.bottle.1.tar.gz
+🍺  /opt/homebrew/Cellar/libxcb/1.17.0: 2,498 files, 7.4MB
+==> Installing openjdk dependency: libx11
+==> Pouring libx11--1.8.13.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libx11/1.8.13: 1,043 files, 7.3MB
+==> Installing openjdk dependency: libxext
+==> Pouring libxext--1.3.7.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libxext/1.3.7: 88 files, 448.8KB
+==> Installing openjdk dependency: libxrender
+==> Pouring libxrender--0.9.12.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libxrender/0.9.12: 13 files, 206.4KB
+==> Installing openjdk dependency: lzo
+==> Pouring lzo--2.10.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/lzo/2.10: 32 files, 562.2KB
+==> Installing openjdk dependency: pixman
+==> Pouring pixman--0.46.4.arm64_sequoia.bottle.1.tar.gz
+🍺  /opt/homebrew/Cellar/pixman/0.46.4: 11 files, 1.4MB
+==> Installing openjdk dependency: cairo
+==> Pouring cairo--1.18.4.arm64_sequoia.bottle.2.tar.gz
+🍺  /opt/homebrew/Cellar/cairo/1.18.4: 58 files, 4.6MB
+==> Installing openjdk dependency: graphite2
+==> Pouring graphite2--1.3.15.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/graphite2/1.3.15: 19 files, 257KB
+==> Installing openjdk dependency: icu4c@78
+==> Pouring icu4c@78--78.3.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/icu4c@78/78.3: 279 files, 87.5MB
+==> Installing openjdk dependency: harfbuzz
+==> Pouring harfbuzz--14.2.1.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/harfbuzz/14.2.1: 94 files, 12.9MB
+==> Installing openjdk dependency: jpeg-turbo
+==> Pouring jpeg-turbo--3.2.0.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/jpeg-turbo/3.2.0: 47 files, 4.3MB
+==> Installing openjdk dependency: webp
+==> Pouring webp--1.6.0.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/webp/1.6.0: 64 files, 2.5MB
+==> Installing openjdk dependency: xz
+==> Pouring xz--5.8.3.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/xz/5.8.3: 96 files, 2.6MB
+==> Installing openjdk dependency: lz4
+==> Pouring lz4--1.10.0.arm64_sequoia.bottle.1.tar.gz
+🍺  /opt/homebrew/Cellar/lz4/1.10.0: 24 files, 711.3KB
+==> Installing openjdk dependency: zstd
+==> Pouring zstd--1.5.7_1.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/zstd/1.5.7_1: 32 files, 2.3MB
+==> Installing openjdk dependency: libtiff
+==> Pouring libtiff--4.7.2.arm64_sequoia.bottle.1.tar.gz
+🍺  /opt/homebrew/Cellar/libtiff/4.7.2: 493 files, 9.0MB
+==> Installing openjdk dependency: little-cms2
+==> Pouring little-cms2--2.19.arm64_sequoia.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/little-cms2/2.19: 23 files, 1.4MB
+==> Installing openjdk
+==> Pouring openjdk--26.0.2.arm64_sequoia.bottle.tar.gz
+==> Caveats
+For the system Java wrappers to find this JDK, symlink it with
+  sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+
+openjdk is keg-only, which means it was not symlinked into /opt/homebrew,
+because macOS provides similar software and installing this software in
+parallel can cause all kinds of trouble.
+
+If you need to have openjdk first in your PATH, run:
+  echo 'export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"' >> /Users/anshulyadav/.zshrc
+
+For compilers to find openjdk you may need to set:
+  export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+==> Summary
+🍺  /opt/homebrew/Cellar/openjdk/26.0.2: 549 files, 397.8MB
+==> Running `brew cleanup openjdk`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Caveats
+==> openjdk
+For the system Java wrappers to find this JDK, symlink it with
+  sudo ln -sfn /opt/homebrew/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+
+openjdk is keg-only, which means it was not symlinked into /opt/homebrew,
+because macOS provides similar software and installing this software in
+parallel can cause all kinds of trouble.
+
+If you need to have openjdk first in your PATH, run:
+  echo 'export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"' >> /Users/anshulyadav/.zshrc
+
+For compilers to find openjdk you may need to set:
+  export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+2026-07-30T19:02:40Z INFO: Installing category: devtools
+2026-07-30T19:02:40Z INFO: Installing Git...
+2026-07-30T19:02:43Z INFO: OK: brew install git
+2026-07-30T19:02:43Z COMMAND: brew install git
+OUTPUT: ✔︎ JSON API packages.arm64_sequoia.jws.json
+Warning: git 2.55.0 is already installed and up-to-date.
+To reinstall 2.55.0, run:
+  brew reinstall git
+2026-07-30T19:02:43Z INFO: Installing GitHub CLI...
+2026-07-30T19:02:44Z INFO: OK: brew install gh
+2026-07-30T19:02:44Z COMMAND: brew install gh
+OUTPUT: Warning: gh 2.96.0 is already installed and up-to-date.
+To reinstall 2.96.0, run:
+  brew reinstall gh
+2026-07-30T19:02:44Z INFO: Installing jq...
+2026-07-30T19:02:45Z INFO: OK: brew install jq
+2026-07-30T19:02:45Z COMMAND: brew install jq
+OUTPUT: Warning: jq 1.8.2 is already installed and up-to-date.
+To reinstall 1.8.2, run:
+  brew reinstall jq
+2026-07-30T19:02:45Z INFO: Installing Java (OpenJDK)...
+2026-07-30T19:02:47Z INFO: OK: brew install openjdk
+2026-07-30T19:02:47Z COMMAND: brew install openjdk
+OUTPUT: Warning: openjdk 26.0.2 is already installed and up-to-date.
+To reinstall 26.0.2, run:
+  brew reinstall openjdk
+2026-07-30T19:03:23Z INFO: Installing category: devtools
+2026-07-30T19:03:23Z INFO: Installing Git...
+2026-07-30T19:03:24Z INFO: OK: brew install git
+2026-07-30T19:03:24Z COMMAND: brew install git
+OUTPUT: Warning: git 2.55.0 is already installed and up-to-date.
+To reinstall 2.55.0, run:
+  brew reinstall git
+2026-07-30T19:03:24Z INFO: Installing GitHub CLI...
+2026-07-30T19:03:25Z INFO: OK: brew install gh
+2026-07-30T19:03:25Z COMMAND: brew install gh
+OUTPUT: Warning: gh 2.96.0 is already installed and up-to-date.
+To reinstall 2.96.0, run:
+  brew reinstall gh
+2026-07-30T19:03:25Z INFO: Installing jq...
+2026-07-30T19:03:26Z INFO: OK: brew install jq
+2026-07-30T19:03:26Z COMMAND: brew install jq
+OUTPUT: Warning: jq 1.8.2 is already installed and up-to-date.
+To reinstall 1.8.2, run:
+  brew reinstall jq
+2026-07-30T19:03:26Z INFO: Installing Java (OpenJDK)...
+2026-07-30T19:03:27Z INFO: OK: brew install openjdk
+2026-07-30T19:03:27Z COMMAND: brew install openjdk
+OUTPUT: Warning: openjdk 26.0.2 is already installed and up-to-date.
+To reinstall 26.0.2, run:
+  brew reinstall openjdk
+2026-07-30T19:03:45Z INFO: Installing category: devtools
+2026-07-30T19:03:45Z INFO: Installing Git...
+2026-07-30T19:03:46Z INFO: OK: brew install git
+2026-07-30T19:03:46Z COMMAND: brew install git
+OUTPUT: Warning: git 2.55.0 is already installed and up-to-date.
+To reinstall 2.55.0, run:
+  brew reinstall git
+2026-07-30T19:03:46Z INFO: Installing GitHub CLI...
+2026-07-30T19:03:47Z INFO: OK: brew install gh
+2026-07-30T19:03:47Z COMMAND: brew install gh
+OUTPUT: Warning: gh 2.96.0 is already installed and up-to-date.
+To reinstall 2.96.0, run:
+  brew reinstall gh
+2026-07-30T19:03:47Z INFO: Installing jq...
+2026-07-30T19:03:48Z INFO: OK: brew install jq
+2026-07-30T19:03:48Z COMMAND: brew install jq
+OUTPUT: Warning: jq 1.8.2 is already installed and up-to-date.
+To reinstall 1.8.2, run:
+  brew reinstall jq
+2026-07-30T19:03:48Z INFO: Installing Java (OpenJDK)...
+2026-07-30T19:03:49Z INFO: OK: brew install openjdk
+2026-07-30T19:03:49Z COMMAND: brew install openjdk
+OUTPUT: Warning: openjdk 26.0.2 is already installed and up-to-date.
+To reinstall 26.0.2, run:
+  brew reinstall openjdk
+2026-07-30T19:24:48Z INFO: OS: macos
+2026-07-30T19:24:48Z INFO: Package manager: brew
+2026-07-30T19:27:37Z INFO: Installing category: devtools
+2026-07-30T19:27:37Z ERROR: No install command defined for Git
+2026-07-30T19:33:10Z INFO: Installing category: devtools
+2026-07-30T19:33:11Z INFO: Installing Git...
+2026-07-30T19:35:51Z INFO: OK: brew install git
+2026-07-30T19:35:51Z COMMAND: brew install git
+OUTPUT: ✔︎ JSON API packages.arm64_tahoe.jws.json
+Warning: git 2.55.0 is already installed and up-to-date.
+To reinstall 2.55.0, run:
+  brew reinstall git
+2026-07-30T19:35:51Z INFO: Installing GitHub CLI...
+2026-07-30T19:35:52Z INFO: OK: brew install gh
+2026-07-30T19:35:52Z COMMAND: brew install gh
+OUTPUT: Warning: gh 2.96.0 is already installed and up-to-date.
+To reinstall 2.96.0, run:
+  brew reinstall gh
+2026-07-30T19:35:52Z INFO: Installing jq...
+2026-07-30T19:35:53Z INFO: OK: brew install jq
+2026-07-30T19:35:53Z COMMAND: brew install jq
+OUTPUT: Warning: jq 1.8.2 is already installed and up-to-date.
+To reinstall 1.8.2, run:
+  brew reinstall jq
+2026-07-30T19:35:53Z INFO: Installing Java (OpenJDK)...
+2026-07-30T19:35:54Z INFO: OK: brew install openjdk
+2026-07-30T19:35:54Z COMMAND: brew install openjdk
+OUTPUT: Warning: openjdk 26.0.2 is already installed and up-to-date.
+To reinstall 26.0.2, run:
+  brew reinstall openjdk
+2026-07-30T19:42:12Z INFO: Installing category: devtools
+2026-07-30T19:42:12Z INFO: Installing Git...
+2026-07-30T19:42:14Z INFO: OK: brew install git
+2026-07-30T19:42:14Z COMMAND: brew install git
+OUTPUT: Warning: git 2.55.0 is already installed and up-to-date.
+To reinstall 2.55.0, run:
+  brew reinstall git
+2026-07-30T19:42:14Z INFO: Installing GitHub CLI...
+2026-07-30T19:42:16Z INFO: OK: brew install gh
+2026-07-30T19:42:16Z COMMAND: brew install gh
+OUTPUT: Warning: gh 2.96.0 is already installed and up-to-date.
+To reinstall 2.96.0, run:
+  brew reinstall gh
+2026-07-30T19:42:16Z INFO: Installing jq...
+2026-07-30T19:42:17Z INFO: OK: brew install jq
+2026-07-30T19:42:17Z COMMAND: brew install jq
+OUTPUT: Warning: jq 1.8.2 is already installed and up-to-date.
+To reinstall 1.8.2, run:
+  brew reinstall jq
+2026-07-30T19:42:17Z INFO: Installing Java (OpenJDK)...
+2026-07-30T19:42:19Z INFO: OK: brew install openjdk
+2026-07-30T19:42:19Z COMMAND: brew install openjdk
+OUTPUT: Warning: openjdk 26.0.2 is already installed and up-to-date.
+To reinstall 26.0.2, run:
+  brew reinstall openjdk
+2026-07-30T19:50:15Z INFO: Installing category: devtools
+2026-07-30T19:50:15Z INFO: Installing Git...
+2026-07-30T19:51:37Z INFO: OK: brew install git
+2026-07-30T19:51:37Z COMMAND: brew install git
+OUTPUT: ✔︎ JSON API packages.arm64_tahoe.jws.json
+Warning: git 2.55.0 is already installed and up-to-date.
+To reinstall 2.55.0, run:
+  brew reinstall git
+2026-07-30T19:51:38Z INFO: Installing GitHub CLI...
+2026-07-30T19:51:39Z INFO: OK: brew install gh
+2026-07-30T19:51:39Z COMMAND: brew install gh
+OUTPUT: Warning: gh 2.96.0 is already installed and up-to-date.
+To reinstall 2.96.0, run:
+  brew reinstall gh
+2026-07-30T19:51:39Z INFO: Installing jq...
+2026-07-30T19:51:40Z INFO: OK: brew install jq
+2026-07-30T19:51:40Z COMMAND: brew install jq
+OUTPUT: Warning: jq 1.8.2 is already installed and up-to-date.
+To reinstall 1.8.2, run:
+  brew reinstall jq
+2026-07-30T19:51:40Z INFO: Installing Java (OpenJDK)...
+2026-07-30T19:51:41Z INFO: OK: brew install openjdk
+2026-07-30T19:51:41Z COMMAND: brew install openjdk
+OUTPUT: Warning: openjdk 26.0.2 is already installed and up-to-date.
+To reinstall 26.0.2, run:
+  brew reinstall openjdk
+2026-07-30T19:51:41Z INFO: Appended environment variable to /Users/anshulyadav/.zshrc

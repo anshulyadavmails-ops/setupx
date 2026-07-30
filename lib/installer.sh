@@ -47,25 +47,16 @@ install_tool() {
   local install_cmd
   install_cmd="$(get_tool_attribute "$category" "$tool_name" "install" 2>/dev/null || true)"
   if [[ -z "$install_cmd" ]]; then
-    local tool_type
-    tool_type="$(get_tool_attribute "$category" "$tool_name" "type" 2>/dev/null || true)"
-    local package_name
-    package_name="$(get_tool_attribute "$category" "$tool_name" "package" 2>/dev/null || true)"
-    if [[ "$tool_type" == "brew" && -n "$package_name" ]]; then
-      install_cmd="brew install $package_name"
-      log_warn "No install command defined for $tool_name, falling back to: $install_cmd"
-    else
-      log_error "No install command defined for $tool_name"
-      return 1
-    fi
+    log_error "No install command defined for $tool_name"
+    return 1
   fi
 
   log_info "Installing $tool_name..."
-  if ! run_cmd_with_retry "$install_cmd"; then
+  if ! run_cmd "$install_cmd"; then
     log_warn "Install failed for $tool_name, attempting doctor checks..."
     doctor_tool "$category" "$tool_name"
     log_info "Retrying install for $tool_name..."
-    if ! run_cmd_with_retry "$install_cmd"; then
+    if ! run_cmd "$install_cmd"; then
       log_error "Installation failed again for $tool_name"
       return 1
     fi
