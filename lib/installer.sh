@@ -66,6 +66,19 @@ install_tool() {
   return 0
 }
 
+install_tool_by_name() {
+  local tool_name="$1"
+  local result category tool
+
+  if ! result="$(find_tool_by_name "$tool_name" 2>/dev/null)"; then
+    log_error "Tool or package '$tool_name' not found in data.json"
+    return 1
+  fi
+
+  IFS=$'\n' read -r category tool <<< "$result"
+  install_tool "$category" "$tool"
+}
+
 get_tools_list() {
   ensure_python
   local category="$1"

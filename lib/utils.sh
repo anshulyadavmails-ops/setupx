@@ -169,6 +169,24 @@ sys.exit(1)
 PY
 }
 
+find_tool_by_name() {
+  ensure_python
+  local tool_name="$1"
+  "$PYTHON" - "$DATA_FILE" "$tool_name" <<'PY'
+import json, sys
+with open(sys.argv[1], 'r', encoding='utf-8') as f:
+    data = json.load(f)
+search = sys.argv[2]
+for category in data.get('categories', []):
+    for tool in data.get(category, {}).get('tools', []):
+        if tool.get('name') == search or tool.get('package') == search:
+            print(category)
+            print(tool.get('name'))
+            sys.exit(0)
+sys.exit(1)
+PY
+}
+
 print_category_summary() {
   ensure_python
   local category="$1"

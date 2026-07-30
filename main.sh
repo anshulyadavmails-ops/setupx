@@ -30,6 +30,7 @@ Commands:
   install <category>       Install all tools in a category
   install-all              Install every category in data.json
   install-tool <cat> <tool> Install a specific tool
+  n <package>              Install a tool by package or name (choco-like)
   update <category>        Update all tools in a category
   update-all               Update every category in data.json
   doctor <category>        Run doctor checks for a category
@@ -59,6 +60,10 @@ show_system_info() {
 
 run_install_all() {
   install_all_categories
+}
+
+run_install_by_name() {
+  install_tool_by_name "$1"
 }
 
 run_update_all() {
@@ -119,6 +124,15 @@ main() {
     install-tool)
       shift
       install_tool "$1" "$2"
+      ;;
+    n)
+      shift
+      if [[ $# -lt 1 ]]; then
+        log_error 'Missing package name for n command.'
+        main_help
+        exit 1
+      fi
+      run_install_by_name "$1"
       ;;
     update)
       shift
