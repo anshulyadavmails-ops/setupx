@@ -1316,3 +1316,645 @@ installer: Package name is Google Drive
 installer: Installing at base path /
 installer: The install was successful.
 🍺  google-drive was successfully installed!
+2026-07-31T13:12:25Z INFO: Installing category: common_tools
+2026-07-31T13:12:25Z INFO: PATH is already configured in /Users/anshulyadav/.zshrc
+2026-07-31T13:12:25Z INFO: Updating Homebrew...
+2026-07-31T13:12:27Z INFO: OK: brew update
+2026-07-31T13:12:27Z COMMAND: brew update
+OUTPUT: ==> Updating Homebrew...
+Already up-to-date.
+2026-07-31T13:12:27Z INFO: Installing tool: Visual Studio Code
+2026-07-31T13:12:27Z INFO: Installing Visual Studio Code...
+2026-07-31T13:12:37Z WARNING: FAILED: brew install --cask visual-studio-code
+2026-07-31T13:12:37Z COMMAND: brew install --cask visual-studio-code
+OUTPUT: ==> Would install 1 cask:
+visual-studio-code
+==> Fetching downloads for: visual-studio-code
+✔︎ Cask visual-studio-code (1.131.0)
+Error: It seems there is already an App at '/Applications/Visual Studio Code.app'.
+==> Installing Cask visual-studio-code
+==> Purging files for version 1.131.0 of Cask visual-studio-code
+2026-07-31T13:12:37Z WARNING: Install failed for Visual Studio Code, attempting doctor checks...
+2026-07-31T13:12:37Z WARNING: No doctor commands defined for Visual Studio Code
+2026-07-31T13:12:37Z INFO: Retrying install for Visual Studio Code...
+2026-07-31T13:12:46Z WARNING: FAILED: brew install --cask visual-studio-code
+2026-07-31T13:12:46Z COMMAND: brew install --cask visual-studio-code
+OUTPUT: ==> Would install 1 cask:
+visual-studio-code
+==> Fetching downloads for: visual-studio-code
+✔︎ Cask visual-studio-code (1.131.0)
+Error: It seems there is already an App at '/Applications/Visual Studio Code.app'.
+==> Installing Cask visual-studio-code
+==> Purging files for version 1.131.0 of Cask visual-studio-code
+2026-07-31T13:12:46Z ERROR: Installation failed again for Visual Studio Code
+2026-07-31T13:12:46Z WARNING: Continuing after failed install for Visual Studio Code
+2026-07-31T13:12:46Z INFO: Installing tool: Xcode (macOS)
+2026-07-31T13:12:46Z INFO: Installing Xcode (macOS)...
+2026-07-31T13:12:47Z WARNING: FAILED: brew install --cask xcode
+2026-07-31T13:12:47Z COMMAND: brew install --cask xcode
+OUTPUT: Warning: Cask 'xcode' is unavailable: No Cask with this name exists.
+==> Searching for similarly named casks...
+==> Casks
+codex
+copilot-for-xcode
+github-copilot-for-xcode
+phoenix-code
+swiftformat-for-xcode
+xcodeclangformat
+xcodepilot
+xcodes-app
+xscope
+
+To install codex, run:
+  brew install --cask codex
+2026-07-31T13:12:47Z WARNING: Install failed for Xcode (macOS), attempting doctor checks...
+2026-07-31T13:12:47Z WARNING: No doctor commands defined for Xcode (macOS)
+2026-07-31T13:12:47Z INFO: Retrying install for Xcode (macOS)...
+2026-07-31T13:12:48Z WARNING: FAILED: brew install --cask xcode
+2026-07-31T13:12:48Z COMMAND: brew install --cask xcode
+OUTPUT: Warning: Cask 'xcode' is unavailable: No Cask with this name exists.
+==> Searching for similarly named casks...
+==> Casks
+codex
+copilot-for-xcode
+github-copilot-for-xcode
+phoenix-code
+swiftformat-for-xcode
+xcodeclangformat
+xcodepilot
+xcodes-app
+xscope
+
+To install codex, run:
+  brew install --cask codex
+2026-07-31T13:12:48Z ERROR: Installation failed again for Xcode (macOS)
+2026-07-31T13:12:48Z WARNING: Continuing after failed install for Xcode (macOS)
+2026-07-31T13:12:48Z INFO: Installing tool: Homebrew
+2026-07-31T13:12:48Z INFO: Installing Homebrew...
+2026-07-31T13:12:48Z WARNING: FAILED: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+2026-07-31T13:12:48Z COMMAND: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+OUTPUT: Warning: Running in non-interactive mode because `stdin` is not a TTY.
+==> Checking for `sudo` access (which may request your password)...
+Need sudo access on macOS (e.g. the user anshulyadav needs to be an Administrator)!
+2026-07-31T13:12:48Z WARNING: Install failed for Homebrew, attempting doctor checks...
+2026-07-31T13:12:48Z WARNING: No doctor commands defined for Homebrew
+2026-07-31T13:12:48Z INFO: Retrying install for Homebrew...
+2026-07-31T13:12:48Z WARNING: FAILED: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+2026-07-31T13:12:48Z COMMAND: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+OUTPUT: Warning: Running in non-interactive mode because `stdin` is not a TTY.
+==> Checking for `sudo` access (which may request your password)...
+Need sudo access on macOS (e.g. the user anshulyadav needs to be an Administrator)!
+2026-07-31T13:12:48Z ERROR: Installation failed again for Homebrew
+2026-07-31T13:12:48Z WARNING: Continuing after failed install for Homebrew
+2026-07-31T13:12:48Z INFO: Installing tool: Winget
+2026-07-31T13:12:49Z INFO: Installing Winget...
+2026-07-31T13:12:49Z WARNING: FAILED: brew install winget
+2026-07-31T13:12:49Z COMMAND: brew install winget
+OUTPUT: Warning: No available formula with the name "winget". Did you mean wget or bwidget?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+wget
+bwidget
+
+To install wget, run:
+  brew install wget
+
+==> Casks
+twingate
+
+To install twingate, run:
+  brew install --cask twingate
+2026-07-31T13:12:49Z WARNING: Install failed for Winget, attempting doctor checks...
+2026-07-31T13:12:50Z WARNING: No doctor commands defined for Winget
+2026-07-31T13:12:50Z INFO: Retrying install for Winget...
+2026-07-31T13:12:51Z WARNING: FAILED: brew install winget
+2026-07-31T13:12:51Z COMMAND: brew install winget
+OUTPUT: Warning: No available formula with the name "winget". Did you mean wget or bwidget?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+wget
+bwidget
+
+To install wget, run:
+  brew install wget
+
+==> Casks
+twingate
+
+To install twingate, run:
+  brew install --cask twingate
+2026-07-31T13:12:51Z ERROR: Installation failed again for Winget
+2026-07-31T13:12:51Z WARNING: Continuing after failed install for Winget
+2026-07-31T13:12:51Z INFO: Installing tool: Scoop
+2026-07-31T13:12:51Z INFO: Installing Scoop...
+2026-07-31T13:12:51Z WARNING: FAILED: brew install scoop
+2026-07-31T13:12:51Z COMMAND: brew install scoop
+OUTPUT: Warning: No available formula with the name "scoop". Did you mean scooter?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+scooter
+
+To install scooter, run:
+  brew install scooter
+
+==> Casks
+scoot
+
+To install scoot, run:
+  brew install --cask scoot
+2026-07-31T13:12:51Z WARNING: Install failed for Scoop, attempting doctor checks...
+2026-07-31T13:12:52Z WARNING: No doctor commands defined for Scoop
+2026-07-31T13:12:52Z INFO: Retrying install for Scoop...
+2026-07-31T13:12:53Z WARNING: FAILED: brew install scoop
+2026-07-31T13:12:53Z COMMAND: brew install scoop
+OUTPUT: Warning: No available formula with the name "scoop". Did you mean scooter?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+scooter
+
+To install scooter, run:
+  brew install scooter
+
+==> Casks
+scoot
+
+To install scoot, run:
+  brew install --cask scoot
+2026-07-31T13:12:53Z ERROR: Installation failed again for Scoop
+2026-07-31T13:12:53Z WARNING: Continuing after failed install for Scoop
+2026-07-31T13:12:53Z INFO: Installing tool: Chocolatey
+2026-07-31T13:12:53Z INFO: Installing Chocolatey...
+2026-07-31T13:12:54Z WARNING: FAILED: brew install chocolatey
+2026-07-31T13:12:54Z COMMAND: brew install chocolatey
+OUTPUT: Warning: No available formula with the name "chocolatey". Did you mean chocolate-doom?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+chocolate-doom
+
+To install chocolate-doom, run:
+  brew install chocolate-doom
+
+==> Casks
+choosy
+
+To install choosy, run:
+  brew install --cask choosy
+2026-07-31T13:12:54Z WARNING: Install failed for Chocolatey, attempting doctor checks...
+2026-07-31T13:12:54Z WARNING: No doctor commands defined for Chocolatey
+2026-07-31T13:12:54Z INFO: Retrying install for Chocolatey...
+2026-07-31T13:12:55Z WARNING: FAILED: brew install chocolatey
+2026-07-31T13:12:55Z COMMAND: brew install chocolatey
+OUTPUT: Warning: No available formula with the name "chocolatey". Did you mean chocolate-doom?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+chocolate-doom
+
+To install chocolate-doom, run:
+  brew install chocolate-doom
+
+==> Casks
+choosy
+
+To install choosy, run:
+  brew install --cask choosy
+2026-07-31T13:12:55Z ERROR: Installation failed again for Chocolatey
+2026-07-31T13:12:55Z WARNING: Continuing after failed install for Chocolatey
+2026-07-31T13:12:55Z INFO: Installing tool: npm
+2026-07-31T13:12:55Z INFO: Installing npm...
+2026-07-31T13:12:55Z WARNING: FAILED: npm install -g npm
+2026-07-31T13:12:55Z COMMAND: npm install -g npm
+OUTPUT: bash: npm: command not found
+2026-07-31T13:12:55Z WARNING: Install failed for npm, attempting doctor checks...
+2026-07-31T13:12:55Z WARNING: No doctor commands defined for npm
+2026-07-31T13:12:55Z INFO: Retrying install for npm...
+2026-07-31T13:12:55Z WARNING: FAILED: npm install -g npm
+2026-07-31T13:12:55Z COMMAND: npm install -g npm
+OUTPUT: bash: npm: command not found
+2026-07-31T13:12:55Z ERROR: Installation failed again for npm
+2026-07-31T13:12:55Z WARNING: Continuing after failed install for npm
+2026-07-31T13:12:55Z INFO: Installing tool: nvm
+2026-07-31T13:12:55Z INFO: Installing nvm...
+2026-07-31T13:12:56Z INFO: OK: brew install nvm
+2026-07-31T13:12:56Z COMMAND: brew install nvm
+OUTPUT: Warning: nvm 0.40.6 is already installed and up-to-date.
+To reinstall 0.40.6, run:
+  brew reinstall nvm
+2026-07-31T13:12:56Z INFO: Installing tool: pip
+2026-07-31T13:12:56Z INFO: Installing pip...
+2026-07-31T13:12:57Z INFO: OK: brew install python
+2026-07-31T13:12:57Z COMMAND: brew install python
+OUTPUT: Warning: python@3.14 3.14.6 is already installed and up-to-date.
+To reinstall 3.14.6, run:
+  brew reinstall python@3.14
+2026-07-31T13:12:57Z INFO: Installing tool: pipx
+2026-07-31T13:12:57Z INFO: Installing pipx...
+2026-07-31T13:13:00Z INFO: OK: brew install pipx
+2026-07-31T13:13:00Z COMMAND: brew install pipx
+OUTPUT: ==> Would install 1 formula:
+pipx
+==> Downloading https://ghcr.io/v2/homebrew/core/pipx/manifests/1.16.5
+==> Fetching downloads for: pipx
+✔︎ Bottle pipx (1.16.5)
+==> Pouring pipx--1.16.5.all.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/pipx/1.16.5: 207 files, 2.0MB
+==> Running `brew cleanup pipx`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Caveats
+zsh completions have been installed to:
+  /opt/homebrew/share/zsh/site-functions
+2026-07-31T13:13:00Z INFO: Installing tool: Node.js (LTS)
+2026-07-31T13:13:00Z INFO: Installing Node.js (LTS)...
+2026-07-31T13:13:25Z INFO: OK: brew install node
+2026-07-31T13:13:25Z COMMAND: brew install node
+OUTPUT: ==> Would install 1 formula:
+node
+==> Downloading https://ghcr.io/v2/homebrew/core/node/manifests/26.5.0_1
+==> Would install 17 dependencies for node:
+fmt
+ada-url
+brotli
+c-ares
+hdrhistogram_c
+icu4c@78
+libffi
+libnghttp2
+libnghttp3
+libngtcp2
+libuv
+llhttp
+simdutf
+merve
+nbytes
+simdjson
+uvwasi
+==> Fetching downloads for: node
+✔︎ Bottle Manifest fmt (12.2.0)
+✔︎ Bottle Manifest ada-url (4.0.0)
+✔︎ Bottle Manifest brotli (1.2.0)
+✔︎ Bottle Manifest c-ares (1.34.8)
+✔︎ Bottle Manifest hdrhistogram_c (0.11.10)
+✔︎ Bottle Manifest icu4c@78 (78.3)
+✔︎ Bottle Manifest libffi (3.7.1)
+✔︎ Bottle Manifest libnghttp2 (1.69.0)
+✔︎ Bottle hdrhistogram_c (0.11.10)
+✔︎ Bottle fmt (12.2.0)
+✔︎ Bottle c-ares (1.34.8)
+✔︎ Bottle ada-url (4.0.0)
+✔︎ Bottle libffi (3.7.1)
+✔︎ Bottle Manifest libnghttp3 (1.18.0)
+✔︎ Bottle brotli (1.2.0)
+✔︎ Bottle Manifest libngtcp2 (1.25.0)
+✔︎ Bottle Manifest libuv (1.52.1)
+✔︎ Bottle Manifest llhttp (9.4.3)
+✔︎ Bottle libngtcp2 (1.25.0)
+✔︎ Bottle Manifest nbytes (0.1.4)
+✔︎ Bottle libuv (1.52.1)
+✔︎ Bottle Manifest simdjson (4.6.6)
+✔︎ Bottle libnghttp3 (1.18.0)
+✔︎ Bottle Manifest merve (1.2.2_1)
+✔︎ Bottle Manifest simdutf (9.0.0)
+✔︎ Bottle libnghttp2 (1.69.0)
+✔︎ Bottle llhttp (9.4.3)
+✔︎ Bottle merve (1.2.2_1)
+✔︎ Bottle simdutf (9.0.0)
+✔︎ Bottle Manifest uvwasi (0.0.23)
+✔︎ Bottle uvwasi (0.0.23)
+✔︎ Bottle nbytes (0.1.4)
+✔︎ Bottle simdjson (4.6.6)
+✔︎ Bottle node (26.5.0_1)
+✔︎ Bottle icu4c@78 (78.3)
+==> Installing dependencies for node: fmt, ada-url, brotli, c-ares, hdrhistogram_c, icu4c@78, libffi, libnghttp2, libnghttp3, libngtcp2, libuv, llhttp, simdutf, merve, nbytes, simdjson and uvwasi
+==> Installing node dependency: fmt
+==> Pouring fmt--12.2.0.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/fmt/12.2.0: 31 files, 1MB
+==> Installing node dependency: ada-url
+==> Pouring ada-url--4.0.0.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/ada-url/4.0.0: 56 files, 1MB
+==> Installing node dependency: brotli
+==> Pouring brotli--1.2.0.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/brotli/1.2.0: 33 files, 1.9MB
+==> Installing node dependency: c-ares
+==> Pouring c-ares--1.34.8.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/c-ares/1.34.8: 176 files, 1MB
+==> Installing node dependency: hdrhistogram_c
+==> Pouring hdrhistogram_c--0.11.10.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/hdrhistogram_c/0.11.10: 22 files, 154.0KB
+==> Installing node dependency: icu4c@78
+==> Pouring icu4c@78--78.3.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/icu4c@78/78.3: 279 files, 87.5MB
+==> Installing node dependency: libffi
+==> Pouring libffi--3.7.1.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libffi/3.7.1: 18 files, 915KB
+==> Installing node dependency: libnghttp2
+==> Pouring libnghttp2--1.69.0.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libnghttp2/1.69.0: 14 files, 830.3KB
+==> Installing node dependency: libnghttp3
+==> Pouring libnghttp3--1.18.0.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libnghttp3/1.18.0: 20 files, 600.4KB
+==> Installing node dependency: libngtcp2
+==> Pouring libngtcp2--1.25.0.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libngtcp2/1.25.0: 21 files, 1.4MB
+==> Installing node dependency: libuv
+==> Pouring libuv--1.52.1.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libuv/1.52.1: 35 files, 1.3MB
+==> Installing node dependency: llhttp
+==> Pouring llhttp--9.4.3.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/llhttp/9.4.3: 15 files, 147.8KB
+==> Installing node dependency: simdutf
+==> Pouring simdutf--9.0.0.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/simdutf/9.0.0: 65 files, 2MB
+==> Installing node dependency: merve
+==> Pouring merve--1.2.2_1.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/merve/1.2.2_1: 19 files, 131KB
+==> Installing node dependency: nbytes
+==> Pouring nbytes--0.1.4.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/nbytes/0.1.4: 9 files, 71.2KB
+==> Installing node dependency: simdjson
+==> Pouring simdjson--4.6.6.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/simdjson/4.6.6: 19 files, 8.0MB
+==> Installing node dependency: uvwasi
+==> Pouring uvwasi--0.0.23.arm64_tahoe.bottle.1.tar.gz
+🍺  /opt/homebrew/Cellar/uvwasi/0.0.23: 15 files, 269.2KB
+==> Installing node
+==> Pouring node--26.5.0_1.arm64_tahoe.bottle.tar.gz
+Python
+C/C++
+Java (JDK)
+Git
+GitHub CLI
+iTerm2
+Windows Terminal
+Docker Desktop
+Google Drive
+Google Chrome
+Brave
+Firefox
+==> Caveats
+Single Executable Application is disabled as it doesn't work with shared libnode.
+Temporal support is disabled as it doesn't work with shared ICU library.
+==> Summary
+🍺  /opt/homebrew/Cellar/node/26.5.0_1: 2,071 files, 89MB
+==> Running `brew cleanup node`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Caveats
+==> node
+Single Executable Application is disabled as it doesn't work with shared libnode.
+Temporal support is disabled as it doesn't work with shared ICU library.
+2026-07-31T13:16:17Z INFO: PATH is already configured in /Users/anshulyadav/.zshrc
+2026-07-31T13:16:17Z INFO: Updating Homebrew...
+2026-07-31T13:16:19Z INFO: OK: brew update
+2026-07-31T13:16:19Z COMMAND: brew update
+OUTPUT: ==> Updating Homebrew...
+Already up-to-date.
+2026-07-31T13:16:19Z INFO: Package manager ready: brew
+2026-07-31T13:16:32Z INFO: Installing category: common_tools
+2026-07-31T13:16:32Z INFO: PATH is already configured in /Users/anshulyadav/.zshrc
+2026-07-31T13:16:32Z INFO: Updating Homebrew...
+2026-07-31T13:16:34Z INFO: OK: brew update
+2026-07-31T13:16:34Z COMMAND: brew update
+OUTPUT: ==> Updating Homebrew...
+Already up-to-date.
+2026-07-31T13:16:34Z INFO: Installing tool: Visual Studio Code
+2026-07-31T13:16:34Z INFO: Installing Visual Studio Code...
+2026-07-31T13:16:43Z WARNING: FAILED: brew install --cask visual-studio-code
+2026-07-31T13:16:43Z COMMAND: brew install --cask visual-studio-code
+OUTPUT: ==> Would install 1 cask:
+visual-studio-code
+==> Fetching downloads for: visual-studio-code
+✔︎ Cask visual-studio-code (1.131.0)
+Error: It seems there is already an App at '/Applications/Visual Studio Code.app'.
+==> Installing Cask visual-studio-code
+==> Purging files for version 1.131.0 of Cask visual-studio-code
+2026-07-31T13:16:43Z WARNING: Install failed for Visual Studio Code, attempting doctor checks...
+2026-07-31T13:16:43Z WARNING: No doctor commands defined for Visual Studio Code
+2026-07-31T13:16:43Z INFO: Retrying install for Visual Studio Code...
+2026-07-31T13:16:52Z WARNING: FAILED: brew install --cask visual-studio-code
+2026-07-31T13:16:52Z COMMAND: brew install --cask visual-studio-code
+OUTPUT: ==> Would install 1 cask:
+visual-studio-code
+==> Fetching downloads for: visual-studio-code
+✔︎ Cask visual-studio-code (1.131.0)
+Error: It seems there is already an App at '/Applications/Visual Studio Code.app'.
+==> Installing Cask visual-studio-code
+==> Purging files for version 1.131.0 of Cask visual-studio-code
+2026-07-31T13:16:52Z ERROR: Installation failed again for Visual Studio Code
+2026-07-31T13:16:52Z WARNING: Continuing after failed install for Visual Studio Code
+2026-07-31T13:16:52Z INFO: Installing tool: Xcode (macOS)
+2026-07-31T13:16:52Z INFO: Installing Xcode (macOS)...
+2026-07-31T13:16:52Z WARNING: FAILED: brew install --cask xcode
+2026-07-31T13:16:52Z COMMAND: brew install --cask xcode
+OUTPUT: Warning: Cask 'xcode' is unavailable: No Cask with this name exists.
+==> Searching for similarly named casks...
+==> Casks
+codex
+copilot-for-xcode
+github-copilot-for-xcode
+phoenix-code
+swiftformat-for-xcode
+xcodeclangformat
+xcodepilot
+xcodes-app
+xscope
+
+To install codex, run:
+  brew install --cask codex
+2026-07-31T13:16:52Z WARNING: Install failed for Xcode (macOS), attempting doctor checks...
+2026-07-31T13:16:53Z WARNING: No doctor commands defined for Xcode (macOS)
+2026-07-31T13:16:53Z INFO: Retrying install for Xcode (macOS)...
+2026-07-31T13:16:53Z WARNING: FAILED: brew install --cask xcode
+2026-07-31T13:16:53Z COMMAND: brew install --cask xcode
+OUTPUT: Warning: Cask 'xcode' is unavailable: No Cask with this name exists.
+==> Searching for similarly named casks...
+==> Casks
+codex
+copilot-for-xcode
+github-copilot-for-xcode
+phoenix-code
+swiftformat-for-xcode
+xcodeclangformat
+xcodepilot
+xcodes-app
+xscope
+
+To install codex, run:
+  brew install --cask codex
+2026-07-31T13:16:53Z ERROR: Installation failed again for Xcode (macOS)
+2026-07-31T13:16:53Z WARNING: Continuing after failed install for Xcode (macOS)
+2026-07-31T13:16:53Z INFO: Installing tool: Homebrew
+2026-07-31T13:16:53Z INFO: Installing Homebrew...
+2026-07-31T13:16:54Z WARNING: FAILED: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+2026-07-31T13:16:54Z COMMAND: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+OUTPUT: Warning: Running in non-interactive mode because `stdin` is not a TTY.
+==> Checking for `sudo` access (which may request your password)...
+Need sudo access on macOS (e.g. the user anshulyadav needs to be an Administrator)!
+2026-07-31T13:16:54Z WARNING: Install failed for Homebrew, attempting doctor checks...
+2026-07-31T13:16:54Z WARNING: No doctor commands defined for Homebrew
+2026-07-31T13:16:54Z INFO: Retrying install for Homebrew...
+2026-07-31T13:16:54Z WARNING: FAILED: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+2026-07-31T13:16:54Z COMMAND: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+OUTPUT: Warning: Running in non-interactive mode because `stdin` is not a TTY.
+==> Checking for `sudo` access (which may request your password)...
+Need sudo access on macOS (e.g. the user anshulyadav needs to be an Administrator)!
+2026-07-31T13:16:54Z ERROR: Installation failed again for Homebrew
+2026-07-31T13:16:54Z WARNING: Continuing after failed install for Homebrew
+2026-07-31T13:16:54Z INFO: Installing tool: Winget
+2026-07-31T13:16:54Z INFO: Installing Winget...
+2026-07-31T13:16:55Z WARNING: FAILED: brew install winget
+2026-07-31T13:16:55Z COMMAND: brew install winget
+OUTPUT: Warning: No available formula with the name "winget". Did you mean wget or bwidget?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+wget
+bwidget
+
+To install wget, run:
+  brew install wget
+
+==> Casks
+twingate
+
+To install twingate, run:
+  brew install --cask twingate
+2026-07-31T13:16:55Z WARNING: Install failed for Winget, attempting doctor checks...
+2026-07-31T13:16:55Z WARNING: No doctor commands defined for Winget
+2026-07-31T13:16:55Z INFO: Retrying install for Winget...
+2026-07-31T13:16:56Z WARNING: FAILED: brew install winget
+2026-07-31T13:16:56Z COMMAND: brew install winget
+OUTPUT: Warning: No available formula with the name "winget". Did you mean wget or bwidget?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+wget
+bwidget
+
+To install wget, run:
+  brew install wget
+
+==> Casks
+twingate
+
+To install twingate, run:
+  brew install --cask twingate
+2026-07-31T13:16:56Z ERROR: Installation failed again for Winget
+2026-07-31T13:16:56Z WARNING: Continuing after failed install for Winget
+2026-07-31T13:16:56Z INFO: Installing tool: Scoop
+2026-07-31T13:16:56Z INFO: Installing Scoop...
+2026-07-31T13:16:57Z WARNING: FAILED: brew install scoop
+2026-07-31T13:16:57Z COMMAND: brew install scoop
+OUTPUT: Warning: No available formula with the name "scoop". Did you mean scooter?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+scooter
+
+To install scooter, run:
+  brew install scooter
+
+==> Casks
+scoot
+
+To install scoot, run:
+  brew install --cask scoot
+2026-07-31T13:16:57Z WARNING: Install failed for Scoop, attempting doctor checks...
+2026-07-31T13:16:57Z WARNING: No doctor commands defined for Scoop
+2026-07-31T13:16:57Z INFO: Retrying install for Scoop...
+2026-07-31T13:16:58Z WARNING: FAILED: brew install scoop
+2026-07-31T13:16:58Z COMMAND: brew install scoop
+OUTPUT: Warning: No available formula with the name "scoop". Did you mean scooter?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+scooter
+
+To install scooter, run:
+  brew install scooter
+
+==> Casks
+scoot
+
+To install scoot, run:
+  brew install --cask scoot
+2026-07-31T13:16:58Z ERROR: Installation failed again for Scoop
+2026-07-31T13:16:58Z WARNING: Continuing after failed install for Scoop
+2026-07-31T13:16:58Z INFO: Installing tool: Chocolatey
+2026-07-31T13:16:58Z INFO: Installing Chocolatey...
+2026-07-31T13:16:59Z WARNING: FAILED: brew install chocolatey
+2026-07-31T13:16:59Z COMMAND: brew install chocolatey
+OUTPUT: Warning: No available formula with the name "chocolatey". Did you mean chocolate-doom?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+chocolate-doom
+
+To install chocolate-doom, run:
+  brew install chocolate-doom
+
+==> Casks
+choosy
+
+To install choosy, run:
+  brew install --cask choosy
+2026-07-31T13:16:59Z WARNING: Install failed for Chocolatey, attempting doctor checks...
+2026-07-31T13:16:59Z WARNING: No doctor commands defined for Chocolatey
+2026-07-31T13:16:59Z INFO: Retrying install for Chocolatey...
+2026-07-31T13:17:00Z WARNING: FAILED: brew install chocolatey
+2026-07-31T13:17:00Z COMMAND: brew install chocolatey
+OUTPUT: Warning: No available formula with the name "chocolatey". Did you mean chocolate-doom?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+chocolate-doom
+
+To install chocolate-doom, run:
+  brew install chocolate-doom
+
+==> Casks
+choosy
+
+To install choosy, run:
+  brew install --cask choosy
+2026-07-31T13:17:00Z ERROR: Installation failed again for Chocolatey
+2026-07-31T13:17:00Z WARNING: Continuing after failed install for Chocolatey
+2026-07-31T13:17:00Z INFO: Installing tool: npm
+2026-07-31T13:17:00Z INFO: Installing npm...
+2026-07-31T13:17:04Z INFO: OK: npm install -g npm
+2026-07-31T13:17:04Z COMMAND: npm install -g npm
+OUTPUT: 
+removed 8 packages, and changed 75 packages in 4s
+
+15 packages are looking for funding
+  run `npm fund` for details
+2026-07-31T13:17:04Z INFO: Installing tool: nvm
+2026-07-31T13:17:04Z INFO: Installing nvm...
+2026-07-31T13:17:05Z INFO: OK: brew install nvm
+2026-07-31T13:17:05Z COMMAND: brew install nvm
+OUTPUT: Warning: nvm 0.40.6 is already installed and up-to-date.
+To reinstall 0.40.6, run:
+  brew reinstall nvm
+2026-07-31T13:17:05Z INFO: Installing tool: pip
+2026-07-31T13:17:05Z INFO: Installing pip...
+2026-07-31T13:17:06Z INFO: OK: brew install python
+2026-07-31T13:17:06Z COMMAND: brew install python
+OUTPUT: Warning: python@3.14 3.14.6 is already installed and up-to-date.
+To reinstall 3.14.6, run:
+  brew reinstall python@3.14
+2026-07-31T13:17:06Z INFO: Installing tool: pipx
+2026-07-31T13:17:06Z INFO: Installing pipx...
+2026-07-31T13:17:07Z INFO: OK: brew install pipx
+2026-07-31T13:17:07Z COMMAND: brew install pipx
+OUTPUT: Warning: pipx 1.16.5 is already installed and up-to-date.
+To reinstall 1.16.5, run:
+  brew reinstall pipx
+2026-07-31T13:17:07Z INFO: Installing tool: Node.js (LTS)
+2026-07-31T13:17:07Z INFO: Installing Node.js (LTS)...
+2026-07-31T13:17:08Z INFO: OK: brew install node
+2026-07-31T13:17:08Z COMMAND: brew install node
+OUTPUT: Warning: node 26.5.0_1 is already installed and up-to-date.
+To reinstall 26.5.0_1, run:
+  brew reinstall node
+2026-07-31T13:17:08Z INFO: Installing tool: Python
+2026-07-31T13:17:08Z INFO: Installing Python...
+2026-07-31T13:17:09Z INFO: OK: brew install python
+2026-07-31T13:17:09Z COMMAND: brew install python
+OUTPUT: Warning: python@3.14 3.14.6 is already installed and up-to-date.
+To reinstall 3.14.6, run:
+  brew reinstall python@3.14
+2026-07-31T13:17:09Z INFO: Installing tool: C/C++
+2026-07-31T13:17:09Z INFO: Installing C/C++...

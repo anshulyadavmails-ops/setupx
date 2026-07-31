@@ -28,78 +28,6 @@
         "required": false
       },
       {
-        "name": "Homebrew",
-        "type": "brew",
-        "package": "homebrew",
-        "check": "brew --version",
-        "install": "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"",
-        "update": "brew update",
-        "required": false
-      },
-      {
-        "name": "Winget",
-        "type": "brew",
-        "package": "winget",
-        "check": "command -v winget",
-        "install": "brew install winget",
-        "update": "brew upgrade winget",
-        "required": false
-      },
-      {
-        "name": "Scoop",
-        "type": "brew",
-        "package": "scoop",
-        "check": "command -v scoop",
-        "install": "brew install scoop",
-        "update": "brew upgrade scoop",
-        "required": false
-      },
-      {
-        "name": "Chocolatey",
-        "type": "brew",
-        "package": "chocolatey",
-        "check": "command -v chocolatey",
-        "install": "brew install chocolatey",
-        "update": "brew upgrade chocolatey",
-        "required": false
-      },
-      {
-        "name": "npm",
-        "type": "npm",
-        "package": "npm",
-        "check": "npm --version",
-        "install": "npm install -g npm",
-        "update": "npm update -g npm",
-        "required": false
-      },
-      {
-        "name": "nvm",
-        "type": "brew",
-        "package": "nvm",
-        "check": "command -v nvm",
-        "install": "brew install nvm",
-        "update": "brew upgrade nvm",
-        "required": false
-      },
-      {
-        "name": "pip",
-        "type": "brew",
-        "package": "python",
-        "check": "pip --version",
-        "install": "brew install python",
-        "update": "brew upgrade python",
-        "required": false
-      },
-      {
-        "name": "pipx",
-        "type": "brew",
-        "package": "pipx",
-        "check": "command -v pipx",
-        "install": "brew install pipx",
-        "update": "brew upgrade pipx",
-        "required": false
-      },
-      {
         "name": "Node.js (LTS)",
         "type": "brew",
         "package": "node",
@@ -160,15 +88,6 @@
         "check": "open -Ra iTerm",
         "install": "brew install --cask iterm2",
         "update": "brew upgrade --cask iterm2",
-        "required": false
-      },
-      {
-        "name": "Windows Terminal",
-        "type": "brew",
-        "package": "windows-terminal",
-        "check": "command -v windows-terminal",
-        "install": "brew install windows-terminal",
-        "update": "brew upgrade windows-terminal",
         "required": false
       },
       {
