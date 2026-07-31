@@ -1,67 +1,58 @@
 {
   "categories": [
-    "devtools",
-    "common",
-    "web",
-    "cloud",
-    "containers",
-    "database",
-    "ai"
+    "common_tools_browsers",
+    "common_tools_code_editors",
+    "common_tools_package_managers",
+    "common_tools_programming_languages",
+    "common_tools_version_control",
+    "common_tools_terminal",
+    "common_tools_containers",
+    "common_tools_cloud_storage",
+    "development_tools_ai_development",
+    "development_tools_editors_ides",
+    "development_tools_java_development",
+    "development_tools_web_development_javascript",
+    "development_tools_web_development_framework_clis",
+    "development_tools_web_development_code_quality",
+    "development_tools_backend_development",
+    "development_tools_api_development",
+    "development_tools_cloud_development",
+    "development_tools_database_tools",
+    "mobile_development_android_development",
+    "mobile_development_flutter_development",
+    "mobile_development_react_native",
+    "mobile_development_apple_development",
+    "mobile_development_mobile_testing",
+    "mobile_development_mobile_utilities",
+    "devops_containers_kubernetes",
+    "devops_cloud_platforms",
+    "devops_cicd",
+    "extras_ai_tools",
+    "extras_ides",
+    "extras_languages",
+    "extras_package_managers",
+    "extras_databases_sql",
+    "extras_databases_nosql",
+    "extras_database_clients",
+    "extras_embedded_development",
+    "extras_virtualization",
+    "extras_kubernetes",
+    "extras_infrastructure",
+    "extras_monitoring",
+    "extras_security",
+    "extras_secret_management",
+    "extras_networking",
+    "extras_testing",
+    "extras_build_tools",
+    "extras_utilities",
+    "extras_productivity",
+    "extras_design",
+    "extras_communication",
+    "extras_browsers",
+    "extras_cloud_storage"
   ],
-
-  "devtools": {
-    "description": "Developer tools and CLI utilities",
-    "tools": [
-      {
-        "name": "Git",
-        "type": "brew",
-        "package": "git",
-        "check": "git --version",
-        "install": "brew install git",
-        "update": "brew upgrade git",
-        "doctor": ["brew doctor"],
-        "required": true
-      },
-      {
-        "name": "GitHub CLI",
-        "type": "brew",
-        "package": "gh",
-        "check": "gh --version",
-        "install": "brew install gh",
-        "update": "brew upgrade gh",
-        "doctor": ["gh auth status"],
-        "required": false
-      },
-      {
-        "name": "jq",
-        "type": "brew",
-        "package": "jq",
-        "check": "jq --version",
-        "install": "brew install jq",
-        "update": "brew upgrade jq",
-        "required": true
-      },
-      {
-        "name": "Java (OpenJDK)",
-        "type": "brew",
-        "package": "openjdk",
-        "check": "java --version",
-        "install": "brew install openjdk",
-        "update": "brew upgrade openjdk",
-        "doctor": ["java --version"],
-        "env": [
-          {
-            "key": "PATH",
-            "value": "$(brew --prefix openjdk)/bin:$PATH",
-            "shell": "zsh"
-          }
-        ]
-      }
-    ]
-  },
-
-  "common": {
-    "description": "Common desktop apps and everyday productivity tools",
+  "common_tools_browsers": {
+    "description": "Common Tools (Essential) > Browsers",
     "tools": [
       {
         "name": "Google Chrome",
@@ -73,7 +64,7 @@
         "required": false
       },
       {
-        "name": "Brave Browser",
+        "name": "Brave",
         "type": "brew",
         "package": "brave-browser",
         "check": "open -Ra 'Brave Browser'",
@@ -81,6 +72,29 @@
         "update": "brew upgrade --cask brave-browser",
         "required": false
       },
+      {
+        "name": "Mozilla Firefox",
+        "type": "brew",
+        "package": "firefox",
+        "check": "open -Ra 'Firefox'",
+        "install": "brew install --cask firefox",
+        "update": "brew upgrade --cask firefox",
+        "required": false
+      },
+      {
+        "name": "Microsoft Edge",
+        "type": "brew",
+        "package": "microsoft-edge",
+        "check": "open -Ra 'Microsoft Edge'",
+        "install": "brew install --cask microsoft-edge",
+        "update": "brew upgrade --cask microsoft-edge",
+        "required": false
+      }
+    ]
+  },
+  "common_tools_code_editors": {
+    "description": "Common Tools (Essential) > Code Editors",
+    "tools": [
       {
         "name": "Visual Studio Code",
         "type": "brew",
@@ -91,14 +105,145 @@
         "required": false
       },
       {
+        "name": "Xcode (macOS)",
+        "type": "brew",
+        "package": "xcode",
+        "check": "command -v xcode",
+        "install": "brew install --cask xcode",
+        "update": "brew upgrade --cask xcode",
+        "required": false
+      }
+    ]
+  },
+  "common_tools_package_managers": {
+    "description": "Common Tools (Essential) > Package Managers",
+    "tools": [
+      {
+        "name": "Homebrew",
+        "type": "brew",
+        "package": "homebrew",
+        "check": "brew --version",
+        "install": "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"",
+        "update": "brew update",
+        "required": false
+      },
+      {
+        "name": "Winget",
+        "type": "brew",
+        "package": "winget",
+        "check": "command -v winget",
+        "install": "brew install winget",
+        "update": "brew upgrade winget",
+        "required": false
+      },
+      {
+        "name": "Scoop",
+        "type": "brew",
+        "package": "scoop",
+        "check": "command -v scoop",
+        "install": "brew install scoop",
+        "update": "brew upgrade scoop",
+        "required": false
+      },
+      {
+        "name": "Chocolatey",
+        "type": "brew",
+        "package": "chocolatey",
+        "check": "command -v chocolatey",
+        "install": "brew install chocolatey",
+        "update": "brew upgrade chocolatey",
+        "required": false
+      },
+      {
+        "name": "npm",
+        "type": "npm",
+        "package": "npm",
+        "check": "npm --version",
+        "install": "npm install -g npm",
+        "update": "npm update -g npm",
+        "required": false
+      },
+      {
+        "name": "nvm",
+        "type": "brew",
+        "package": "nvm",
+        "check": "command -v nvm",
+        "install": "brew install nvm",
+        "update": "brew upgrade nvm",
+        "required": false
+      },
+      {
+        "name": "pip",
+        "type": "brew",
+        "package": "python",
+        "check": "pip --version",
+        "install": "brew install python",
+        "update": "brew upgrade python",
+        "required": false
+      },
+      {
+        "name": "pipx",
+        "type": "brew",
+        "package": "pipx",
+        "check": "command -v pipx",
+        "install": "brew install pipx",
+        "update": "brew upgrade pipx",
+        "required": false
+      }
+    ]
+  },
+  "common_tools_programming_languages": {
+    "description": "Common Tools (Essential) > Programming Languages",
+    "tools": [
+      {
+        "name": "Node.js (LTS)",
+        "type": "brew",
+        "package": "node",
+        "check": "node --version",
+        "install": "brew install node",
+        "update": "brew upgrade node",
+        "required": false
+      },
+      {
+        "name": "Python",
+        "type": "brew",
+        "package": "python",
+        "check": "python3 --version",
+        "install": "brew install python",
+        "update": "brew upgrade python",
+        "required": false
+      },
+      {
+        "name": "C/C++",
+        "type": "brew",
+        "package": "llvm",
+        "check": "clang++ --version",
+        "install": "brew install llvm",
+        "update": "brew upgrade llvm",
+        "required": false
+      },
+      {
+        "name": "Java (JDK)",
+        "type": "brew",
+        "package": "openjdk",
+        "check": "java --version",
+        "install": "brew install openjdk",
+        "update": "brew upgrade openjdk",
+        "required": false
+      }
+    ]
+  },
+  "common_tools_version_control": {
+    "description": "Common Tools (Essential) > Version Control",
+    "tools": [
+      {
         "name": "Git",
         "type": "brew",
         "package": "git",
         "check": "git --version",
         "install": "brew install git",
         "update": "brew upgrade git",
-        "doctor": ["brew doctor"],
-        "required": true
+        "required": false
       },
       {
         "name": "GitHub CLI",
@@ -107,9 +252,50 @@
         "check": "gh --version",
         "install": "brew install gh",
         "update": "brew upgrade gh",
-        "doctor": ["gh auth status"],
+        "required": false
+      }
+    ]
+  },
+  "common_tools_terminal": {
+    "description": "Common Tools (Essential) > Terminal",
+    "tools": [
+      {
+        "name": "iTerm2",
+        "type": "brew",
+        "package": "iterm2",
+        "check": "open -Ra iTerm",
+        "install": "brew install --cask iterm2",
+        "update": "brew upgrade --cask iterm2",
         "required": false
       },
+      {
+        "name": "Windows Terminal",
+        "type": "brew",
+        "package": "windows-terminal",
+        "check": "command -v windows-terminal",
+        "install": "brew install windows-terminal",
+        "update": "brew upgrade windows-terminal",
+        "required": false
+      }
+    ]
+  },
+  "common_tools_containers": {
+    "description": "Common Tools (Essential) > Containers",
+    "tools": [
+      {
+        "name": "Docker Desktop",
+        "type": "brew",
+        "package": "docker",
+        "check": "open -Ra Docker",
+        "install": "brew install --cask docker",
+        "update": "brew upgrade --cask docker",
+        "required": false
+      }
+    ]
+  },
+  "common_tools_cloud_storage": {
+    "description": "Common Tools (Essential) > Cloud Storage",
+    "tools": [
       {
         "name": "Google Drive",
         "type": "brew",
@@ -118,16 +304,2610 @@
         "install": "brew install --cask google-drive",
         "update": "brew upgrade --cask google-drive",
         "required": false
-      },
+      }
+    ]
+  },
+  "development_tools_ai_development": {
+    "description": "Development Tools > AI Development",
+    "tools": [
       {
-        "name": "Microsoft Outlook",
+        "name": "Cursor",
         "type": "brew",
-        "package": "microsoft-outlook",
-        "check": "open -Ra 'Microsoft Outlook'",
-        "install": "brew install --cask microsoft-outlook",
-        "update": "brew upgrade --cask microsoft-outlook",
+        "package": "cursor",
+        "check": "command -v cursor",
+        "install": "brew install cursor",
+        "update": "brew upgrade cursor",
         "required": false
       },
+      {
+        "name": "Claude Code",
+        "type": "brew",
+        "package": "claude_code",
+        "check": "command -v claude_code",
+        "install": "brew install claude_code",
+        "update": "brew upgrade claude_code",
+        "required": false
+      },
+      {
+        "name": "Codex CLI",
+        "type": "npm",
+        "package": "codex_cli",
+        "check": "command -v codex_cli",
+        "install": "npm install -g codex_cli",
+        "update": "npm update -g codex_cli",
+        "required": false
+      },
+      {
+        "name": "Gemini CLI",
+        "type": "npm",
+        "package": "gemini_cli",
+        "check": "command -v gemini_cli",
+        "install": "npm install -g gemini_cli",
+        "update": "npm update -g gemini_cli",
+        "required": false
+      },
+      {
+        "name": "GitHub Copilot",
+        "type": "brew",
+        "package": "github_copilot",
+        "check": "command -v github_copilot",
+        "install": "brew install github_copilot",
+        "update": "brew upgrade github_copilot",
+        "required": false
+      }
+    ]
+  },
+  "development_tools_editors_ides": {
+    "description": "Development Tools > Editors & IDEs",
+    "tools": [
+      {
+        "name": "Visual Studio Code",
+        "type": "brew",
+        "package": "visual-studio-code",
+        "check": "open -Ra 'Visual Studio Code'",
+        "install": "brew install --cask visual-studio-code",
+        "update": "brew upgrade --cask visual-studio-code",
+        "required": false
+      },
+      {
+        "name": "Cursor",
+        "type": "brew",
+        "package": "cursor",
+        "check": "command -v cursor",
+        "install": "brew install cursor",
+        "update": "brew upgrade cursor",
+        "required": false
+      }
+    ]
+  },
+  "development_tools_java_development": {
+    "description": "Development Tools > Java Development",
+    "tools": [
+      {
+        "name": "OpenJDK",
+        "type": "brew",
+        "package": "openjdk",
+        "check": "command -v openjdk",
+        "install": "brew install openjdk",
+        "update": "brew upgrade openjdk",
+        "required": false
+      },
+      {
+        "name": "Maven",
+        "type": "brew",
+        "package": "maven",
+        "check": "command -v maven",
+        "install": "brew install maven",
+        "update": "brew upgrade maven",
+        "required": false
+      },
+      {
+        "name": "Gradle",
+        "type": "brew",
+        "package": "gradle",
+        "check": "command -v gradle",
+        "install": "brew install gradle",
+        "update": "brew upgrade gradle",
+        "required": false
+      }
+    ]
+  },
+  "development_tools_web_development_javascript": {
+    "description": "Development Tools > Web Development > JavaScript",
+    "tools": [
+      {
+        "name": "Node.js",
+        "type": "brew",
+        "package": "node",
+        "check": "command -v node",
+        "install": "brew install node",
+        "update": "brew upgrade node",
+        "required": false
+      },
+      {
+        "name": "npm",
+        "type": "npm",
+        "package": "npm",
+        "check": "npm --version",
+        "install": "npm install -g npm",
+        "update": "npm update -g npm",
+        "required": false
+      },
+      {
+        "name": "pnpm",
+        "type": "brew",
+        "package": "pnpm",
+        "check": "command -v pnpm",
+        "install": "brew install pnpm",
+        "update": "brew upgrade pnpm",
+        "required": false
+      }
+    ]
+  },
+  "development_tools_web_development_framework_clis": {
+    "description": "Development Tools > Web Development > Framework CLIs",
+    "tools": [
+      {
+        "name": "Angular CLI",
+        "type": "npm",
+        "package": "angular_cli",
+        "check": "command -v angular_cli",
+        "install": "npm install -g angular_cli",
+        "update": "npm update -g angular_cli",
+        "required": false
+      },
+      {
+        "name": "Vue CLI",
+        "type": "npm",
+        "package": "vue_cli",
+        "check": "command -v vue_cli",
+        "install": "npm install -g vue_cli",
+        "update": "npm update -g vue_cli",
+        "required": false
+      },
+      {
+        "name": "Create React App",
+        "type": "brew",
+        "package": "create_react_app",
+        "check": "command -v create_react_app",
+        "install": "brew install create_react_app",
+        "update": "brew upgrade create_react_app",
+        "required": false
+      },
+      {
+        "name": "Vite",
+        "type": "brew",
+        "package": "vite",
+        "check": "command -v vite",
+        "install": "brew install vite",
+        "update": "brew upgrade vite",
+        "required": false
+      }
+    ]
+  },
+  "development_tools_web_development_code_quality": {
+    "description": "Development Tools > Web Development > Code Quality",
+    "tools": [
+      {
+        "name": "ESLint",
+        "type": "brew",
+        "package": "eslint",
+        "check": "command -v eslint",
+        "install": "brew install eslint",
+        "update": "brew upgrade eslint",
+        "required": false
+      },
+      {
+        "name": "Prettier",
+        "type": "brew",
+        "package": "prettier",
+        "check": "command -v prettier",
+        "install": "brew install prettier",
+        "update": "brew upgrade prettier",
+        "required": false
+      },
+      {
+        "name": "TypeScript",
+        "type": "brew",
+        "package": "typescript",
+        "check": "command -v typescript",
+        "install": "brew install typescript",
+        "update": "brew upgrade typescript",
+        "required": false
+      }
+    ]
+  },
+  "development_tools_backend_development": {
+    "description": "Development Tools > Backend Development",
+    "tools": [
+      {
+        "name": "Prisma CLI",
+        "type": "npm",
+        "package": "prisma_cli",
+        "check": "command -v prisma_cli",
+        "install": "npm install -g prisma_cli",
+        "update": "npm update -g prisma_cli",
+        "required": false
+      },
+      {
+        "name": "Drizzle Kit",
+        "type": "brew",
+        "package": "drizzle_kit",
+        "check": "command -v drizzle_kit",
+        "install": "brew install drizzle_kit",
+        "update": "brew upgrade drizzle_kit",
+        "required": false
+      },
+      {
+        "name": "OpenAPI Generator",
+        "type": "brew",
+        "package": "openapi_generator",
+        "check": "command -v openapi_generator",
+        "install": "brew install openapi_generator",
+        "update": "brew upgrade openapi_generator",
+        "required": false
+      }
+    ]
+  },
+  "development_tools_api_development": {
+    "description": "Development Tools > API Development",
+    "tools": [
+      {
+        "name": "Postman",
+        "type": "brew",
+        "package": "postman",
+        "check": "command -v postman",
+        "install": "brew install postman",
+        "update": "brew upgrade postman",
+        "required": false
+      },
+      {
+        "name": "Bruno",
+        "type": "brew",
+        "package": "bruno",
+        "check": "command -v bruno",
+        "install": "brew install bruno",
+        "update": "brew upgrade bruno",
+        "required": false
+      },
+      {
+        "name": "Insomnia",
+        "type": "brew",
+        "package": "insomnia",
+        "check": "command -v insomnia",
+        "install": "brew install insomnia",
+        "update": "brew upgrade insomnia",
+        "required": false
+      },
+      {
+        "name": "HTTPie",
+        "type": "brew",
+        "package": "httpie",
+        "check": "command -v httpie",
+        "install": "brew install httpie",
+        "update": "brew upgrade httpie",
+        "required": false
+      }
+    ]
+  },
+  "development_tools_cloud_development": {
+    "description": "Development Tools > Cloud Development",
+    "tools": [
+      {
+        "name": "AWS CLI",
+        "type": "npm",
+        "package": "awscli",
+        "check": "command -v awscli",
+        "install": "npm install -g awscli",
+        "update": "npm update -g awscli",
+        "required": false
+      },
+      {
+        "name": "Azure CLI",
+        "type": "npm",
+        "package": "azure-cli",
+        "check": "command -v azure-cli",
+        "install": "npm install -g azure-cli",
+        "update": "npm update -g azure-cli",
+        "required": false
+      },
+      {
+        "name": "Google Cloud CLI",
+        "type": "npm",
+        "package": "google-cloud-sdk",
+        "check": "command -v google-cloud-sdk",
+        "install": "npm install -g google-cloud-sdk",
+        "update": "npm update -g google-cloud-sdk",
+        "required": false
+      },
+      {
+        "name": "Cloudflare Wrangler",
+        "type": "npm",
+        "package": "wrangler",
+        "check": "command -v wrangler",
+        "install": "npm install -g wrangler",
+        "update": "npm update -g wrangler",
+        "required": false
+      },
+      {
+        "name": "Firebase CLI",
+        "type": "npm",
+        "package": "firebase-tools",
+        "check": "command -v firebase-tools",
+        "install": "npm install -g firebase-tools",
+        "update": "npm update -g firebase-tools",
+        "required": false
+      },
+      {
+        "name": "Supabase CLI",
+        "type": "npm",
+        "package": "supabase",
+        "check": "command -v supabase",
+        "install": "npm install -g supabase",
+        "update": "npm update -g supabase",
+        "required": false
+      },
+      {
+        "name": "Railway CLI",
+        "type": "npm",
+        "package": "railway",
+        "check": "command -v railway",
+        "install": "npm install -g railway",
+        "update": "npm update -g railway",
+        "required": false
+      },
+      {
+        "name": "Neon CLI",
+        "type": "npm",
+        "package": "neon-cli",
+        "check": "command -v neon-cli",
+        "install": "npm install -g neon-cli",
+        "update": "npm update -g neon-cli",
+        "required": false
+      },
+      {
+        "name": "Vercel CLI",
+        "type": "npm",
+        "package": "vercel_cli",
+        "check": "command -v vercel_cli",
+        "install": "npm install -g vercel_cli",
+        "update": "npm update -g vercel_cli",
+        "required": false
+      },
+      {
+        "name": "Netlify CLI",
+        "type": "npm",
+        "package": "netlify-cli",
+        "check": "command -v netlify-cli",
+        "install": "npm install -g netlify-cli",
+        "update": "npm update -g netlify-cli",
+        "required": false
+      }
+    ]
+  },
+  "development_tools_database_tools": {
+    "description": "Development Tools > Database Tools",
+    "tools": [
+      {
+        "name": "TablePlus",
+        "type": "brew",
+        "package": "tableplus",
+        "check": "command -v tableplus",
+        "install": "brew install tableplus",
+        "update": "brew upgrade tableplus",
+        "required": false
+      }
+    ]
+  },
+  "mobile_development_android_development": {
+    "description": "Mobile Development > Android Development",
+    "tools": [
+      {
+        "name": "Android Studio",
+        "type": "brew",
+        "package": "android-studio",
+        "check": "open -Ra 'Android Studio'",
+        "install": "brew install --cask android-studio",
+        "update": "brew upgrade --cask android-studio",
+        "required": false
+      },
+      {
+        "name": "Android SDK",
+        "type": "brew",
+        "package": "android_sdk",
+        "check": "command -v sdkmanager",
+        "install": "brew install android_sdk",
+        "update": "brew upgrade android_sdk",
+        "required": false
+      },
+      {
+        "name": "SDK Manager",
+        "type": "brew",
+        "package": "sdk_manager",
+        "check": "command -v sdk_manager",
+        "install": "brew install sdk_manager",
+        "update": "brew upgrade sdk_manager",
+        "required": false
+      },
+      {
+        "name": "Build Tools",
+        "type": "brew",
+        "package": "build_tools",
+        "check": "command -v build_tools",
+        "install": "brew install build_tools",
+        "update": "brew upgrade build_tools",
+        "required": false
+      },
+      {
+        "name": "Platform Tools",
+        "type": "brew",
+        "package": "platform_tools",
+        "check": "command -v platform_tools",
+        "install": "brew install platform_tools",
+        "update": "brew upgrade platform_tools",
+        "required": false
+      },
+      {
+        "name": "Command-line Tools",
+        "type": "brew",
+        "package": "commandline_tools",
+        "check": "command -v commandline_tools",
+        "install": "brew install commandline_tools",
+        "update": "brew upgrade commandline_tools",
+        "required": false
+      },
+      {
+        "name": "Android Emulator",
+        "type": "brew",
+        "package": "android-platform-tools",
+        "check": "emulator -version",
+        "install": "brew install --cask android-platform-tools",
+        "update": "brew upgrade --cask android-platform-tools",
+        "required": false
+      },
+      {
+        "name": "NDK",
+        "type": "brew",
+        "package": "ndk",
+        "check": "command -v ndk",
+        "install": "brew install ndk",
+        "update": "brew upgrade ndk",
+        "required": false
+      },
+      {
+        "name": "CMake",
+        "type": "brew",
+        "package": "cmake",
+        "check": "command -v cmake",
+        "install": "brew install cmake",
+        "update": "brew upgrade cmake",
+        "required": false
+      }
+    ]
+  },
+  "mobile_development_flutter_development": {
+    "description": "Mobile Development > Flutter Development",
+    "tools": [
+      {
+        "name": "Flutter SDK",
+        "type": "brew",
+        "package": "flutter",
+        "check": "flutter --version",
+        "install": "brew install --cask flutter",
+        "update": "brew upgrade --cask flutter",
+        "required": false
+      },
+      {
+        "name": "Dart SDK",
+        "type": "brew",
+        "package": "dart",
+        "check": "dart --version",
+        "install": "brew install --cask dart",
+        "update": "brew upgrade --cask dart",
+        "required": false
+      },
+      {
+        "name": "FVM",
+        "type": "brew",
+        "package": "fvm",
+        "check": "command -v fvm",
+        "install": "brew install fvm",
+        "update": "brew upgrade fvm",
+        "required": false
+      },
+      {
+        "name": "Flutter Extension",
+        "type": "brew",
+        "package": "flutter_extension",
+        "check": "command -v flutter_extension",
+        "install": "brew install flutter_extension",
+        "update": "brew upgrade flutter_extension",
+        "required": false
+      },
+      {
+        "name": "Dart Extension",
+        "type": "brew",
+        "package": "dart_extension",
+        "check": "command -v dart_extension",
+        "install": "brew install dart_extension",
+        "update": "brew upgrade dart_extension",
+        "required": false
+      }
+    ]
+  },
+  "mobile_development_react_native": {
+    "description": "Mobile Development > React Native",
+    "tools": [
+      {
+        "name": "Node.js",
+        "type": "brew",
+        "package": "node",
+        "check": "command -v node",
+        "install": "brew install node",
+        "update": "brew upgrade node",
+        "required": false
+      },
+      {
+        "name": "npm",
+        "type": "npm",
+        "package": "npm",
+        "check": "npm --version",
+        "install": "npm install -g npm",
+        "update": "npm update -g npm",
+        "required": false
+      },
+      {
+        "name": "pnpm",
+        "type": "brew",
+        "package": "pnpm",
+        "check": "command -v pnpm",
+        "install": "brew install pnpm",
+        "update": "brew upgrade pnpm",
+        "required": false
+      },
+      {
+        "name": "Yarn",
+        "type": "npm",
+        "package": "yarn",
+        "check": "command -v yarn",
+        "install": "npm install -g yarn",
+        "update": "npm update -g yarn",
+        "required": false
+      },
+      {
+        "name": "React Native CLI",
+        "type": "npm",
+        "package": "react_native_cli",
+        "check": "command -v react_native_cli",
+        "install": "npm install -g react_native_cli",
+        "update": "npm update -g react_native_cli",
+        "required": false
+      },
+      {
+        "name": "Expo CLI",
+        "type": "npm",
+        "package": "expo_cli",
+        "check": "command -v expo_cli",
+        "install": "npm install -g expo_cli",
+        "update": "npm update -g expo_cli",
+        "required": false
+      },
+      {
+        "name": "Metro",
+        "type": "brew",
+        "package": "metro",
+        "check": "command -v metro",
+        "install": "brew install metro",
+        "update": "brew upgrade metro",
+        "required": false
+      },
+      {
+        "name": "Watchman",
+        "type": "brew",
+        "package": "watchman",
+        "check": "command -v watchman",
+        "install": "brew install watchman",
+        "update": "brew upgrade watchman",
+        "required": false
+      }
+    ]
+  },
+  "mobile_development_apple_development": {
+    "description": "Mobile Development > Apple Development",
+    "tools": [
+      {
+        "name": "Xcode",
+        "type": "brew",
+        "package": "xcode",
+        "check": "xcodebuild -version",
+        "install": "brew install --cask xcode",
+        "update": "brew upgrade --cask xcode",
+        "required": false
+      },
+      {
+        "name": "Swift",
+        "type": "brew",
+        "package": "swift",
+        "check": "command -v swift",
+        "install": "brew install swift",
+        "update": "brew upgrade swift",
+        "required": false
+      },
+      {
+        "name": "Swift Package Manager",
+        "type": "brew",
+        "package": "swift_package_manager",
+        "check": "command -v swift_package_manager",
+        "install": "brew install swift_package_manager",
+        "update": "brew upgrade swift_package_manager",
+        "required": false
+      },
+      {
+        "name": "CocoaPods",
+        "type": "brew",
+        "package": "cocoapods",
+        "check": "command -v cocoapods",
+        "install": "brew install cocoapods",
+        "update": "brew upgrade cocoapods",
+        "required": false
+      },
+      {
+        "name": "iOS Simulator",
+        "type": "brew",
+        "package": "ios_simulator",
+        "check": "command -v ios_simulator",
+        "install": "brew install ios_simulator",
+        "update": "brew upgrade ios_simulator",
+        "required": false
+      },
+      {
+        "name": "Instruments",
+        "type": "brew",
+        "package": "instruments",
+        "check": "command -v instruments",
+        "install": "brew install instruments",
+        "update": "brew upgrade instruments",
+        "required": false
+      },
+      {
+        "name": "TestFlight",
+        "type": "brew",
+        "package": "testflight",
+        "check": "command -v testflight",
+        "install": "brew install testflight",
+        "update": "brew upgrade testflight",
+        "required": false
+      }
+    ]
+  },
+  "mobile_development_mobile_testing": {
+    "description": "Mobile Development > Mobile Testing",
+    "tools": [
+      {
+        "name": "Maestro",
+        "type": "brew",
+        "package": "maestro",
+        "check": "command -v maestro",
+        "install": "brew install maestro",
+        "update": "brew upgrade maestro",
+        "required": false
+      },
+      {
+        "name": "Appium",
+        "type": "brew",
+        "package": "appium",
+        "check": "command -v appium",
+        "install": "brew install appium",
+        "update": "brew upgrade appium",
+        "required": false
+      },
+      {
+        "name": "Charles Proxy",
+        "type": "brew",
+        "package": "charles_proxy",
+        "check": "command -v charles_proxy",
+        "install": "brew install charles_proxy",
+        "update": "brew upgrade charles_proxy",
+        "required": false
+      },
+      {
+        "name": "mitmproxy",
+        "type": "brew",
+        "package": "mitmproxy",
+        "check": "command -v mitmproxy",
+        "install": "brew install mitmproxy",
+        "update": "brew upgrade mitmproxy",
+        "required": false
+      }
+    ]
+  },
+  "mobile_development_mobile_utilities": {
+    "description": "Mobile Development > Mobile Utilities",
+    "tools": [
+      {
+        "name": "adb",
+        "type": "brew",
+        "package": "adb",
+        "check": "adb --version",
+        "install": "brew install adb",
+        "update": "brew upgrade adb",
+        "required": false
+      },
+      {
+        "name": "fastboot",
+        "type": "brew",
+        "package": "fastboot",
+        "check": "fastboot --version",
+        "install": "brew install fastboot",
+        "update": "brew upgrade fastboot",
+        "required": false
+      },
+      {
+        "name": "scrcpy",
+        "type": "brew",
+        "package": "scrcpy",
+        "check": "scrcpy --version",
+        "install": "brew install scrcpy",
+        "update": "brew upgrade scrcpy",
+        "required": false
+      }
+    ]
+  },
+  "devops_containers_kubernetes": {
+    "description": "DevOps > Containers & Kubernetes",
+    "tools": [
+      {
+        "name": "Docker Desktop",
+        "type": "brew",
+        "package": "docker",
+        "check": "open -Ra Docker",
+        "install": "brew install --cask docker",
+        "update": "brew upgrade --cask docker",
+        "required": false
+      },
+      {
+        "name": "kubectl",
+        "type": "brew",
+        "package": "kubectl",
+        "check": "command -v kubectl",
+        "install": "brew install kubectl",
+        "update": "brew upgrade kubectl",
+        "required": false
+      },
+      {
+        "name": "Helm",
+        "type": "brew",
+        "package": "helm",
+        "check": "command -v helm",
+        "install": "brew install helm",
+        "update": "brew upgrade helm",
+        "required": false
+      }
+    ]
+  },
+  "devops_cloud_platforms": {
+    "description": "DevOps > Cloud Platforms",
+    "tools": [
+      {
+        "name": "AWS CLI",
+        "type": "npm",
+        "package": "awscli",
+        "check": "command -v awscli",
+        "install": "npm install -g awscli",
+        "update": "npm update -g awscli",
+        "required": false
+      },
+      {
+        "name": "SAM CLI",
+        "type": "npm",
+        "package": "sam_cli",
+        "check": "command -v sam_cli",
+        "install": "npm install -g sam_cli",
+        "update": "npm update -g sam_cli",
+        "required": false
+      },
+      {
+        "name": "CDK",
+        "type": "brew",
+        "package": "cdk",
+        "check": "command -v cdk",
+        "install": "brew install cdk",
+        "update": "brew upgrade cdk",
+        "required": false
+      },
+      {
+        "name": "Azure CLI",
+        "type": "npm",
+        "package": "azure-cli",
+        "check": "command -v azure-cli",
+        "install": "npm install -g azure-cli",
+        "update": "npm update -g azure-cli",
+        "required": false
+      },
+      {
+        "name": "Azure Developer CLI",
+        "type": "npm",
+        "package": "azure_developer_cli",
+        "check": "command -v azure_developer_cli",
+        "install": "npm install -g azure_developer_cli",
+        "update": "npm update -g azure_developer_cli",
+        "required": false
+      },
+      {
+        "name": "Google Cloud CLI",
+        "type": "npm",
+        "package": "google-cloud-sdk",
+        "check": "command -v google-cloud-sdk",
+        "install": "npm install -g google-cloud-sdk",
+        "update": "npm update -g google-cloud-sdk",
+        "required": false
+      },
+      {
+        "name": "Cloudflare Wrangler",
+        "type": "npm",
+        "package": "wrangler",
+        "check": "command -v wrangler",
+        "install": "npm install -g wrangler",
+        "update": "npm update -g wrangler",
+        "required": false
+      },
+      {
+        "name": "Vercel CLI",
+        "type": "npm",
+        "package": "vercel_cli",
+        "check": "command -v vercel_cli",
+        "install": "npm install -g vercel_cli",
+        "update": "npm update -g vercel_cli",
+        "required": false
+      },
+      {
+        "name": "Netlify CLI",
+        "type": "npm",
+        "package": "netlify-cli",
+        "check": "command -v netlify-cli",
+        "install": "npm install -g netlify-cli",
+        "update": "npm update -g netlify-cli",
+        "required": false
+      },
+      {
+        "name": "Firebase CLI",
+        "type": "npm",
+        "package": "firebase-tools",
+        "check": "command -v firebase-tools",
+        "install": "npm install -g firebase-tools",
+        "update": "npm update -g firebase-tools",
+        "required": false
+      },
+      {
+        "name": "Supabase CLI",
+        "type": "npm",
+        "package": "supabase",
+        "check": "command -v supabase",
+        "install": "npm install -g supabase",
+        "update": "npm update -g supabase",
+        "required": false
+      },
+      {
+        "name": "Railway CLI",
+        "type": "npm",
+        "package": "railway",
+        "check": "command -v railway",
+        "install": "npm install -g railway",
+        "update": "npm update -g railway",
+        "required": false
+      },
+      {
+        "name": "Neon CLI",
+        "type": "npm",
+        "package": "neon-cli",
+        "check": "command -v neon-cli",
+        "install": "npm install -g neon-cli",
+        "update": "npm update -g neon-cli",
+        "required": false
+      },
+      {
+        "name": "Flyctl",
+        "type": "npm",
+        "package": "flyctl",
+        "check": "command -v flyctl",
+        "install": "npm install -g flyctl",
+        "update": "npm update -g flyctl",
+        "required": false
+      },
+      {
+        "name": "doctl",
+        "type": "npm",
+        "package": "doctl",
+        "check": "command -v doctl",
+        "install": "npm install -g doctl",
+        "update": "npm update -g doctl",
+        "required": false
+      },
+      {
+        "name": "OCI CLI",
+        "type": "npm",
+        "package": "oci-cli",
+        "check": "command -v oci-cli",
+        "install": "npm install -g oci-cli",
+        "update": "npm update -g oci-cli",
+        "required": false
+      }
+    ]
+  },
+  "devops_cicd": {
+    "description": "DevOps > CI/CD",
+    "tools": [
+      {
+        "name": "GitHub Actions",
+        "type": "brew",
+        "package": "github_actions",
+        "check": "command -v github_actions",
+        "install": "brew install github_actions",
+        "update": "brew upgrade github_actions",
+        "required": false
+      },
+      {
+        "name": "GitHub CLI",
+        "type": "brew",
+        "package": "gh",
+        "check": "gh --version",
+        "install": "brew install gh",
+        "update": "brew upgrade gh",
+        "required": false
+      },
+      {
+        "name": "GitLab CLI",
+        "type": "npm",
+        "package": "gitlab-cli",
+        "check": "command -v gitlab-cli",
+        "install": "npm install -g gitlab-cli",
+        "update": "npm update -g gitlab-cli",
+        "required": false
+      },
+      {
+        "name": "Jenkins CLI",
+        "type": "npm",
+        "package": "jenkins-cli",
+        "check": "command -v jenkins-cli",
+        "install": "npm install -g jenkins-cli",
+        "update": "npm update -g jenkins-cli",
+        "required": false
+      },
+      {
+        "name": "CircleCI CLI",
+        "type": "npm",
+        "package": "circleci-cli",
+        "check": "command -v circleci-cli",
+        "install": "npm install -g circleci-cli",
+        "update": "npm update -g circleci-cli",
+        "required": false
+      },
+      {
+        "name": "Buildkite CLI",
+        "type": "npm",
+        "package": "buildkite-cli",
+        "check": "command -v buildkite-cli",
+        "install": "npm install -g buildkite-cli",
+        "update": "npm update -g buildkite-cli",
+        "required": false
+      },
+      {
+        "name": "act",
+        "type": "npm",
+        "package": "act",
+        "check": "command -v act",
+        "install": "npm install -g act",
+        "update": "npm update -g act",
+        "required": false
+      }
+    ]
+  },
+  "extras_ai_tools": {
+    "description": "Extras > AI Tools",
+    "tools": [
+      {
+        "name": "Continue.dev",
+        "type": "brew",
+        "package": "continuedev",
+        "check": "command -v continuedev",
+        "install": "brew install continuedev",
+        "update": "brew upgrade continuedev",
+        "required": false
+      },
+      {
+        "name": "Aider",
+        "type": "brew",
+        "package": "aider",
+        "check": "command -v aider",
+        "install": "brew install aider",
+        "update": "brew upgrade aider",
+        "required": false
+      },
+      {
+        "name": "OpenCode AI",
+        "type": "brew",
+        "package": "opencode_ai",
+        "check": "command -v opencode_ai",
+        "install": "brew install opencode_ai",
+        "update": "brew upgrade opencode_ai",
+        "required": false
+      },
+      {
+        "name": "Ollama",
+        "type": "brew",
+        "package": "ollama",
+        "check": "command -v ollama",
+        "install": "brew install ollama",
+        "update": "brew upgrade ollama",
+        "required": false
+      },
+      {
+        "name": "LM Studio",
+        "type": "brew",
+        "package": "lm_studio",
+        "check": "command -v lm_studio",
+        "install": "brew install lm_studio",
+        "update": "brew upgrade lm_studio",
+        "required": false
+      },
+      {
+        "name": "Open WebUI",
+        "type": "brew",
+        "package": "open_webui",
+        "check": "command -v open_webui",
+        "install": "brew install open_webui",
+        "update": "brew upgrade open_webui",
+        "required": false
+      },
+      {
+        "name": "MCP Inspector",
+        "type": "brew",
+        "package": "mcp_inspector",
+        "check": "command -v mcp_inspector",
+        "install": "brew install mcp_inspector",
+        "update": "brew upgrade mcp_inspector",
+        "required": false
+      }
+    ]
+  },
+  "extras_ides": {
+    "description": "Extras > IDEs",
+    "tools": [
+      {
+        "name": "JetBrains Toolbox",
+        "type": "brew",
+        "package": "jetbrains-toolbox",
+        "check": "open -Ra 'JetBrains Toolbox'",
+        "install": "brew install --cask jetbrains-toolbox",
+        "update": "brew upgrade --cask jetbrains-toolbox",
+        "required": false
+      },
+      {
+        "name": "IntelliJ IDEA",
+        "type": "brew",
+        "package": "intellij_idea",
+        "check": "command -v intellij_idea",
+        "install": "brew install intellij_idea",
+        "update": "brew upgrade intellij_idea",
+        "required": false
+      },
+      {
+        "name": "PyCharm",
+        "type": "brew",
+        "package": "pycharm",
+        "check": "command -v pycharm",
+        "install": "brew install pycharm",
+        "update": "brew upgrade pycharm",
+        "required": false
+      },
+      {
+        "name": "WebStorm",
+        "type": "brew",
+        "package": "webstorm",
+        "check": "command -v webstorm",
+        "install": "brew install webstorm",
+        "update": "brew upgrade webstorm",
+        "required": false
+      },
+      {
+        "name": "GoLand",
+        "type": "brew",
+        "package": "goland",
+        "check": "command -v goland",
+        "install": "brew install goland",
+        "update": "brew upgrade goland",
+        "required": false
+      },
+      {
+        "name": "Rider",
+        "type": "brew",
+        "package": "rider",
+        "check": "command -v rider",
+        "install": "brew install rider",
+        "update": "brew upgrade rider",
+        "required": false
+      },
+      {
+        "name": "CLion",
+        "type": "brew",
+        "package": "clion",
+        "check": "command -v clion",
+        "install": "brew install clion",
+        "update": "brew upgrade clion",
+        "required": false
+      },
+      {
+        "name": "PhpStorm",
+        "type": "brew",
+        "package": "phpstorm",
+        "check": "command -v phpstorm",
+        "install": "brew install phpstorm",
+        "update": "brew upgrade phpstorm",
+        "required": false
+      },
+      {
+        "name": "RubyMine",
+        "type": "brew",
+        "package": "rubymine",
+        "check": "command -v rubymine",
+        "install": "brew install rubymine",
+        "update": "brew upgrade rubymine",
+        "required": false
+      },
+      {
+        "name": "DataGrip",
+        "type": "brew",
+        "package": "datagrip",
+        "check": "command -v datagrip",
+        "install": "brew install datagrip",
+        "update": "brew upgrade datagrip",
+        "required": false
+      },
+      {
+        "name": "Fleet",
+        "type": "brew",
+        "package": "fleet",
+        "check": "command -v fleet",
+        "install": "brew install fleet",
+        "update": "brew upgrade fleet",
+        "required": false
+      },
+      {
+        "name": "Zed",
+        "type": "brew",
+        "package": "zed",
+        "check": "command -v zed",
+        "install": "brew install zed",
+        "update": "brew upgrade zed",
+        "required": false
+      },
+      {
+        "name": "Neovim",
+        "type": "brew",
+        "package": "neovim",
+        "check": "command -v neovim",
+        "install": "brew install neovim",
+        "update": "brew upgrade neovim",
+        "required": false
+      },
+      {
+        "name": "Vim",
+        "type": "brew",
+        "package": "vim",
+        "check": "command -v vim",
+        "install": "brew install vim",
+        "update": "brew upgrade vim",
+        "required": false
+      }
+    ]
+  },
+  "extras_languages": {
+    "description": "Extras > Languages",
+    "tools": [
+      {
+        "name": "Go",
+        "type": "brew",
+        "package": "go",
+        "check": "command -v go",
+        "install": "brew install go",
+        "update": "brew upgrade go",
+        "required": false
+      },
+      {
+        "name": "Rust",
+        "type": "brew",
+        "package": "rust",
+        "check": "command -v rust",
+        "install": "brew install rust",
+        "update": "brew upgrade rust",
+        "required": false
+      },
+      {
+        "name": "PHP",
+        "type": "brew",
+        "package": "php",
+        "check": "command -v php",
+        "install": "brew install php",
+        "update": "brew upgrade php",
+        "required": false
+      },
+      {
+        "name": "Ruby",
+        "type": "brew",
+        "package": "ruby",
+        "check": "command -v ruby",
+        "install": "brew install ruby",
+        "update": "brew upgrade ruby",
+        "required": false
+      },
+      {
+        "name": "Kotlin",
+        "type": "brew",
+        "package": "kotlin",
+        "check": "command -v kotlin",
+        "install": "brew install kotlin",
+        "update": "brew upgrade kotlin",
+        "required": false
+      },
+      {
+        "name": "Scala",
+        "type": "brew",
+        "package": "scala",
+        "check": "command -v scala",
+        "install": "brew install scala",
+        "update": "brew upgrade scala",
+        "required": false
+      },
+      {
+        "name": "Dart",
+        "type": "brew",
+        "package": "dart",
+        "check": "command -v dart",
+        "install": "brew install --cask dart",
+        "update": "brew upgrade --cask dart",
+        "required": false
+      },
+      {
+        "name": "Swift",
+        "type": "brew",
+        "package": "swift",
+        "check": "command -v swift",
+        "install": "brew install swift",
+        "update": "brew upgrade swift",
+        "required": false
+      },
+      {
+        "name": "Perl",
+        "type": "brew",
+        "package": "perl",
+        "check": "command -v perl",
+        "install": "brew install perl",
+        "update": "brew upgrade perl",
+        "required": false
+      },
+      {
+        "name": "Lua",
+        "type": "brew",
+        "package": "lua",
+        "check": "command -v lua",
+        "install": "brew install lua",
+        "update": "brew upgrade lua",
+        "required": false
+      },
+      {
+        "name": "Elixir",
+        "type": "brew",
+        "package": "elixir",
+        "check": "command -v elixir",
+        "install": "brew install elixir",
+        "update": "brew upgrade elixir",
+        "required": false
+      },
+      {
+        "name": "Haskell",
+        "type": "brew",
+        "package": "haskell",
+        "check": "command -v haskell",
+        "install": "brew install haskell",
+        "update": "brew upgrade haskell",
+        "required": false
+      },
+      {
+        "name": "Zig",
+        "type": "brew",
+        "package": "zig",
+        "check": "command -v zig",
+        "install": "brew install zig",
+        "update": "brew upgrade zig",
+        "required": false
+      },
+      {
+        "name": "R",
+        "type": "brew",
+        "package": "r",
+        "check": "command -v r",
+        "install": "brew install r",
+        "update": "brew upgrade r",
+        "required": false
+      },
+      {
+        "name": "Kotlin",
+        "type": "brew",
+        "package": "kotlin",
+        "check": "command -v kotlin",
+        "install": "brew install kotlin",
+        "update": "brew upgrade kotlin",
+        "required": false
+      }
+    ]
+  },
+  "extras_package_managers": {
+    "description": "Extras > Package Managers",
+    "tools": [
+      {
+        "name": "Yarn",
+        "type": "npm",
+        "package": "yarn",
+        "check": "command -v yarn",
+        "install": "npm install -g yarn",
+        "update": "npm update -g yarn",
+        "required": false
+      },
+      {
+        "name": "Bun",
+        "type": "npm",
+        "package": "bun",
+        "check": "command -v bun",
+        "install": "npm install -g bun",
+        "update": "npm update -g bun",
+        "required": false
+      },
+      {
+        "name": "Deno",
+        "type": "npm",
+        "package": "deno",
+        "check": "command -v deno",
+        "install": "npm install -g deno",
+        "update": "npm update -g deno",
+        "required": false
+      },
+      {
+        "name": "Cargo",
+        "type": "npm",
+        "package": "cargo",
+        "check": "command -v cargo",
+        "install": "npm install -g cargo",
+        "update": "npm update -g cargo",
+        "required": false
+      },
+      {
+        "name": "SDKMAN",
+        "type": "npm",
+        "package": "sdkman",
+        "check": "command -v sdkman",
+        "install": "npm install -g sdkman",
+        "update": "npm update -g sdkman",
+        "required": false
+      },
+      {
+        "name": "Poetry",
+        "type": "npm",
+        "package": "poetry",
+        "check": "command -v poetry",
+        "install": "npm install -g poetry",
+        "update": "npm update -g poetry",
+        "required": false
+      },
+      {
+        "name": "uv",
+        "type": "brew",
+        "package": "uv",
+        "check": "command -v uv",
+        "install": "brew install uv",
+        "update": "brew upgrade uv",
+        "required": false
+      },
+      {
+        "name": "Rustup",
+        "type": "npm",
+        "package": "rustup",
+        "check": "command -v rustup",
+        "install": "npm install -g rustup",
+        "update": "npm update -g rustup",
+        "required": false
+      },
+      {
+        "name": "Go",
+        "type": "brew",
+        "package": "go",
+        "check": "command -v go",
+        "install": "brew install go",
+        "update": "brew upgrade go",
+        "required": false
+      }
+    ]
+  },
+  "extras_databases_sql": {
+    "description": "Extras > Databases > SQL",
+    "tools": [
+      {
+        "name": "PostgreSQL",
+        "type": "brew",
+        "package": "postgresql",
+        "check": "command -v postgresql",
+        "install": "brew install postgresql",
+        "update": "brew upgrade postgresql",
+        "required": false
+      },
+      {
+        "name": "MySQL",
+        "type": "brew",
+        "package": "mysql",
+        "check": "command -v mysql",
+        "install": "brew install mysql",
+        "update": "brew upgrade mysql",
+        "required": false
+      },
+      {
+        "name": "MariaDB",
+        "type": "brew",
+        "package": "mariadb",
+        "check": "command -v mariadb",
+        "install": "brew install mariadb",
+        "update": "brew upgrade mariadb",
+        "required": false
+      },
+      {
+        "name": "SQLite",
+        "type": "brew",
+        "package": "sqlite",
+        "check": "command -v sqlite",
+        "install": "brew install sqlite",
+        "update": "brew upgrade sqlite",
+        "required": false
+      }
+    ]
+  },
+  "extras_databases_nosql": {
+    "description": "Extras > Databases > NoSQL",
+    "tools": [
+      {
+        "name": "MongoDB",
+        "type": "brew",
+        "package": "mongodb",
+        "check": "command -v mongodb",
+        "install": "brew install mongodb",
+        "update": "brew upgrade mongodb",
+        "required": false
+      },
+      {
+        "name": "Redis",
+        "type": "brew",
+        "package": "redis",
+        "check": "command -v redis",
+        "install": "brew install redis",
+        "update": "brew upgrade redis",
+        "required": false
+      },
+      {
+        "name": "Cassandra",
+        "type": "brew",
+        "package": "cassandra",
+        "check": "command -v cassandra",
+        "install": "brew install cassandra",
+        "update": "brew upgrade cassandra",
+        "required": false
+      },
+      {
+        "name": "CouchDB",
+        "type": "brew",
+        "package": "couchdb",
+        "check": "command -v couchdb",
+        "install": "brew install couchdb",
+        "update": "brew upgrade couchdb",
+        "required": false
+      },
+      {
+        "name": "Elasticsearch",
+        "type": "brew",
+        "package": "elasticsearch",
+        "check": "command -v elasticsearch",
+        "install": "brew install elasticsearch",
+        "update": "brew upgrade elasticsearch",
+        "required": false
+      }
+    ]
+  },
+  "extras_database_clients": {
+    "description": "Extras > Database Clients",
+    "tools": [
+      {
+        "name": "DBeaver",
+        "type": "brew",
+        "package": "dbeaver-community",
+        "check": "open -Ra 'DBeaver'",
+        "install": "brew install --cask dbeaver-community",
+        "update": "brew upgrade --cask dbeaver-community",
+        "required": false
+      },
+      {
+        "name": "pgAdmin",
+        "type": "brew",
+        "package": "pgadmin",
+        "check": "command -v pgadmin",
+        "install": "brew install pgadmin",
+        "update": "brew upgrade pgadmin",
+        "required": false
+      },
+      {
+        "name": "MongoDB Compass",
+        "type": "brew",
+        "package": "mongodb-compass",
+        "check": "open -Ra 'MongoDB Compass'",
+        "install": "brew install --cask mongodb-compass",
+        "update": "brew upgrade --cask mongodb-compass",
+        "required": false
+      },
+      {
+        "name": "Redis Insight",
+        "type": "brew",
+        "package": "redisinsight",
+        "check": "open -Ra 'Redis Insight'",
+        "install": "brew install --cask redisinsight",
+        "update": "brew upgrade --cask redisinsight",
+        "required": false
+      },
+      {
+        "name": "MySQL Workbench",
+        "type": "brew",
+        "package": "mysqlworkbench",
+        "check": "open -Ra 'MySQL Workbench'",
+        "install": "brew install --cask mysqlworkbench",
+        "update": "brew upgrade --cask mysqlworkbench",
+        "required": false
+      },
+      {
+        "name": "Azure Data Studio",
+        "type": "brew",
+        "package": "azure_data_studio",
+        "check": "command -v azure_data_studio",
+        "install": "brew install azure_data_studio",
+        "update": "brew upgrade azure_data_studio",
+        "required": false
+      }
+    ]
+  },
+  "extras_embedded_development": {
+    "description": "Extras > Embedded Development",
+    "tools": [
+      {
+        "name": "PlatformIO",
+        "type": "brew",
+        "package": "platformio",
+        "check": "command -v platformio",
+        "install": "brew install platformio",
+        "update": "brew upgrade platformio",
+        "required": false
+      },
+      {
+        "name": "Arduino IDE",
+        "type": "brew",
+        "package": "arduino_ide",
+        "check": "command -v arduino_ide",
+        "install": "brew install arduino_ide",
+        "update": "brew upgrade arduino_ide",
+        "required": false
+      },
+      {
+        "name": "ESP-IDF",
+        "type": "brew",
+        "package": "espidf",
+        "check": "command -v espidf",
+        "install": "brew install espidf",
+        "update": "brew upgrade espidf",
+        "required": false
+      },
+      {
+        "name": "STM32CubeIDE",
+        "type": "brew",
+        "package": "stm32cubeide",
+        "check": "command -v stm32cubeide",
+        "install": "brew install stm32cubeide",
+        "update": "brew upgrade stm32cubeide",
+        "required": false
+      },
+      {
+        "name": "STM32CubeProgrammer",
+        "type": "brew",
+        "package": "stm32cubeprogrammer",
+        "check": "command -v stm32cubeprogrammer",
+        "install": "brew install stm32cubeprogrammer",
+        "update": "brew upgrade stm32cubeprogrammer",
+        "required": false
+      },
+      {
+        "name": "Zephyr SDK",
+        "type": "brew",
+        "package": "zephyr_sdk",
+        "check": "command -v zephyr_sdk",
+        "install": "brew install zephyr_sdk",
+        "update": "brew upgrade zephyr_sdk",
+        "required": false
+      }
+    ]
+  },
+  "extras_virtualization": {
+    "description": "Extras > Virtualization",
+    "tools": [
+      {
+        "name": "OrbStack",
+        "type": "brew",
+        "package": "orbstack",
+        "check": "command -v orbstack",
+        "install": "brew install orbstack",
+        "update": "brew upgrade orbstack",
+        "required": false
+      },
+      {
+        "name": "Colima",
+        "type": "brew",
+        "package": "colima",
+        "check": "command -v colima",
+        "install": "brew install colima",
+        "update": "brew upgrade colima",
+        "required": false
+      },
+      {
+        "name": "Podman",
+        "type": "brew",
+        "package": "podman",
+        "check": "command -v podman",
+        "install": "brew install podman",
+        "update": "brew upgrade podman",
+        "required": false
+      },
+      {
+        "name": "Lima",
+        "type": "brew",
+        "package": "lima",
+        "check": "command -v lima",
+        "install": "brew install lima",
+        "update": "brew upgrade lima",
+        "required": false
+      },
+      {
+        "name": "Rancher Desktop",
+        "type": "brew",
+        "package": "rancher_desktop",
+        "check": "command -v rancher_desktop",
+        "install": "brew install rancher_desktop",
+        "update": "brew upgrade rancher_desktop",
+        "required": false
+      },
+      {
+        "name": "VirtualBox",
+        "type": "brew",
+        "package": "virtualbox",
+        "check": "command -v virtualbox",
+        "install": "brew install virtualbox",
+        "update": "brew upgrade virtualbox",
+        "required": false
+      },
+      {
+        "name": "VMware Workstation",
+        "type": "brew",
+        "package": "vmware_workstation",
+        "check": "command -v vmware_workstation",
+        "install": "brew install vmware_workstation",
+        "update": "brew upgrade vmware_workstation",
+        "required": false
+      },
+      {
+        "name": "VMware Fusion",
+        "type": "brew",
+        "package": "vmware_fusion",
+        "check": "command -v vmware_fusion",
+        "install": "brew install vmware_fusion",
+        "update": "brew upgrade vmware_fusion",
+        "required": false
+      },
+      {
+        "name": "UTM",
+        "type": "brew",
+        "package": "utm",
+        "check": "command -v utm",
+        "install": "brew install utm",
+        "update": "brew upgrade utm",
+        "required": false
+      },
+      {
+        "name": "QEMU",
+        "type": "brew",
+        "package": "qemu",
+        "check": "command -v qemu",
+        "install": "brew install qemu",
+        "update": "brew upgrade qemu",
+        "required": false
+      },
+      {
+        "name": "Multipass",
+        "type": "brew",
+        "package": "multipass",
+        "check": "command -v multipass",
+        "install": "brew install multipass",
+        "update": "brew upgrade multipass",
+        "required": false
+      },
+      {
+        "name": "Vagrant",
+        "type": "brew",
+        "package": "vagrant",
+        "check": "command -v vagrant",
+        "install": "brew install vagrant",
+        "update": "brew upgrade vagrant",
+        "required": false
+      }
+    ]
+  },
+  "extras_kubernetes": {
+    "description": "Extras > Kubernetes",
+    "tools": [
+      {
+        "name": "Minikube",
+        "type": "brew",
+        "package": "minikube",
+        "check": "command -v minikube",
+        "install": "brew install minikube",
+        "update": "brew upgrade minikube",
+        "required": false
+      },
+      {
+        "name": "kind",
+        "type": "brew",
+        "package": "kind",
+        "check": "command -v kind",
+        "install": "brew install kind",
+        "update": "brew upgrade kind",
+        "required": false
+      },
+      {
+        "name": "Kustomize",
+        "type": "brew",
+        "package": "kustomize",
+        "check": "command -v kustomize",
+        "install": "brew install kustomize",
+        "update": "brew upgrade kustomize",
+        "required": false
+      },
+      {
+        "name": "k9s",
+        "type": "brew",
+        "package": "k9s",
+        "check": "command -v k9s",
+        "install": "brew install k9s",
+        "update": "brew upgrade k9s",
+        "required": false
+      },
+      {
+        "name": "Lens",
+        "type": "brew",
+        "package": "lens",
+        "check": "command -v lens",
+        "install": "brew install lens",
+        "update": "brew upgrade lens",
+        "required": false
+      },
+      {
+        "name": "OpenShift CLI",
+        "type": "npm",
+        "package": "openshift_cli",
+        "check": "command -v openshift_cli",
+        "install": "npm install -g openshift_cli",
+        "update": "npm update -g openshift_cli",
+        "required": false
+      }
+    ]
+  },
+  "extras_infrastructure": {
+    "description": "Extras > Infrastructure",
+    "tools": [
+      {
+        "name": "Terraform",
+        "type": "brew",
+        "package": "terraform",
+        "check": "command -v terraform",
+        "install": "brew install terraform",
+        "update": "brew upgrade terraform",
+        "required": false
+      },
+      {
+        "name": "OpenTofu",
+        "type": "brew",
+        "package": "opentofu",
+        "check": "command -v opentofu",
+        "install": "brew install opentofu",
+        "update": "brew upgrade opentofu",
+        "required": false
+      },
+      {
+        "name": "Pulumi",
+        "type": "brew",
+        "package": "pulumi",
+        "check": "command -v pulumi",
+        "install": "brew install pulumi",
+        "update": "brew upgrade pulumi",
+        "required": false
+      },
+      {
+        "name": "Ansible",
+        "type": "brew",
+        "package": "ansible",
+        "check": "command -v ansible",
+        "install": "brew install ansible",
+        "update": "brew upgrade ansible",
+        "required": false
+      },
+      {
+        "name": "Packer",
+        "type": "brew",
+        "package": "packer",
+        "check": "command -v packer",
+        "install": "brew install packer",
+        "update": "brew upgrade packer",
+        "required": false
+      }
+    ]
+  },
+  "extras_monitoring": {
+    "description": "Extras > Monitoring",
+    "tools": [
+      {
+        "name": "Prometheus",
+        "type": "brew",
+        "package": "prometheus",
+        "check": "command -v prometheus",
+        "install": "brew install prometheus",
+        "update": "brew upgrade prometheus",
+        "required": false
+      },
+      {
+        "name": "Grafana",
+        "type": "brew",
+        "package": "grafana",
+        "check": "command -v grafana",
+        "install": "brew install grafana",
+        "update": "brew upgrade grafana",
+        "required": false
+      },
+      {
+        "name": "Loki",
+        "type": "brew",
+        "package": "loki",
+        "check": "command -v loki",
+        "install": "brew install loki",
+        "update": "brew upgrade loki",
+        "required": false
+      },
+      {
+        "name": "Tempo",
+        "type": "brew",
+        "package": "tempo",
+        "check": "command -v tempo",
+        "install": "brew install tempo",
+        "update": "brew upgrade tempo",
+        "required": false
+      },
+      {
+        "name": "Jaeger",
+        "type": "brew",
+        "package": "jaeger",
+        "check": "command -v jaeger",
+        "install": "brew install jaeger",
+        "update": "brew upgrade jaeger",
+        "required": false
+      },
+      {
+        "name": "OpenTelemetry",
+        "type": "brew",
+        "package": "opentelemetry",
+        "check": "command -v opentelemetry",
+        "install": "brew install opentelemetry",
+        "update": "brew upgrade opentelemetry",
+        "required": false
+      },
+      {
+        "name": "Datadog CLI",
+        "type": "npm",
+        "package": "datadog_cli",
+        "check": "command -v datadog_cli",
+        "install": "npm install -g datadog_cli",
+        "update": "npm update -g datadog_cli",
+        "required": false
+      },
+      {
+        "name": "New Relic CLI",
+        "type": "npm",
+        "package": "new_relic_cli",
+        "check": "command -v new_relic_cli",
+        "install": "npm install -g new_relic_cli",
+        "update": "npm update -g new_relic_cli",
+        "required": false
+      },
+      {
+        "name": "Sentry CLI",
+        "type": "npm",
+        "package": "sentry_cli",
+        "check": "command -v sentry_cli",
+        "install": "npm install -g sentry_cli",
+        "update": "npm update -g sentry_cli",
+        "required": false
+      }
+    ]
+  },
+  "extras_security": {
+    "description": "Extras > Security",
+    "tools": [
+      {
+        "name": "Trivy",
+        "type": "brew",
+        "package": "trivy",
+        "check": "command -v trivy",
+        "install": "brew install trivy",
+        "update": "brew upgrade trivy",
+        "required": false
+      },
+      {
+        "name": "Gitleaks",
+        "type": "brew",
+        "package": "gitleaks",
+        "check": "command -v gitleaks",
+        "install": "brew install gitleaks",
+        "update": "brew upgrade gitleaks",
+        "required": false
+      },
+      {
+        "name": "Checkov",
+        "type": "brew",
+        "package": "checkov",
+        "check": "command -v checkov",
+        "install": "brew install checkov",
+        "update": "brew upgrade checkov",
+        "required": false
+      },
+      {
+        "name": "tfsec",
+        "type": "brew",
+        "package": "tfsec",
+        "check": "command -v tfsec",
+        "install": "brew install tfsec",
+        "update": "brew upgrade tfsec",
+        "required": false
+      },
+      {
+        "name": "Syft",
+        "type": "brew",
+        "package": "syft",
+        "check": "command -v syft",
+        "install": "brew install syft",
+        "update": "brew upgrade syft",
+        "required": false
+      },
+      {
+        "name": "Grype",
+        "type": "brew",
+        "package": "grype",
+        "check": "command -v grype",
+        "install": "brew install grype",
+        "update": "brew upgrade grype",
+        "required": false
+      },
+      {
+        "name": "Cosign",
+        "type": "brew",
+        "package": "cosign",
+        "check": "command -v cosign",
+        "install": "brew install cosign",
+        "update": "brew upgrade cosign",
+        "required": false
+      },
+      {
+        "name": "SOPS",
+        "type": "brew",
+        "package": "sops",
+        "check": "command -v sops",
+        "install": "brew install sops",
+        "update": "brew upgrade sops",
+        "required": false
+      },
+      {
+        "name": "age",
+        "type": "brew",
+        "package": "age",
+        "check": "command -v age",
+        "install": "brew install age",
+        "update": "brew upgrade age",
+        "required": false
+      },
+      {
+        "name": "OWASP Dependency Check",
+        "type": "brew",
+        "package": "owasp_dependency_check",
+        "check": "command -v owasp_dependency_check",
+        "install": "brew install owasp_dependency_check",
+        "update": "brew upgrade owasp_dependency_check",
+        "required": false
+      }
+    ]
+  },
+  "extras_secret_management": {
+    "description": "Extras > Secret Management",
+    "tools": [
+      {
+        "name": "Vault",
+        "type": "brew",
+        "package": "vault",
+        "check": "command -v vault",
+        "install": "brew install vault",
+        "update": "brew upgrade vault",
+        "required": false
+      },
+      {
+        "name": "Doppler",
+        "type": "brew",
+        "package": "doppler",
+        "check": "command -v doppler",
+        "install": "brew install doppler",
+        "update": "brew upgrade doppler",
+        "required": false
+      },
+      {
+        "name": "Infisical",
+        "type": "brew",
+        "package": "infisical",
+        "check": "command -v infisical",
+        "install": "brew install infisical",
+        "update": "brew upgrade infisical",
+        "required": false
+      },
+      {
+        "name": "1Password CLI",
+        "type": "npm",
+        "package": "1password_cli",
+        "check": "command -v 1password_cli",
+        "install": "npm install -g 1password_cli",
+        "update": "npm update -g 1password_cli",
+        "required": false
+      }
+    ]
+  },
+  "extras_networking": {
+    "description": "Extras > Networking",
+    "tools": [
+      {
+        "name": "NGINX",
+        "type": "brew",
+        "package": "nginx",
+        "check": "command -v nginx",
+        "install": "brew install nginx",
+        "update": "brew upgrade nginx",
+        "required": false
+      },
+      {
+        "name": "Caddy",
+        "type": "brew",
+        "package": "caddy",
+        "check": "command -v caddy",
+        "install": "brew install caddy",
+        "update": "brew upgrade caddy",
+        "required": false
+      },
+      {
+        "name": "Traefik",
+        "type": "brew",
+        "package": "traefik",
+        "check": "command -v traefik",
+        "install": "brew install traefik",
+        "update": "brew upgrade traefik",
+        "required": false
+      },
+      {
+        "name": "HAProxy",
+        "type": "brew",
+        "package": "haproxy",
+        "check": "command -v haproxy",
+        "install": "brew install haproxy",
+        "update": "brew upgrade haproxy",
+        "required": false
+      },
+      {
+        "name": "ngrok",
+        "type": "brew",
+        "package": "ngrok",
+        "check": "command -v ngrok",
+        "install": "brew install ngrok",
+        "update": "brew upgrade ngrok",
+        "required": false
+      },
+      {
+        "name": "Cloudflared",
+        "type": "brew",
+        "package": "cloudflared",
+        "check": "command -v cloudflared",
+        "install": "brew install cloudflared",
+        "update": "brew upgrade cloudflared",
+        "required": false
+      },
+      {
+        "name": "Tailscale",
+        "type": "brew",
+        "package": "tailscale",
+        "check": "command -v tailscale",
+        "install": "brew install tailscale",
+        "update": "brew upgrade tailscale",
+        "required": false
+      },
+      {
+        "name": "WireGuard",
+        "type": "brew",
+        "package": "wireguard",
+        "check": "command -v wireguard",
+        "install": "brew install wireguard",
+        "update": "brew upgrade wireguard",
+        "required": false
+      }
+    ]
+  },
+  "extras_testing": {
+    "description": "Extras > Testing",
+    "tools": [
+      {
+        "name": "Playwright",
+        "type": "brew",
+        "package": "playwright",
+        "check": "command -v playwright",
+        "install": "brew install playwright",
+        "update": "brew upgrade playwright",
+        "required": false
+      },
+      {
+        "name": "Cypress",
+        "type": "brew",
+        "package": "cypress",
+        "check": "command -v cypress",
+        "install": "brew install cypress",
+        "update": "brew upgrade cypress",
+        "required": false
+      },
+      {
+        "name": "Selenium",
+        "type": "brew",
+        "package": "selenium",
+        "check": "command -v selenium",
+        "install": "brew install selenium",
+        "update": "brew upgrade selenium",
+        "required": false
+      },
+      {
+        "name": "Vitest",
+        "type": "brew",
+        "package": "vitest",
+        "check": "command -v vitest",
+        "install": "brew install vitest",
+        "update": "brew upgrade vitest",
+        "required": false
+      },
+      {
+        "name": "Jest",
+        "type": "brew",
+        "package": "jest",
+        "check": "command -v jest",
+        "install": "brew install jest",
+        "update": "brew upgrade jest",
+        "required": false
+      },
+      {
+        "name": "Mocha",
+        "type": "brew",
+        "package": "mocha",
+        "check": "command -v mocha",
+        "install": "brew install mocha",
+        "update": "brew upgrade mocha",
+        "required": false
+      },
+      {
+        "name": "JUnit",
+        "type": "brew",
+        "package": "junit",
+        "check": "command -v junit",
+        "install": "brew install junit",
+        "update": "brew upgrade junit",
+        "required": false
+      },
+      {
+        "name": "NUnit",
+        "type": "brew",
+        "package": "nunit",
+        "check": "command -v nunit",
+        "install": "brew install nunit",
+        "update": "brew upgrade nunit",
+        "required": false
+      },
+      {
+        "name": "xUnit",
+        "type": "brew",
+        "package": "xunit",
+        "check": "command -v xunit",
+        "install": "brew install xunit",
+        "update": "brew upgrade xunit",
+        "required": false
+      },
+      {
+        "name": "PHPUnit",
+        "type": "brew",
+        "package": "phpunit",
+        "check": "command -v phpunit",
+        "install": "brew install phpunit",
+        "update": "brew upgrade phpunit",
+        "required": false
+      }
+    ]
+  },
+  "extras_build_tools": {
+    "description": "Extras > Build Tools",
+    "tools": [
+      {
+        "name": "CMake",
+        "type": "brew",
+        "package": "cmake",
+        "check": "command -v cmake",
+        "install": "brew install cmake",
+        "update": "brew upgrade cmake",
+        "required": false
+      },
+      {
+        "name": "Ninja",
+        "type": "brew",
+        "package": "ninja",
+        "check": "command -v ninja",
+        "install": "brew install ninja",
+        "update": "brew upgrade ninja",
+        "required": false
+      },
+      {
+        "name": "Make",
+        "type": "brew",
+        "package": "make",
+        "check": "command -v make",
+        "install": "brew install make",
+        "update": "brew upgrade make",
+        "required": false
+      },
+      {
+        "name": "Meson",
+        "type": "brew",
+        "package": "meson",
+        "check": "command -v meson",
+        "install": "brew install meson",
+        "update": "brew upgrade meson",
+        "required": false
+      },
+      {
+        "name": "Bazel",
+        "type": "brew",
+        "package": "bazel",
+        "check": "command -v bazel",
+        "install": "brew install bazel",
+        "update": "brew upgrade bazel",
+        "required": false
+      }
+    ]
+  },
+  "extras_utilities": {
+    "description": "Extras > Utilities",
+    "tools": [
+      {
+        "name": "jq",
+        "type": "brew",
+        "package": "jq",
+        "check": "command -v jq",
+        "install": "brew install jq",
+        "update": "brew upgrade jq",
+        "required": false
+      },
+      {
+        "name": "yq",
+        "type": "brew",
+        "package": "yq",
+        "check": "command -v yq",
+        "install": "brew install yq",
+        "update": "brew upgrade yq",
+        "required": false
+      },
+      {
+        "name": "ripgrep",
+        "type": "brew",
+        "package": "ripgrep",
+        "check": "command -v ripgrep",
+        "install": "brew install ripgrep",
+        "update": "brew upgrade ripgrep",
+        "required": false
+      },
+      {
+        "name": "fd",
+        "type": "brew",
+        "package": "fd",
+        "check": "command -v fd",
+        "install": "brew install fd",
+        "update": "brew upgrade fd",
+        "required": false
+      },
+      {
+        "name": "fzf",
+        "type": "brew",
+        "package": "fzf",
+        "check": "command -v fzf",
+        "install": "brew install fzf",
+        "update": "brew upgrade fzf",
+        "required": false
+      },
+      {
+        "name": "bat",
+        "type": "brew",
+        "package": "bat",
+        "check": "command -v bat",
+        "install": "brew install bat",
+        "update": "brew upgrade bat",
+        "required": false
+      },
+      {
+        "name": "eza",
+        "type": "brew",
+        "package": "eza",
+        "check": "command -v eza",
+        "install": "brew install eza",
+        "update": "brew upgrade eza",
+        "required": false
+      },
+      {
+        "name": "zoxide",
+        "type": "brew",
+        "package": "zoxide",
+        "check": "command -v zoxide",
+        "install": "brew install zoxide",
+        "update": "brew upgrade zoxide",
+        "required": false
+      },
+      {
+        "name": "tree",
+        "type": "brew",
+        "package": "tree",
+        "check": "command -v tree",
+        "install": "brew install tree",
+        "update": "brew upgrade tree",
+        "required": false
+      },
+      {
+        "name": "btop",
+        "type": "brew",
+        "package": "btop",
+        "check": "command -v btop",
+        "install": "brew install btop",
+        "update": "brew upgrade btop",
+        "required": false
+      },
+      {
+        "name": "htop",
+        "type": "brew",
+        "package": "htop",
+        "check": "command -v htop",
+        "install": "brew install htop",
+        "update": "brew upgrade htop",
+        "required": false
+      },
+      {
+        "name": "tmux",
+        "type": "brew",
+        "package": "tmux",
+        "check": "command -v tmux",
+        "install": "brew install tmux",
+        "update": "brew upgrade tmux",
+        "required": false
+      },
+      {
+        "name": "lazygit",
+        "type": "brew",
+        "package": "lazygit",
+        "check": "command -v lazygit",
+        "install": "brew install lazygit",
+        "update": "brew upgrade lazygit",
+        "required": false
+      },
+      {
+        "name": "lazydocker",
+        "type": "brew",
+        "package": "lazydocker",
+        "check": "command -v lazydocker",
+        "install": "brew install lazydocker",
+        "update": "brew upgrade lazydocker",
+        "required": false
+      },
+      {
+        "name": "just",
+        "type": "brew",
+        "package": "just",
+        "check": "command -v just",
+        "install": "brew install just",
+        "update": "brew upgrade just",
+        "required": false
+      },
+      {
+        "name": "direnv",
+        "type": "brew",
+        "package": "direnv",
+        "check": "command -v direnv",
+        "install": "brew install direnv",
+        "update": "brew upgrade direnv",
+        "required": false
+      },
+      {
+        "name": "entr",
+        "type": "brew",
+        "package": "entr",
+        "check": "command -v entr",
+        "install": "brew install entr",
+        "update": "brew upgrade entr",
+        "required": false
+      },
+      {
+        "name": "watch",
+        "type": "brew",
+        "package": "watch",
+        "check": "command -v watch",
+        "install": "brew install watch",
+        "update": "brew upgrade watch",
+        "required": false
+      }
+    ]
+  },
+  "extras_productivity": {
+    "description": "Extras > Productivity",
+    "tools": [
+      {
+        "name": "Raycast",
+        "type": "brew",
+        "package": "raycast",
+        "check": "command -v raycast",
+        "install": "brew install raycast",
+        "update": "brew upgrade raycast",
+        "required": false
+      },
+      {
+        "name": "Rectangle",
+        "type": "brew",
+        "package": "rectangle",
+        "check": "command -v rectangle",
+        "install": "brew install rectangle",
+        "update": "brew upgrade rectangle",
+        "required": false
+      },
+      {
+        "name": "Alfred",
+        "type": "brew",
+        "package": "alfred",
+        "check": "command -v alfred",
+        "install": "brew install alfred",
+        "update": "brew upgrade alfred",
+        "required": false
+      },
+      {
+        "name": "AppCleaner",
+        "type": "brew",
+        "package": "appcleaner",
+        "check": "command -v appcleaner",
+        "install": "brew install appcleaner",
+        "update": "brew upgrade appcleaner",
+        "required": false
+      },
+      {
+        "name": "Notion",
+        "type": "brew",
+        "package": "notion",
+        "check": "open -Ra 'Notion'",
+        "install": "brew install --cask notion",
+        "update": "brew upgrade --cask notion",
+        "required": false
+      },
+      {
+        "name": "Obsidian",
+        "type": "brew",
+        "package": "obsidian",
+        "check": "open -Ra 'Obsidian'",
+        "install": "brew install --cask obsidian",
+        "update": "brew upgrade --cask obsidian",
+        "required": false
+      },
+      {
+        "name": "Bitwarden",
+        "type": "brew",
+        "package": "bitwarden",
+        "check": "command -v bitwarden",
+        "install": "brew install bitwarden",
+        "update": "brew upgrade bitwarden",
+        "required": false
+      },
+      {
+        "name": "1Password",
+        "type": "brew",
+        "package": "1password",
+        "check": "command -v 1password",
+        "install": "brew install 1password",
+        "update": "brew upgrade 1password",
+        "required": false
+      }
+    ]
+  },
+  "extras_design": {
+    "description": "Extras > Design",
+    "tools": [
+      {
+        "name": "Figma",
+        "type": "brew",
+        "package": "figma",
+        "check": "open -Ra 'Figma'",
+        "install": "brew install --cask figma",
+        "update": "brew upgrade --cask figma",
+        "required": false
+      },
+      {
+        "name": "Canva",
+        "type": "brew",
+        "package": "canva",
+        "check": "open -Ra 'Canva'",
+        "install": "brew install --cask canva",
+        "update": "brew upgrade --cask canva",
+        "required": false
+      },
+      {
+        "name": "Blender",
+        "type": "brew",
+        "package": "blender",
+        "check": "open -Ra 'Blender'",
+        "install": "brew install --cask blender",
+        "update": "brew upgrade --cask blender",
+        "required": false
+      },
+      {
+        "name": "GIMP",
+        "type": "brew",
+        "package": "gimp",
+        "check": "open -Ra 'GIMP'",
+        "install": "brew install --cask gimp",
+        "update": "brew upgrade --cask gimp",
+        "required": false
+      },
+      {
+        "name": "Inkscape",
+        "type": "brew",
+        "package": "inkscape",
+        "check": "open -Ra 'Inkscape'",
+        "install": "brew install --cask inkscape",
+        "update": "brew upgrade --cask inkscape",
+        "required": false
+      },
+      {
+        "name": "Krita",
+        "type": "brew",
+        "package": "krita",
+        "check": "open -Ra 'Krita'",
+        "install": "brew install --cask krita",
+        "update": "brew upgrade --cask krita",
+        "required": false
+      }
+    ]
+  },
+  "extras_communication": {
+    "description": "Extras > Communication",
+    "tools": [
       {
         "name": "Slack",
         "type": "brew",
@@ -138,162 +2918,140 @@
         "required": false
       },
       {
+        "name": "Discord",
+        "type": "brew",
+        "package": "discord",
+        "check": "open -Ra 'Discord'",
+        "install": "brew install --cask discord",
+        "update": "brew upgrade --cask discord",
+        "required": false
+      },
+      {
+        "name": "Microsoft Teams",
+        "type": "brew",
+        "package": "microsoft-teams",
+        "check": "open -Ra 'Microsoft Teams'",
+        "install": "brew install --cask microsoft-teams",
+        "update": "brew upgrade --cask microsoft-teams",
+        "required": false
+      },
+      {
         "name": "Zoom",
         "type": "brew",
         "package": "zoom",
-        "check": "open -Ra 'zoom.us'",
+        "check": "open -Ra 'Zoom'",
         "install": "brew install --cask zoom",
         "update": "brew upgrade --cask zoom",
         "required": false
       },
       {
-        "name": "p7zip",
+        "name": "Telegram",
         "type": "brew",
-        "package": "p7zip",
-        "check": "7z --help",
-        "install": "brew install p7zip",
-        "update": "brew upgrade p7zip",
+        "package": "telegram",
+        "check": "open -Ra 'Telegram'",
+        "install": "brew install --cask telegram",
+        "update": "brew upgrade --cask telegram",
+        "required": false
+      },
+      {
+        "name": "WhatsApp",
+        "type": "brew",
+        "package": "whatsapp",
+        "check": "open -Ra 'WhatsApp'",
+        "install": "brew install --cask whatsapp",
+        "update": "brew upgrade --cask whatsapp",
         "required": false
       }
     ]
   },
-
-  "web": {
-    "description": "Web development runtime, package managers, and CLIs",
+  "extras_browsers": {
+    "description": "Extras > Browsers",
     "tools": [
       {
-        "name": "Node.js",
+        "name": "Safari",
         "type": "brew",
-        "package": "node",
-        "check": "node --version",
-        "install": "brew install node",
-        "update": "brew upgrade node",
-        "doctor": ["npm doctor"],
-        "env": [
-          {
-            "key": "PATH",
-            "value": "$HOME/.npm-global/bin",
-            "shell": "zsh"
-          }
-        ],
-        "required": true
+        "package": "safari",
+        "check": "open -Ra 'Safari'",
+        "install": "brew install --cask safari",
+        "update": "brew upgrade --cask safari",
+        "required": false
       },
       {
-        "name": "Vercel CLI",
-        "type": "npm",
-        "package": "vercel",
-        "check": "vercel --version",
-        "install": "npm install -g vercel",
-        "update": "npm update -g vercel",
-        "doctor": ["vercel --help"]
+        "name": "Arc",
+        "type": "brew",
+        "package": "arc",
+        "check": "open -Ra 'Arc'",
+        "install": "brew install --cask arc",
+        "update": "brew upgrade --cask arc",
+        "required": false
       },
       {
-        "name": "Netlify CLI",
-        "type": "npm",
-        "package": "netlify-cli",
-        "check": "netlify --version",
-        "install": "npm install -g netlify-cli",
-        "update": "npm update -g netlify-cli",
-        "doctor": ["netlify status"]
+        "name": "Opera",
+        "type": "brew",
+        "package": "opera",
+        "check": "open -Ra 'Opera'",
+        "install": "brew install --cask opera",
+        "update": "brew upgrade --cask opera",
+        "required": false
+      },
+      {
+        "name": "Opera GX",
+        "type": "brew",
+        "package": "opera-gx",
+        "check": "open -Ra 'Opera GX'",
+        "install": "brew install --cask opera-gx",
+        "update": "brew upgrade --cask opera-gx",
+        "required": false
+      },
+      {
+        "name": "Tor Browser",
+        "type": "brew",
+        "package": "tor-browser",
+        "check": "open -Ra 'Tor Browser'",
+        "install": "brew install --cask tor-browser",
+        "update": "brew upgrade --cask tor-browser",
+        "required": false
       }
     ]
   },
-
-  "cloud": {
-    "description": "Cloud CLI tools and SDKs",
+  "extras_cloud_storage": {
+    "description": "Extras > Cloud Storage",
     "tools": [
       {
-        "name": "AWS CLI",
+        "name": "Dropbox",
         "type": "brew",
-        "package": "awscli",
-        "check": "aws --version",
-        "install": "brew install awscli",
-        "update": "brew upgrade awscli",
-        "doctor": ["aws configure list"]
+        "package": "dropbox",
+        "check": "open -Ra 'Dropbox'",
+        "install": "brew install --cask dropbox",
+        "update": "brew upgrade --cask dropbox",
+        "required": false
       },
       {
-        "name": "Google Cloud CLI",
+        "name": "OneDrive",
         "type": "brew",
-        "package": "google-cloud-sdk",
-        "check": "gcloud --version",
-        "install": "brew install --cask google-cloud-sdk",
-        "update": "brew upgrade --cask google-cloud-sdk",
-        "doctor": ["gcloud info"],
-        "env": [
-          {
-            "key": "PATH",
-            "value": "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin",
-            "shell": "zsh"
-          }
-        ]
-      }
-    ]
-  },
-
-  "containers": {
-    "description": "Containers, orchestration and runtime tools",
-    "tools": [
-      {
-        "name": "Docker CLI",
-        "type": "brew",
-        "package": "docker",
-        "check": "docker --version",
-        "install": "brew install --cask docker",
-        "update": "brew upgrade --cask docker",
-        "doctor": ["docker version"]
+        "package": "one-drive",
+        "check": "open -Ra 'OneDrive'",
+        "install": "brew install --cask one-drive",
+        "update": "brew upgrade --cask one-drive",
+        "required": false
       },
       {
-        "name": "Kubernetes kubectl",
+        "name": "iCloud Drive",
         "type": "brew",
-        "package": "kubectl",
-        "check": "kubectl version --client",
-        "install": "brew install kubectl",
-        "update": "brew upgrade kubectl"
-      }
-    ]
-  },
-
-  "database": {
-    "description": "Database servers and client tools",
-    "tools": [
-      {
-        "name": "PostgreSQL",
-        "type": "brew",
-        "package": "postgresql",
-        "check": "psql --version",
-        "install": "brew install postgresql",
-        "update": "brew upgrade postgresql",
-        "doctor": ["brew services list"]
+        "package": "icloud",
+        "check": "open -Ra 'iCloud Drive'",
+        "install": "brew install --cask icloud",
+        "update": "brew upgrade --cask icloud",
+        "required": false
       },
       {
-        "name": "Redis",
+        "name": "MEGA",
         "type": "brew",
-        "package": "redis",
-        "check": "redis-cli --version",
-        "install": "brew install redis",
-        "update": "brew upgrade redis"
-      }
-    ]
-  },
-
-  "ai": {
-    "description": "AI/LLM and developer AI tools",
-    "tools": [
-      {
-        "name": "OpenAI CLI",
-        "type": "npm",
-        "package": "openai",
-        "check": "openai --version",
-        "install": "npm install -g openai",
-        "update": "npm update -g openai"
-      },
-      {
-        "name": "Hugging Face CLI",
-        "type": "pipx",
-        "package": "huggingface_hub",
-        "check": "huggingface-cli --version",
-        "install": "pipx install huggingface_hub",
-        "update": "pipx upgrade huggingface_hub"
+        "package": "mega",
+        "check": "open -Ra 'MEGA'",
+        "install": "brew install --cask mega",
+        "update": "brew upgrade --cask mega",
+        "required": false
       }
     ]
   }

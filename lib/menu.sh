@@ -2,20 +2,42 @@
 set -euo pipefail
 
 launch_menu() {
+  clear
+  local os pm
+  os="$(detect_os)"
+  pm="$(detect_package_manager)"
+  if [[ "$pm" == "brew" ]]; then
+    pm="Homebrew"
+  fi
+
+  cat <<EOF
+███████╗███████╗████████╗██╗   ██╗██████╗ ██╗  ██╗
+██╔════╝██╔════╝╚══██╔══╝██║   ██║██╔══██╗╚██╗██╔╝
+███████╗█████╗     ██║   ██║   ██║██████╔╝ ╚███╔╝
+╚════██║██╔══╝     ██║   ██║   ██║██╔═══╝  ██╔██╗
+███████║███████╗   ██║   ╚██████╔╝██║     ██╔╝ ██╗
+╚══════╝╚══════╝   ╚═╝    ╚═════╝ ╚═╝     ╚═╝  ╚═╝
+
+        Cross-Platform Development Environment Setup
+
+──────────────────────────────────────────────────────────────
+ Platform         : $os
+ Package Manager  : $pm
+──────────────────────────────────────────────────────────────
+
+  1.  System Information          7.  Run Doctor
+  2.  List Categories             8.  Installation Checklist
+  3.  Install Category            9.  Installed Tools
+  4.  Install All Categories     10.  Missing Tools
+  5.  Update Category            11.  Install Tool by Name
+  6.  Update All Categories      12.  Exit
+
+──────────────────────────────────────────────────────────────
+
+Select an option [1-12]: 
+EOF
   while true; do
-    echo "Dev Setup Menu"
-    echo "1) Show OS and package manager"
-    echo "2) List categories"
-    echo "3) Install category"
-    echo "4) Install all categories"
-    echo "5) Update category"
-    echo "6) Update all categories"
-    echo "7) Doctor category"
-    echo "8) Checklist (installed / missing)"
-    echo "9) List installed tools"
-    echo "10) List missing tools"
-    echo "11) Exit"
-    printf 'Choose an option: '
+    read -r choice
     read -r choice
 
     case "$choice" in
@@ -23,28 +45,28 @@ launch_menu() {
         show_system_info
         ;;
       2)
-        list_categories
+        list_categories_numbered
         ;;
       3)
-        printf 'Category: '
-        read -r category
-        install_category "$category"
+        if category="$(select_category)"; then
+          install_category "$category"
+        fi
         ;;
       4)
         run_install_all
         ;;
       5)
-        printf 'Category: '
-        read -r category
-        update_category "$category"
+        if category="$(select_category)"; then
+          update_category "$category"
+        fi
         ;;
       6)
         run_update_all
         ;;
       7)
-        printf 'Category: '
-        read -r category
-        doctor_category "$category"
+        if category="$(select_category)"; then
+          doctor_category "$category"
+        fi
         ;;
       8)
         launch_checklist
@@ -56,6 +78,9 @@ launch_menu() {
         list_missing
         ;;
       11)
+        install_tool_by_name_menu
+        ;;
+      12)
         exit 0
         ;;
       *)
@@ -64,6 +89,54 @@ launch_menu() {
     esac
     echo
   done
+}
+
+install_tool_by_name_menu() {
+  printf 'Enter tool or package name: '
+  read -r tool_name
+  if [[ -z "${tool_name// /}" ]]; then
+    log_warn 'No tool name provided.'
+    return 1
+  fi
+  install_tool_by_name "$tool_name"
+  show_system_info
+}
+
+list_categories_numbered() {
+  ensure_python
+  "$PYTHON" - "$DATA_FILE" <<'PY'
+import json, sys
+with open(sys.argv[1], 'r', encoding='utf-8') as f:
+    data = json.load(f)
+for index, category in enumerate(data.get('categories', []), start=1):
+    print(f"{index}) {category}")
+PY
+}
+
+select_category() {
+  ensure_python
+  printf 'Select a category:\n' >&2
+  list_categories_numbered >&2
+  printf 'Category number: ' >&2
+  read -r category_number
+  category="$($PYTHON - "$DATA_FILE" "$category_number" <<'PY'
+import json, sys
+with open(sys.argv[1], 'r', encoding='utf-8') as f:
+    data = json.load(f)
+try:
+    index = int(sys.argv[2]) - 1
+except ValueError:
+    sys.exit(1)
+categories = data.get('categories', [])
+if index < 0 or index >= len(categories):
+    sys.exit(1)
+print(categories[index])
+PY
+  )" || {
+    log_error 'Invalid category number.'
+    return 1
+  }
+  printf '%s\n' "$category"
 }
 
 list_installed() {

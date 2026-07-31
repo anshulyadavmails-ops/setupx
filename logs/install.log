@@ -440,3 +440,388 @@ OUTPUT: Warning: openjdk 26.0.2 is already installed and up-to-date.
 To reinstall 26.0.2, run:
   brew reinstall openjdk
 2026-07-30T19:51:41Z INFO: Appended environment variable to /Users/anshulyadav/.zshrc
+2026-07-30T20:57:08Z ERROR: Tool or package 'install' not found in data.json
+2026-07-30T21:00:00Z INFO: Installing category: web
+2026-07-30T21:00:01Z INFO: Installing Node.js...
+2026-07-30T21:00:39Z INFO: OK: brew install node
+2026-07-30T21:00:39Z COMMAND: brew install node
+OUTPUT: ✔︎ JSON API packages.arm64_tahoe.jws.json
+==> Would install 1 formula:
+node
+==> Downloading https://ghcr.io/v2/homebrew/core/node/manifests/26.5.0_1
+==> Would install 18 dependencies for node:
+fmt
+ada-url
+brotli
+c-ares
+hdrhistogram_c
+libffi
+libnghttp2
+libnghttp3
+libngtcp2
+libuv
+llhttp
+simdutf
+merve
+nbytes
+simdjson
+readline
+sqlite
+uvwasi
+==> Fetching downloads for: node
+✔︎ Bottle Manifest fmt (12.2.0)
+✔︎ Bottle Manifest ada-url (4.0.0)
+✔︎ Bottle hdrhistogram_c (0.11.10)
+✔︎ Bottle brotli (1.2.0)
+✔︎ Bottle libnghttp3 (1.18.0)
+✔︎ Bottle ada-url (4.0.0)
+✔︎ Bottle c-ares (1.34.8)
+✔︎ Bottle Manifest libuv (1.52.1)
+✔︎ Bottle llhttp (9.4.3)
+✔︎ Bottle libffi (3.7.1)
+✔︎ Bottle Manifest libffi (3.7.1)
+✔︎ Bottle libuv (1.52.1)
+✔︎ Bottle Manifest simdutf (9.0.0)
+✔︎ Bottle libnghttp2 (1.69.0)
+✔︎ Bottle Manifest libngtcp2 (1.25.0)
+✔︎ Bottle Manifest merve (1.2.2_1)
+✔︎ Bottle merve (1.2.2_1)
+✔︎ Bottle Manifest brotli (1.2.0)
+✔︎ Bottle Manifest libnghttp2 (1.69.0)
+✔︎ Bottle Manifest libnghttp3 (1.18.0)
+✔︎ Bottle simdutf (9.0.0)
+✔︎ Bottle readline (8.3.3)
+✔︎ Bottle Manifest c-ares (1.34.8)
+✔︎ Bottle fmt (12.2.0)
+✔︎ Bottle libngtcp2 (1.25.0)
+✔︎ Bottle nbytes (0.1.4)
+✔︎ Bottle simdjson (4.6.5)
+✔︎ Bottle Manifest simdjson (4.6.5)
+✔︎ Bottle Manifest readline (8.3.3)
+✔︎ Bottle uvwasi (0.0.23)
+✔︎ Bottle Manifest hdrhistogram_c (0.11.10)
+✔︎ Bottle sqlite (3.53.4)
+✔︎ Bottle Manifest llhttp (9.4.3)
+✔︎ Bottle Manifest nbytes (0.1.4)
+✔︎ Bottle Manifest sqlite (3.53.4)
+✔︎ Bottle node (26.5.0_1)
+✔︎ Bottle Manifest uvwasi (0.0.23)
+==> Installing dependencies for node: fmt, ada-url, brotli, c-ares, hdrhistogram_c, libffi, libnghttp2, libnghttp3, libngtcp2, libuv, llhttp, simdutf, merve, nbytes, simdjson, readline, sqlite and uvwasi
+==> Installing node dependency: fmt
+==> Pouring fmt--12.2.0.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/fmt/12.2.0: 31 files, 1MB
+==> Installing node dependency: ada-url
+==> Pouring ada-url--4.0.0.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/ada-url/4.0.0: 56 files, 1MB
+==> Installing node dependency: brotli
+==> Pouring brotli--1.2.0.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/brotli/1.2.0: 33 files, 1.9MB
+==> Installing node dependency: c-ares
+==> Pouring c-ares--1.34.8.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/c-ares/1.34.8: 176 files, 1MB
+==> Installing node dependency: hdrhistogram_c
+==> Pouring hdrhistogram_c--0.11.10.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/hdrhistogram_c/0.11.10: 22 files, 154.0KB
+==> Installing node dependency: libffi
+==> Pouring libffi--3.7.1.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libffi/3.7.1: 18 files, 915KB
+==> Installing node dependency: libnghttp2
+==> Pouring libnghttp2--1.69.0.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libnghttp2/1.69.0: 14 files, 830.3KB
+==> Installing node dependency: libnghttp3
+==> Pouring libnghttp3--1.18.0.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libnghttp3/1.18.0: 20 files, 600.4KB
+==> Installing node dependency: libngtcp2
+==> Pouring libngtcp2--1.25.0.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libngtcp2/1.25.0: 21 files, 1.4MB
+==> Installing node dependency: libuv
+==> Pouring libuv--1.52.1.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/libuv/1.52.1: 35 files, 1.3MB
+==> Installing node dependency: llhttp
+==> Pouring llhttp--9.4.3.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/llhttp/9.4.3: 15 files, 147.8KB
+==> Installing node dependency: simdutf
+==> Pouring simdutf--9.0.0.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/simdutf/9.0.0: 65 files, 2MB
+==> Installing node dependency: merve
+==> Pouring merve--1.2.2_1.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/merve/1.2.2_1: 19 files, 131KB
+==> Installing node dependency: nbytes
+==> Pouring nbytes--0.1.4.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/nbytes/0.1.4: 9 files, 71.2KB
+==> Installing node dependency: simdjson
+==> Pouring simdjson--4.6.5.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/simdjson/4.6.5: 19 files, 8.0MB
+==> Installing node dependency: readline
+==> Pouring readline--8.3.3.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/readline/8.3.3: 56 files, 2.6MB
+==> Installing node dependency: sqlite
+==> Pouring sqlite--3.53.4.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/sqlite/3.53.4: 13 files, 5.3MB
+==> Installing node dependency: uvwasi
+==> Pouring uvwasi--0.0.23.arm64_tahoe.bottle.1.tar.gz
+🍺  /opt/homebrew/Cellar/uvwasi/0.0.23: 15 files, 269.2KB
+==> Installing node
+==> Pouring node--26.5.0_1.arm64_tahoe.bottle.tar.gz
+Vercel CLI
+Netlify CLI
+==> Caveats
+Single Executable Application is disabled as it doesn't work with shared libnode.
+Temporal support is disabled as it doesn't work with shared ICU library.
+==> Summary
+🍺  /opt/homebrew/Cellar/node/26.5.0_1: 2,071 files, 89MB
+==> Running `brew cleanup node`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Caveats
+==> node
+Single Executable Application is disabled as it doesn't work with shared libnode.
+Temporal support is disabled as it doesn't work with shared ICU library.
+2026-07-30T21:00:39Z INFO: Appended environment variable to /Users/anshulyadav/.zshrc
+2026-07-30T21:02:33Z INFO: Installing all categories.
+2026-07-30T21:02:33Z INFO: Installing category: devtools
+2026-07-30T21:02:33Z INFO: Installing Git...
+2026-07-30T21:02:35Z INFO: OK: brew install git
+2026-07-30T21:02:35Z COMMAND: brew install git
+OUTPUT: Warning: git 2.55.0 is already installed and up-to-date.
+To reinstall 2.55.0, run:
+  brew reinstall git
+2026-07-30T21:02:35Z INFO: Installing GitHub CLI...
+2026-07-30T21:02:36Z INFO: OK: brew install gh
+2026-07-30T21:02:36Z COMMAND: brew install gh
+OUTPUT: Warning: gh 2.96.0 is already installed and up-to-date.
+To reinstall 2.96.0, run:
+  brew reinstall gh
+2026-07-30T21:02:36Z INFO: Installing jq...
+2026-07-30T21:02:37Z INFO: OK: brew install jq
+2026-07-30T21:02:37Z COMMAND: brew install jq
+OUTPUT: Warning: jq 1.8.2 is already installed and up-to-date.
+To reinstall 1.8.2, run:
+  brew reinstall jq
+2026-07-30T21:02:37Z INFO: Installing Java (OpenJDK)...
+2026-07-30T21:02:38Z INFO: OK: brew install openjdk
+2026-07-30T21:02:38Z COMMAND: brew install openjdk
+OUTPUT: Warning: openjdk 26.0.2 is already installed and up-to-date.
+To reinstall 26.0.2, run:
+  brew reinstall openjdk
+2026-07-30T21:02:38Z INFO: PATH is already configured in /Users/anshulyadav/.zshrc
+2026-07-30T21:02:38Z INFO: Installing Flutter...
+2026-07-30T21:16:55Z ERROR: Tool '' not found in category 'devtools'.
+2026-07-30T21:17:08Z INFO: Installing Flutter...
+2026-07-30T21:18:05Z INFO: OK: brew install flutter
+2026-07-30T21:18:05Z COMMAND: brew install flutter
+OUTPUT: ✔︎ JSON API packages.arm64_tahoe.jws.json
+==> Would install 1 cask:
+flutter
+==> Fetching downloads for: flutter
+✔︎ Cask flutter (3.44.8)
+==> Installing Cask flutter
+==> Moving App Suite 'flutter' to '/opt/homebrew/share/flutter'
+==> Linking Binary 'dart' to '/opt/homebrew/bin/dart'
+==> Linking Binary 'flutter' to '/opt/homebrew/bin/flutter'
+🍺  flutter was successfully installed!
+2026-07-31T11:22:31Z INFO: Running doctor checks for category: devtools
+2026-07-31T11:22:31Z INFO: Running doctor step: brew doctor
+2026-07-31T11:22:53Z INFO: OS: macos
+2026-07-31T11:22:53Z INFO: Package manager: none
+2026-07-31T11:22:53Z WARNING: Homebrew is not installed. Install it manually or run install after enabling sudo.
+2026-07-31T11:22:53Z ERROR: Category 'missing' is not defined in data.json
+2026-07-31T11:27:49Z INFO: OS: macos
+2026-07-31T11:27:49Z INFO: Package manager: none
+2026-07-31T11:27:49Z WARNING: Homebrew is not installed. Install it manually or run install after enabling sudo.
+2026-07-31T11:28:10Z INFO: OS: macos
+2026-07-31T11:28:10Z INFO: Package manager: brew
+2026-07-31T11:28:10Z INFO: Appended environment variable to /var/folders/17/lrphd4hn4nlf5k89yr5x021c0000gn/T/tmp.KpOj2XwfFf/home/.zshrc
+2026-07-31T11:28:10Z INFO: Updating Homebrew...
+2026-07-31T11:28:11Z INFO: OK: brew update
+2026-07-31T11:28:11Z COMMAND: brew update
+OUTPUT: 
+2026-07-31T11:28:11Z INFO: Package manager ready: brew
+2026-07-31T11:28:11Z INFO: OS: macos
+2026-07-31T11:28:11Z INFO: Package manager: brew
+2026-07-31T11:28:23Z WARNING: Unknown choice.
+2026-07-31T11:28:56Z WARNING: Unknown choice.
+2026-07-31T11:29:35Z WARNING: Unknown choice.
+2026-07-31T11:30:16Z WARNING: Unknown choice.
+2026-07-31T11:30:29Z WARNING: Unknown choice.
+2026-07-31T11:31:27Z WARNING: Unknown choice.
+2026-07-31T11:33:43Z WARNING: Unknown choice.
+2026-07-31T11:38:44Z INFO: OS: macos
+2026-07-31T11:38:44Z INFO: Package manager: none
+2026-07-31T11:38:44Z WARNING: Homebrew is not installed. Install it manually or run install after enabling sudo.
+2026-07-31T11:38:44Z WARNING: Unable to detect a supported package manager for this OS.
+2026-07-31T11:38:44Z ERROR: Package manager setup failed. The software menu cannot continue.
+2026-07-31T11:39:24Z INFO: OS: macos
+2026-07-31T11:39:24Z INFO: Package manager: brew
+2026-07-31T11:39:24Z INFO: Appended environment variable to /var/folders/17/lrphd4hn4nlf5k89yr5x021c0000gn/T/tmp.uptz4agfQX/home/.zshrc
+2026-07-31T11:39:24Z INFO: Updating Homebrew...
+2026-07-31T11:39:25Z INFO: OK: brew update
+2026-07-31T11:39:25Z COMMAND: brew update
+OUTPUT: 
+2026-07-31T11:39:25Z INFO: Package manager ready: brew
+2026-07-31T11:39:25Z INFO: OS: macos
+2026-07-31T11:39:25Z INFO: Package manager: brew
+2026-07-31T11:39:57Z INFO: OS: macos
+2026-07-31T11:39:57Z INFO: Package manager: none
+2026-07-31T11:39:57Z WARNING: Homebrew is not installed. Install it manually or run install after enabling sudo.
+2026-07-31T11:39:57Z INFO: Installing Homebrew...
+2026-07-31T11:39:58Z WARNING: FAILED: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+2026-07-31T11:39:58Z COMMAND: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+OUTPUT: Warning: Running in non-interactive mode because `stdin` is not a TTY.
+==> Checking for `sudo` access (which may request your password)...
+Need sudo access on macOS (e.g. the user anshulyadav needs to be an Administrator)!
+2026-07-31T11:39:58Z ERROR: Homebrew installation failed.
+2026-07-31T11:39:58Z INFO: Updating Homebrew...
+2026-07-31T11:39:58Z WARNING: FAILED: brew update
+2026-07-31T11:39:58Z COMMAND: brew update
+OUTPUT: bash: brew: command not found
+2026-07-31T11:39:58Z ERROR: Homebrew update failed.
+2026-07-31T11:39:58Z ERROR: Package manager setup failed. The software menu cannot continue.
+2026-07-31T11:39:58Z WARNING: Opening the menu without a ready package manager.
+2026-07-31T11:42:05Z INFO: OS: macos
+2026-07-31T11:42:05Z INFO: Package manager: none
+2026-07-31T11:42:05Z WARNING: Homebrew is not installed. Install it manually or run install after enabling sudo.
+2026-07-31T11:42:05Z INFO: Installing Homebrew...
+2026-07-31T11:42:05Z WARNING: FAILED: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+2026-07-31T11:42:05Z COMMAND: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+OUTPUT: Warning: Running in non-interactive mode because `stdin` is not a TTY.
+==> Checking for `sudo` access (which may request your password)...
+Need sudo access on macOS (e.g. the user anshulyadav needs to be an Administrator)!
+2026-07-31T11:42:05Z ERROR: Homebrew installation failed.
+2026-07-31T11:42:05Z INFO: Updating Homebrew...
+2026-07-31T11:42:05Z WARNING: FAILED: brew update
+2026-07-31T11:42:05Z COMMAND: brew update
+OUTPUT: bash: brew: command not found
+2026-07-31T11:42:05Z ERROR: Homebrew update failed.
+2026-07-31T11:42:05Z ERROR: Package manager setup failed. The software menu cannot continue.
+2026-07-31T11:42:05Z WARNING: Opening the menu without a ready package manager.
+2026-07-31T11:42:16Z INFO: OS: macos
+2026-07-31T11:42:16Z INFO: Package manager: none
+2026-07-31T11:42:16Z WARNING: Homebrew is not installed. Install it manually or run install after enabling sudo.
+2026-07-31T11:42:16Z INFO: Installing Homebrew...
+2026-07-31T11:42:16Z WARNING: FAILED: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+2026-07-31T11:42:16Z COMMAND: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+OUTPUT: Warning: Running in non-interactive mode because `stdin` is not a TTY.
+==> Checking for `sudo` access (which may request your password)...
+Need sudo access on macOS (e.g. the user anshulyadav needs to be an Administrator)!
+2026-07-31T11:42:16Z ERROR: Homebrew installation failed.
+2026-07-31T11:42:16Z INFO: Updating Homebrew...
+2026-07-31T11:42:16Z WARNING: FAILED: brew update
+2026-07-31T11:42:16Z COMMAND: brew update
+OUTPUT: bash: brew: command not found
+2026-07-31T11:42:16Z ERROR: Homebrew update failed.
+2026-07-31T11:42:16Z ERROR: Package manager setup failed. The software menu cannot continue.
+2026-07-31T11:42:16Z WARNING: Opening the menu without a ready package manager.
+2026-07-31T11:42:35Z INFO: OS: macos
+2026-07-31T11:42:35Z INFO: Package manager: none
+2026-07-31T11:42:35Z WARNING: Homebrew is not installed. Install it manually or run install after enabling sudo.
+2026-07-31T11:42:35Z INFO: Installing Homebrew...
+2026-07-31T11:51:50Z INFO: OS: macos
+2026-07-31T11:51:50Z INFO: Package manager: none
+2026-07-31T11:51:50Z WARNING: Homebrew is not installed. Install it manually or run install after enabling sudo.
+2026-07-31T11:51:50Z INFO: Installing Homebrew (live output follows)...
+2026-07-31T11:51:50Z INFO: Running: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+2026-07-31T12:02:00Z INFO: OK: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+2026-07-31T12:02:00Z COMMAND: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+OUTPUT: ==> Checking for `sudo` access (which may request your password)...
+==> This script will install:
+/opt/homebrew/bin/brew
+/opt/homebrew/share/doc/homebrew
+/opt/homebrew/share/man/man1/brew.1
+/opt/homebrew/share/zsh/site-functions/_brew
+/opt/homebrew/etc/bash_completion.d/brew
+/opt/homebrew
+/etc/paths.d/homebrew
+==> The following new directories will be created:
+/opt/homebrew/bin
+/opt/homebrew/etc
+/opt/homebrew/include
+/opt/homebrew/lib
+/opt/homebrew/sbin
+/opt/homebrew/share
+/opt/homebrew/var
+/opt/homebrew/opt
+/opt/homebrew/share/zsh
+/opt/homebrew/share/zsh/site-functions
+/opt/homebrew/var/homebrew
+/opt/homebrew/var/homebrew/linked
+/opt/homebrew/Cellar
+/opt/homebrew/Caskroom
+/opt/homebrew/Frameworks
+==> The Xcode Command Line Tools will be installed.
+
+Press RETURN/ENTER to continue or any other key to abort:
+==> /usr/bin/sudo /usr/bin/install -d -o root -g wheel -m 0755 /opt/homebrew
+==> /usr/bin/sudo /bin/mkdir -p /opt/homebrew/bin /opt/homebrew/etc /opt/homebrew/include /opt/homebrew/lib /opt/homebrew/sbin /opt/homebrew/share /opt/homebrew/var /opt/homebrew/opt /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /opt/homebrew/var/homebrew /opt/homebrew/var/homebrew/linked /opt/homebrew/Cellar /opt/homebrew/Caskroom /opt/homebrew/Frameworks
+==> /usr/bin/sudo /bin/chmod ug=rwx /opt/homebrew/bin /opt/homebrew/etc /opt/homebrew/include /opt/homebrew/lib /opt/homebrew/sbin /opt/homebrew/share /opt/homebrew/var /opt/homebrew/opt /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /opt/homebrew/var/homebrew /opt/homebrew/var/homebrew/linked /opt/homebrew/Cellar /opt/homebrew/Caskroom /opt/homebrew/Frameworks
+==> /usr/bin/sudo /bin/chmod go-w /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions
+==> /usr/bin/sudo /usr/sbin/chown anshulyadav /opt/homebrew/bin /opt/homebrew/etc /opt/homebrew/include /opt/homebrew/lib /opt/homebrew/sbin /opt/homebrew/share /opt/homebrew/var /opt/homebrew/opt /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /opt/homebrew/var/homebrew /opt/homebrew/var/homebrew/linked /opt/homebrew/Cellar /opt/homebrew/Caskroom /opt/homebrew/Frameworks
+==> /usr/bin/sudo /usr/bin/chgrp admin /opt/homebrew/bin /opt/homebrew/etc /opt/homebrew/include /opt/homebrew/lib /opt/homebrew/sbin /opt/homebrew/share /opt/homebrew/var /opt/homebrew/opt /opt/homebrew/share/zsh /opt/homebrew/share/zsh/site-functions /opt/homebrew/var/homebrew /opt/homebrew/var/homebrew/linked /opt/homebrew/Cellar /opt/homebrew/Caskroom /opt/homebrew/Frameworks
+==> /usr/bin/sudo /usr/sbin/chown -R anshulyadav:admin /opt/homebrew
+==> Searching online for the Command Line Tools
+==> /usr/bin/sudo /usr/bin/touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+==> Installing Command Line Tools for Xcode 26.6-26.6
+==> /usr/bin/sudo /usr/sbin/softwareupdate -i Command\ Line\ Tools\ for\ Xcode\ 26.6-26.6
+Software Update Tool
+
+Finding available software
+
+Downloading Command Line Tools for Xcode 26.6
+Downloaded Command Line Tools for Xcode 26.6
+Installing Command Line Tools for Xcode 26.6
+Done with Command Line Tools for Xcode 26.6
+Done.
+==> /usr/bin/sudo /usr/bin/xcode-select --switch /Library/Developer/CommandLineTools
+==> /usr/bin/sudo /bin/rm -f /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
+==> Downloading and installing Homebrew...
+remote: Enumerating objects: 352370, done.        
+remote: Counting objects:   0% (1/477)        remote: Counting objects:   1% (5/477)        remote: Counting objects:   2% (10/477)        remote: Counting objects:   3% (15/477)        remote: Counting objects:   4% (20/477)        remote: Counting objects:   5% (24/477)        remote: Counting objects:   6% (29/477)        remote: Counting objects:   7% (34/477)        remote: Counting objects:   8% (39/477)        remote: Counting objects:   9% (43/477)        remote: Counting objects:  10% (48/477)        remote: Counting objects:  11% (53/477)        remote: Counting objects:  12% (58/477)        remote: Counting objects:  13% (63/477)        remote: Counting objects:  14% (67/477)        remote: Counting objects:  15% (72/477)        remote: Counting objects:  16% (77/477)        remote: Counting objects:  17% (82/477)        remote: Counting objects:  18% (86/477)        remote: Counting objects:  19% (91/477)        remote: Counting objects:  20% (96/477)        remote: Counting objects:  21% (101/477)        remote: Counting objects:  22% (105/477)        remote: Counting objects:  23% (110/477)        remote: Counting objects:  24% (115/477)        remote: Counting objects:  25% (120/477)        remote: Counting objects:  26% (125/477)        remote: Counting objects:  27% (129/477)        remote: Counting objects:  28% (134/477)        remote: Counting objects:  29% (139/477)        remote: Counting objects:  30% (144/477)        remote: Counting objects:  31% (148/477)        remote: Counting objects:  32% (153/477)        remote: Counting objects:  33% (158/477)        remote: Counting objects:  34% (163/477)        remote: Counting objects:  35% (167/477)        remote: Counting objects:  36% (172/477)        remote: Counting objects:  37% (177/477)        remote: Counting objects:  38% (182/477)        remote: Counting objects:  39% (187/477)        remote: Counting objects:  40% (191/477)        remote: Counting objects:  41% (196/477)        remote: Counting objects:  42% (201/477)        remote: Counting objects:  43% (206/477)        remote: Counting objects:  44% (210/477)        remote: Counting objects:  45% (215/477)        remote: Counting objects:  46% (220/477)        remote: Counting objects:  47% (225/477)        remote: Counting objects:  48% (229/477)        remote: Counting objects:  49% (234/477)        remote: Counting objects:  50% (239/477)        remote: Counting objects:  51% (244/477)        remote: Counting objects:  52% (249/477)        remote: Counting objects:  53% (253/477)        remote: Counting objects:  54% (258/477)        remote: Counting objects:  55% (263/477)        remote: Counting objects:  56% (268/477)        remote: Counting objects:  57% (272/477)        remote: Counting objects:  58% (277/477)        remote: Counting objects:  59% (282/477)        remote: Counting objects:  60% (287/477)        remote: Counting objects:  61% (291/477)        remote: Counting objects:  62% (296/477)        remote: Counting objects:  63% (301/477)        remote: Counting objects:  64% (306/477)        remote: Counting objects:  65% (311/477)        remote: Counting objects:  66% (315/477)        remote: Counting objects:  67% (320/477)        remote: Counting objects:  68% (325/477)        remote: Counting objects:  69% (330/477)        remote: Counting objects:  70% (334/477)        remote: Counting objects:  71% (339/477)        remote: Counting objects:  72% (344/477)        remote: Counting objects:  73% (349/477)        remote: Counting objects:  74% (353/477)        remote: Counting objects:  75% (358/477)        remote: Counting objects:  76% (363/477)        remote: Counting objects:  77% (368/477)        remote: Counting objects:  78% (373/477)        remote: Counting objects:  79% (377/477)        remote: Counting objects:  80% (382/477)        remote: Counting objects:  81% (387/477)        remote: Counting objects:  82% (392/477)        remote: Counting objects:  83% (396/477)        remote: Counting objects:  84% (401/477)        remote: Counting objects:  85% (406/477)        remote: Counting objects:  86% (411/477)        remote: Counting objects:  87% (415/477)        remote: Counting objects:  88% (420/477)        remote: Counting objects:  89% (425/477)        remote: Counting objects:  90% (430/477)        remote: Counting objects:  91% (435/477)        remote: Counting objects:  92% (439/477)        remote: Counting objects:  93% (444/477)        remote: Counting objects:  94% (449/477)        remote: Counting objects:  95% (454/477)        remote: Counting objects:  96% (458/477)        remote: Counting objects:  97% (463/477)        remote: Counting objects:  98% (468/477)        remote: Counting objects:  99% (473/477)        remote: Counting objects: 100% (477/477)        remote: Counting objects: 100% (477/477), done.        
+remote: Compressing objects:   0% (1/235)        remote: Compressing objects:   1% (3/235)        remote: Compressing objects:   2% (5/235)        remote: Compressing objects:   3% (8/235)        remote: Compressing objects:   4% (10/235)        remote: Compressing objects:   5% (12/235)        remote: Compressing objects:   6% (15/235)        remote: Compressing objects:   7% (17/235)        remote: Compressing objects:   8% (19/235)        remote: Compressing objects:   9% (22/235)        remote: Compressing objects:  10% (24/235)        remote: Compressing objects:  11% (26/235)        remote: Compressing objects:  12% (29/235)        remote: Compressing objects:  13% (31/235)        remote: Compressing objects:  14% (33/235)        remote: Compressing objects:  15% (36/235)        remote: Compressing objects:  16% (38/235)        remote: Compressing objects:  17% (40/235)        remote: Compressing objects:  18% (43/235)        remote: Compressing objects:  19% (45/235)        remote: Compressing objects:  20% (47/235)        remote: Compressing objects:  21% (50/235)        remote: Compressing objects:  22% (52/235)        remote: Compressing objects:  23% (55/235)        remote: Compressing objects:  24% (57/235)        remote: Compressing objects:  25% (59/235)        remote: Compressing objects:  26% (62/235)        remote: Compressing objects:  27% (64/235)        remote: Compressing objects:  28% (66/235)        remote: Compressing objects:  29% (69/235)        remote: Compressing objects:  30% (71/235)        remote: Compressing objects:  31% (73/235)        remote: Compressing objects:  32% (76/235)        remote: Compressing objects:  33% (78/235)        remote: Compressing objects:  34% (80/235)        remote: Compressing objects:  35% (83/235)        remote: Compressing objects:  36% (85/235)        remote: Compressing objects:  37% (87/235)        remote: Compressing objects:  38% (90/235)        remote: Compressing objects:  39% (92/235)        remote: Compressing objects:  40% (94/235)        remote: Compressing objects:  41% (97/235)        remote: Compressing objects:  42% (99/235)        remote: Compressing objects:  43% (102/235)        remote: Compressing objects:  44% (104/235)        remote: Compressing objects:  45% (106/235)        remote: Compressing objects:  46% (109/235)        remote: Compressing objects:  47% (111/235)        remote: Compressing objects:  48% (113/235)        remote: Compressing objects:  49% (116/235)        remote: Compressing objects:  50% (118/235)        remote: Compressing objects:  51% (120/235)        remote: Compressing objects:  52% (123/235)        remote: Compressing objects:  53% (125/235)        remote: Compressing objects:  54% (127/235)        remote: Compressing objects:  55% (130/235)        remote: Compressing objects:  56% (132/235)        remote: Compressing objects:  57% (134/235)        remote: Compressing objects:  58% (137/235)        remote: Compressing objects:  59% (139/235)        remote: Compressing objects:  60% (141/235)        remote: Compressing objects:  61% (144/235)        remote: Compressing objects:  62% (146/235)        remote: Compressing objects:  63% (149/235)        remote: Compressing objects:  64% (151/235)        remote: Compressing objects:  65% (153/235)        remote: Compressing objects:  66% (156/235)        remote: Compressing objects:  67% (158/235)        remote: Compressing objects:  68% (160/235)        remote: Compressing objects:  69% (163/235)        remote: Compressing objects:  70% (165/235)        remote: Compressing objects:  71% (167/235)        remote: Compressing objects:  72% (170/235)        remote: Compressing objects:  73% (172/235)        remote: Compressing objects:  74% (174/235)        remote: Compressing objects:  75% (177/235)        remote: Compressing objects:  76% (179/235)        remote: Compressing objects:  77% (181/235)        remote: Compressing objects:  78% (184/235)        remote: Compressing objects:  79% (186/235)        remote: Compressing objects:  80% (188/235)        remote: Compressing objects:  81% (191/235)        remote: Compressing objects:  82% (193/235)        remote: Compressing objects:  83% (196/235)        remote: Compressing objects:  84% (198/235)        remote: Compressing objects:  85% (200/235)        remote: Compressing objects:  86% (203/235)        remote: Compressing objects:  87% (205/235)        remote: Compressing objects:  88% (207/235)        remote: Compressing objects:  89% (210/235)        remote: Compressing objects:  90% (212/235)        remote: Compressing objects:  91% (214/235)        remote: Compressing objects:  92% (217/235)        remote: Compressing objects:  93% (219/235)        remote: Compressing objects:  94% (221/235)        remote: Compressing objects:  95% (224/235)        remote: Compressing objects:  96% (226/235)        remote: Compressing objects:  97% (228/235)        remote: Compressing objects:  98% (231/235)        remote: Compressing objects:  99% (233/235)        remote: Compressing objects: 100% (235/235)        remote: Compressing objects: 100% (235/235), done.        
+remote: Total 352370 (delta 307), reused 300 (delta 239), pack-reused 351893 (from 3)        
+remote: Enumerating objects: 55, done.        
+remote: Counting objects:   3% (1/33)        remote: Counting objects:   6% (2/33)        remote: Counting objects:   9% (3/33)        remote: Counting objects:  12% (4/33)        remote: Counting objects:  15% (5/33)        remote: Counting objects:  18% (6/33)        remote: Counting objects:  21% (7/33)        remote: Counting objects:  24% (8/33)        remote: Counting objects:  27% (9/33)        remote: Counting objects:  30% (10/33)        remote: Counting objects:  33% (11/33)        remote: Counting objects:  36% (12/33)        remote: Counting objects:  39% (13/33)        remote: Counting objects:  42% (14/33)        remote: Counting objects:  45% (15/33)        remote: Counting objects:  48% (16/33)        remote: Counting objects:  51% (17/33)        remote: Counting objects:  54% (18/33)        remote: Counting objects:  57% (19/33)        remote: Counting objects:  60% (20/33)        remote: Counting objects:  63% (21/33)        remote: Counting objects:  66% (22/33)        remote: Counting objects:  69% (23/33)        remote: Counting objects:  72% (24/33)        remote: Counting objects:  75% (25/33)        remote: Counting objects:  78% (26/33)        remote: Counting objects:  81% (27/33)        remote: Counting objects:  84% (28/33)        remote: Counting objects:  87% (29/33)        remote: Counting objects:  90% (30/33)        remote: Counting objects:  93% (31/33)        remote: Counting objects:  96% (32/33)        remote: Counting objects: 100% (33/33)        remote: Counting objects: 100% (33/33), done.        
+remote: Total 55 (delta 33), reused 33 (delta 33), pack-reused 22 (from 1)        
+==> /usr/bin/sudo /bin/mkdir -p /etc/paths.d
+==> /usr/bin/sudo tee /etc/paths.d/homebrew
+/opt/homebrew/bin
+==> /usr/bin/sudo /usr/sbin/chown root:wheel /etc/paths.d/homebrew
+==> /usr/bin/sudo /bin/chmod a+r /etc/paths.d/homebrew
+==> Updating Homebrew...
+==> Downloading https://ghcr.io/v2/homebrew/core/portable-ruby/blobs/sha256:83a3ff85d83acf0e3dd8105de0fdb01da96b7c0eaf2dfaae2ba6500ec2ae4a64
+##O=-#    #                                                                                                                                                                     #=#=-  #     #                                                                                                                                                                  -#O=#    #      #                                                                                                                                                                                                                                                                                                                                           0.3%###                                                                                                                                                                         2.0%###############                                                                                                                                                             9.2%#########################################                                                                                                                                  24.7%########################################################                                                                                                                   33.1%##############################################################                                                                                                             37.1%##############################################################################                                                                                             46.7%###################################################################################                                                                                        49.4%########################################################################################                                                                                   52.2%###########################################################################################                                                                                53.9%#######################################################################################################                                                                    61.1%#####################################################################################################################                                                      69.4%###########################################################################################################################                                                72.8%#####################################################################################################################################                                      78.9%#########################################################################################################################################                                  81.2%#############################################################################################################################################                              83.6%###############################################################################################################################################                            85.1%#################################################################################################################################################                          86.2%###################################################################################################################################################                        87.4%######################################################################################################################################################                     88.8%#######################################################################################################################################################                    89.9%##########################################################################################################################################################                 91.3%############################################################################################################################################################               92.5%##############################################################################################################################################################             93.7%################################################################################################################################################################           95.0%##################################################################################################################################################################         96.1%####################################################################################################################################################################       97.6%#######################################################################################################################################################################    99.0%######################################################################################################################################################################### 100.0%
+==> Pouring portable-ruby-4.0.6.arm64_big_sur.bottle.tar.gz
+==> Installation successful!
+
+==> Homebrew has enabled anonymous aggregate formulae and cask analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics data has been sent yet (nor will any be during this install run).
+
+==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+  https://github.com/Homebrew/brew#donations
+
+==> Next steps:
+- Run these commands in your terminal to add Homebrew to your PATH:
+    echo >> /Users/anshulyadav/.zprofile
+    echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> /Users/anshulyadav/.zprofile
+    eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+- Run brew help to get started
+- Further documentation:
+    https://docs.brew.sh
+2026-07-31T12:02:00Z INFO: Homebrew installed successfully.
+2026-07-31T12:02:00Z INFO: Appended environment variable to /Users/anshulyadav/.zshrc
+2026-07-31T12:02:00Z INFO: Updating Homebrew...
+2026-07-31T12:02:02Z INFO: OK: brew update
+2026-07-31T12:02:02Z COMMAND: brew update
+OUTPUT: ==> Updating Homebrew...
+Already up-to-date.
+2026-07-31T12:02:02Z INFO: Package manager ready: brew
+2026-07-31T12:02:02Z INFO: OS: macos
+2026-07-31T12:02:02Z INFO: Package manager: brew
+2026-07-31T12:02:11Z INFO: OS: macos
+2026-07-31T12:02:11Z INFO: Package manager: brew
+2026-07-31T12:26:59Z INFO: Menu invoked; automatically completing.
+2026-07-31T12:27:33Z INFO: Menu invoked; automatically completing.
+2026-07-31T12:33:03Z INFO: OS: macos
+2026-07-31T12:33:03Z INFO: Package manager: brew
+2026-07-31T12:42:44Z WARNING: Unknown choice.

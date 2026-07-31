@@ -53,3 +53,13 @@ Examples:
 ## Data Manifest
 
 All tools are defined in `data.json` with install, update, and check commands.
+
+## Generated catalog
+
+A separate hierarchical source file, `tools_catalog.json`, documents the full toolkit taxonomy. Use `scripts/generate_data_json.py` to regenerate `data.json` from this catalog when the toolkit list changes:
+
+```bash
+python3 scripts/generate_data_json.py
+```
+
+The output file is `data.generated.json` by default, and you can inspect or copy it into `data.json` after review.

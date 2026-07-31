@@ -27,8 +27,8 @@ log_error() {
 run_cmd() {
   local cmd="$1"
   local output
-  output=$(bash -lc "$cmd" 2>&1)
-  local exit_code=$?
+  local exit_code=0
+  output=$(bash -lc "$cmd" 2>&1) || exit_code=$?
   if [[ $exit_code -eq 0 ]]; then
     log_info "OK: $cmd"
     if [[ -n "${LOG_FILE:-}" ]]; then
@@ -41,6 +41,36 @@ run_cmd() {
     printf '%s COMMAND: %s\nOUTPUT: %s\n' "$(date -u +'%Y-%m-%dT%H:%M:%SZ')" "$cmd" "$output" >>"$LOG_FILE"
   fi
   return $exit_code
+}
+
+run_cmd_live() {
+  local cmd="$1"
+  local output_file
+  local output
+  local exit_code
+
+  output_file="$(mktemp "${TMPDIR:-/tmp}/setupx-output.XXXXXX")"
+  log_info "Running: $cmd"
+  set +e
+  bash -lc "$cmd" 2>&1 | tee "$output_file"
+  exit_code="${PIPESTATUS[0]}"
+  set -e
+  output="$(<"$output_file")"
+  rm -f "$output_file"
+
+  if [[ $exit_code -eq 0 ]]; then
+    log_info "OK: $cmd"
+    if [[ -n "${LOG_FILE:-}" ]]; then
+      printf '%s COMMAND: %s\nOUTPUT: %s\n' "$(date -u +'%Y-%m-%dT%H:%M:%SZ')" "$cmd" "$output" >>"$LOG_FILE"
+    fi
+    return 0
+  fi
+
+  log_warn "FAILED: $cmd"
+  if [[ -n "${LOG_FILE:-}" ]]; then
+    printf '%s COMMAND: %s\nOUTPUT: %s\n' "$(date -u +'%Y-%m-%dT%H:%M:%SZ')" "$cmd" "$output" >>"$LOG_FILE"
+  fi
+  return "$exit_code"
 }
 
 run_cmd_as_admin() {
@@ -180,8 +210,7 @@ search = sys.argv[2]
 for category in data.get('categories', []):
     for tool in data.get(category, {}).get('tools', []):
         if tool.get('name') == search or tool.get('package') == search:
-            print(category)
-            print(tool.get('name'))
+            print(f"{category}\t{tool.get('name')}")
             sys.exit(0)
 sys.exit(1)
 PY
@@ -213,4 +242,47 @@ with open(sys.argv[1], 'r', encoding='utf-8') as f:
 for category in data.get('categories', []):
     print(category)
 PY
+}
+
+# Prompt the user for a yes/no answer.
+# Usage: prompt_yes_no "Question text" [default]
+# - default: 'n' (treat Enter as no) or 'y'
+# Accepts 's' or 'S' as affirmative (maps to yes).
+prompt_yes_no() {
+  local prompt_text="${1:-Proceed?}"
+  local default="${2:-n}"
+
+  # Clear current line to remove any old input text
+  printf '\r\033[K'
+
+  local default_display
+  if [[ "$default" == "y" ]]; then
+    default_display='Y/n'
+  else
+    default_display='y/N'
+  fi
+
+  printf '%s [%s] ' "$prompt_text" "$default_display"
+  local ans
+  if ! read -r ans; then
+    # treat EOF as default
+    ans="$default"
+  fi
+
+  if [[ -z "$ans" ]]; then
+    ans="$default"
+  fi
+
+  # normalize to lowercase (portable)
+  ans="$(printf '%s' "$ans" | tr '[:upper:]' '[:lower:]')"
+
+  # Accept 's' as 'y' (e.g., Spanish sí)
+  if [[ "$ans" == "s" ]]; then
+    ans="y"
+  fi
+
+  if [[ "$ans" == "y" || "$ans" == "yes" ]]; then
+    return 0
+  fi
+  return 1
 }

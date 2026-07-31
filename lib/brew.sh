@@ -16,16 +16,44 @@ install_homebrew() {
     return 1
   fi
 
-  log_info 'Installing Homebrew...'
-  if ! run_cmd_as_admin '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'; then
+  log_info 'Installing Homebrew (live output follows)...'
+  if ! run_cmd_live '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"'; then
     log_error 'Homebrew installation failed.'
     return 1
   fi
   log_info 'Homebrew installed successfully.'
 }
 
+configure_brew_path() {
+  local brew_bin=''
+  if command -v brew >/dev/null 2>&1; then
+    brew_bin="$(dirname "$(command -v brew)")"
+  elif [[ -x /opt/homebrew/bin/brew ]]; then
+    brew_bin='/opt/homebrew/bin'
+  elif [[ -x /usr/local/bin/brew ]]; then
+    brew_bin='/usr/local/bin'
+  fi
+
+  if [[ -z "$brew_bin" ]]; then
+    return 1
+  fi
+
+  export PATH="$brew_bin:$PATH"
+  ensure_env_entry PATH "$brew_bin:\$PATH"
+}
+
+update_brew() {
+  log_info 'Updating Homebrew...'
+  if ! run_cmd 'brew update'; then
+    log_error 'Homebrew update failed.'
+    return 1
+  fi
+}
+
 ensure_brew() {
   if ! brew_installed; then
     install_homebrew
   fi
+  configure_brew_path
+  update_brew
 }

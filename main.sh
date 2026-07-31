@@ -58,6 +58,17 @@ show_system_info() {
   fi
 }
 
+prepare_system() {
+  show_system_info
+  if ! ensure_package_manager; then
+    log_error 'Package manager setup failed. The software menu cannot continue.'
+    return 1
+  fi
+
+  log_info "Package manager ready: $(detect_package_manager)"
+  show_system_info
+}
+
 run_install_all() {
   install_all_categories
 }
@@ -93,6 +104,9 @@ show_category() {
 main() {
   assert_data_file
   if [[ $# -lt 1 ]]; then
+    if ! prepare_system; then
+      log_warn 'Opening the menu without a ready package manager.'
+    fi
     launch_menu
     return
   fi

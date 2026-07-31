@@ -18,6 +18,11 @@ install_category() {
     if [[ -z "$tool" ]]; then
       continue
     fi
+    # Ask user before installing each tool. Defaults to 'no' on Enter.
+    if ! prompt_yes_no "Install $tool?" "n"; then
+      log_info "Skipping $tool"
+      continue
+    fi
     install_tool "$category" "$tool"
   done <<<"$tools"
 }
@@ -75,7 +80,7 @@ install_tool_by_name() {
     return 1
   fi
 
-  IFS=$'\n' read -r category tool <<< "$result"
+  IFS=$'\t' read -r category tool <<< "$result"
   install_tool "$category" "$tool"
 }
 
