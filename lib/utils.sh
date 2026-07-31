@@ -82,6 +82,11 @@ run_cmd_with_timer() {
   local start_time
   local elapsed
   local pid
+  local progress_width=24
+  local filled=0
+  local empty=24
+  local bar=''
+  local i
 
   output_file="$(mktemp "${TMPDIR:-/tmp}/setupx-output.XXXXXX")"
   start_time="$(date +%s)"
@@ -93,7 +98,15 @@ run_cmd_with_timer() {
   while kill -0 "$pid" 2>/dev/null; do
     sleep 1
     elapsed=$(( $(date +%s) - start_time ))
-    printf '\r%s (%ss elapsed)...' "$label" "$elapsed"
+    filled=$(( elapsed % (progress_width + 1) ))
+    if (( filled > progress_width )); then
+      filled=$progress_width
+    fi
+    empty=$(( progress_width - filled ))
+    bar=''
+    for ((i=0; i<filled; i++)); do bar+='#'; done
+    for ((i=0; i<empty; i++)); do bar+='.'; done
+    printf '\r\033[K[%s] %s (%ss elapsed)...' "$bar" "$label" "$elapsed"
   done
   wait "$pid"
   exit_code=$?
