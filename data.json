@@ -231,15 +231,6 @@
         "required": false
       },
       {
-        "name": "Create React App",
-        "type": "brew",
-        "package": "create_react_app",
-        "check": "command -v create_react_app",
-        "install": "brew install create_react_app",
-        "update": "brew upgrade create_react_app",
-        "required": false
-      },
-      {
         "name": "Vite",
         "type": "brew",
         "package": "vite",
@@ -282,60 +273,6 @@
         "check": "command -v prisma_cli",
         "install": "npm install -g prisma_cli",
         "update": "npm update -g prisma_cli",
-        "required": false
-      },
-      {
-        "name": "Drizzle Kit",
-        "type": "brew",
-        "package": "drizzle_kit",
-        "check": "command -v drizzle_kit",
-        "install": "brew install drizzle_kit",
-        "update": "brew upgrade drizzle_kit",
-        "required": false
-      },
-      {
-        "name": "OpenAPI Generator",
-        "type": "brew",
-        "package": "openapi_generator",
-        "check": "command -v openapi_generator",
-        "install": "brew install openapi_generator",
-        "update": "brew upgrade openapi_generator",
-        "required": false
-      },
-      {
-        "name": "Postman",
-        "type": "brew",
-        "package": "postman",
-        "check": "command -v postman",
-        "install": "brew install postman",
-        "update": "brew upgrade postman",
-        "required": false
-      },
-      {
-        "name": "Bruno",
-        "type": "brew",
-        "package": "bruno",
-        "check": "command -v bruno",
-        "install": "brew install bruno",
-        "update": "brew upgrade bruno",
-        "required": false
-      },
-      {
-        "name": "Insomnia",
-        "type": "brew",
-        "package": "insomnia",
-        "check": "command -v insomnia",
-        "install": "brew install insomnia",
-        "update": "brew upgrade insomnia",
-        "required": false
-      },
-      {
-        "name": "HTTPie",
-        "type": "brew",
-        "package": "httpie",
-        "check": "command -v httpie",
-        "install": "brew install httpie",
-        "update": "brew upgrade httpie",
         "required": false
       },
       {
