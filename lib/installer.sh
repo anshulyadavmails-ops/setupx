@@ -18,12 +18,10 @@ install_category() {
     if [[ -z "$tool" ]]; then
       continue
     fi
-    # Ask user before installing each tool. Defaults to 'no' on Enter.
-    if ! prompt_yes_no "Install $tool?" "n"; then
-      log_info "Skipping $tool"
-      continue
+    log_info "Installing tool: $tool"
+    if ! install_tool "$category" "$tool"; then
+      log_warn "Continuing after failed install for $tool"
     fi
-    install_tool "$category" "$tool"
   done <<<"$tools"
 }
 
@@ -36,7 +34,9 @@ install_all_categories() {
     if [[ -z "$category" ]]; then
       continue
     fi
-    install_category "$category"
+    if ! install_category "$category"; then
+      log_warn "Continuing after failed category install for $category"
+    fi
   done <<<"$categories"
 }
 

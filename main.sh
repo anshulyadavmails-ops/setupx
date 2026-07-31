@@ -42,14 +42,20 @@ EOF
 }
 
 show_system_info() {
-  local os pm
-  os="$(detect_os)"
+  local os_name os_version device pm pm_display
+  os_name="$(get_os_display_name)"
+  os_version="$(get_os_version)"
+  device="$(get_device_info)"
   pm="$(detect_package_manager)"
+  pm_display="$(get_package_manager_display_name "$pm")"
 
-  log_info "OS: $os"
-  log_info "Package manager: $pm"
+  printf 'System Information\n'
+  printf 'OS: %s\n' "$os_name"
+  printf 'OS Version: %s\n' "${os_version:-Unknown}"
+  printf 'Device: %s\n' "${device:-Unknown}"
+  printf 'Package Manager: %s\n' "$pm_display"
 
-  if [[ "$os" == "macos" && "$pm" == "none" ]]; then
+  if [[ "$pm" == "none" ]]; then
     log_warn 'Homebrew is not installed. Install it manually or run install after enabling sudo.'
   fi
 

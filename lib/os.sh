@@ -30,6 +30,137 @@ detect_os() {
   esac
 }
 
+get_os_display_name() {
+  case "$(detect_os)" in
+    macos)
+      printf 'macOS'
+      ;;
+    linux)
+      printf 'Linux'
+      ;;
+    windows)
+      printf 'Windows'
+      ;;
+    freebsd)
+      printf 'FreeBSD'
+      ;;
+    openbsd)
+      printf 'OpenBSD'
+      ;;
+    netbsd)
+      printf 'NetBSD'
+      ;;
+    solaris)
+      printf 'Solaris'
+      ;;
+    *)
+      printf 'Unknown'
+      ;;
+  esac
+}
+
+get_os_version() {
+  case "$(detect_os)" in
+    macos)
+      if command -v sw_vers >/dev/null 2>&1; then
+        sw_vers -productVersion 2>/dev/null || uname -r
+      else
+        uname -r
+      fi
+      ;;
+    linux)
+      if [[ -f /etc/os-release ]]; then
+        (
+          source /etc/os-release 2>/dev/null || true
+          printf '%s\n' "${VERSION_ID:-${PRETTY_NAME:-}}"
+        )
+      else
+        uname -r
+      fi
+      ;;
+    windows)
+      if command -v cmd.exe >/dev/null 2>&1; then
+        cmd.exe /c ver 2>/dev/null | head -n 1 | tr -d '\r' || true
+      fi
+      uname -r
+      ;;
+    *)
+      uname -r
+      ;;
+  esac
+}
+
+get_device_info() {
+  local model arch
+  arch="$(uname -m)"
+  case "$(detect_os)" in
+    macos)
+      if command -v system_profiler >/dev/null 2>&1; then
+        model="$(system_profiler SPHardwareDataType 2>/dev/null | awk -F': ' '/Model Name/ {print $2; exit}' || true)"
+      fi
+      if [[ -n "$model" ]]; then
+        printf '%s (%s)' "$model" "$arch"
+      else
+        printf '%s' "$arch"
+      fi
+      ;;
+    linux)
+      if command -v hostnamectl >/dev/null 2>&1; then
+        model="$(hostnamectl 2>/dev/null | awk -F': ' '/Machine/ {print $2; exit}' || true)"
+      fi
+      if [[ -n "$model" ]]; then
+        printf '%s (%s)' "$model" "$arch"
+      else
+        printf '%s' "$arch"
+      fi
+      ;;
+    windows)
+      printf '%s' "$arch"
+      ;;
+    *)
+      printf '%s' "$arch"
+      ;;
+  esac
+}
+
+get_package_manager_display_name() {
+  case "$1" in
+    brew)
+      printf 'Homebrew'
+      ;;
+    apt)
+      printf 'APT'
+      ;;
+    dnf)
+      printf 'DNF'
+      ;;
+    pacman)
+      printf 'Pacman'
+      ;;
+    zypper)
+      printf 'Zypper'
+      ;;
+    choco)
+      printf 'Chocolatey'
+      ;;
+    scoop)
+      printf 'Scoop'
+      ;;
+    winget)
+      printf 'Winget'
+      ;;
+    pkg)
+      printf 'pkg'
+      ;;
+    none)
+      printf 'None'
+      ;;
+    *)
+      printf '%s' "$1"
+      ;;
+  esac
+}
+
 is_macos() {
   [[ "$(detect_os)" == "macos" ]]
 }

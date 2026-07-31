@@ -825,3 +825,494 @@ Already up-to-date.
 2026-07-31T12:33:03Z INFO: OS: macos
 2026-07-31T12:33:03Z INFO: Package manager: brew
 2026-07-31T12:42:44Z WARNING: Unknown choice.
+2026-07-31T12:51:36Z INFO: PATH is already configured in /Users/anshulyadav/.zshrc
+2026-07-31T12:51:36Z INFO: Updating Homebrew...
+2026-07-31T12:51:38Z INFO: OK: brew update
+2026-07-31T12:51:38Z COMMAND: brew update
+OUTPUT: ==> Updating Homebrew...
+Already up-to-date.
+2026-07-31T12:51:38Z INFO: Package manager ready: brew
+2026-07-31T12:51:58Z INFO: PATH is already configured in /Users/anshulyadav/.zshrc
+2026-07-31T12:51:58Z INFO: Updating Homebrew...
+2026-07-31T12:52:00Z INFO: OK: brew update
+2026-07-31T12:52:00Z COMMAND: brew update
+OUTPUT: ==> Updating Homebrew...
+Already up-to-date.
+2026-07-31T12:52:00Z INFO: Package manager ready: brew
+2026-07-31T12:52:20Z WARNING: Unknown choice.
+2026-07-31T12:52:24Z WARNING: Unknown choice.
+2026-07-31T12:52:28Z WARNING: Unknown choice.
+2026-07-31T12:52:33Z WARNING: Unknown choice.
+2026-07-31T12:57:17Z INFO: PATH is already configured in /Users/anshulyadav/.zshrc
+2026-07-31T12:57:17Z INFO: Updating Homebrew...
+2026-07-31T12:57:21Z INFO: OK: brew update
+2026-07-31T12:57:21Z COMMAND: brew update
+OUTPUT: ==> Updating Homebrew...
+==> Homebrew collects anonymous analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics have been recorded yet (nor will be during this `brew` run).
+
+==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+  https://github.com/Homebrew/brew#-donations
+
+Already up-to-date.
+2026-07-31T12:57:21Z INFO: Package manager ready: brew
+2026-07-31T12:59:40Z INFO: Installing category: common_tools
+2026-07-31T12:59:40Z INFO: PATH is already configured in /Users/anshulyadav/.zshrc
+2026-07-31T12:59:40Z INFO: Updating Homebrew...
+2026-07-31T12:59:42Z INFO: OK: brew update
+2026-07-31T12:59:42Z COMMAND: brew update
+OUTPUT: ==> Updating Homebrew...
+Already up-to-date.
+2026-07-31T12:59:42Z INFO: Installing tool: Visual Studio Code
+2026-07-31T12:59:42Z INFO: Installing Visual Studio Code...
+2026-07-31T13:00:40Z INFO: PATH is already configured in /Users/anshulyadav/.zshrc
+2026-07-31T13:00:40Z INFO: Updating Homebrew...
+2026-07-31T13:00:43Z INFO: OK: brew update
+2026-07-31T13:00:43Z COMMAND: brew update
+OUTPUT: ==> Updating Homebrew...
+Already up-to-date.
+2026-07-31T13:00:43Z INFO: Package manager ready: brew
+2026-07-31T13:00:59Z INFO: Installing category: common_tools
+2026-07-31T13:00:59Z INFO: PATH is already configured in /Users/anshulyadav/.zshrc
+2026-07-31T13:00:59Z INFO: Updating Homebrew...
+2026-07-31T13:01:01Z INFO: OK: brew update
+2026-07-31T13:01:01Z COMMAND: brew update
+OUTPUT: ==> Updating Homebrew...
+Already up-to-date.
+2026-07-31T13:01:01Z INFO: Installing tool: Visual Studio Code
+2026-07-31T13:01:01Z INFO: Installing Visual Studio Code...
+2026-07-31T13:01:04Z WARNING: FAILED: brew install --cask visual-studio-code
+2026-07-31T13:01:04Z COMMAND: brew install --cask visual-studio-code
+OUTPUT: ==> Would install 1 cask:
+visual-studio-code
+==> Fetching downloads for: visual-studio-code
+✘ Cask visual-studio-code (1.131.0)
+Error: A `brew install --cask visual-studio-code` process has already locked /Users/anshulyadav/Library/Caches/Homebrew/downloads/04e9c233b4b971cfad8e60b4bd6c6cd95dad3355b4f6979fd73533d221e7280a--VSCode-darwin-arm64.zip.incomplete.
+Please wait for it to finish or terminate it to continue.
+2026-07-31T13:01:04Z WARNING: Install failed for Visual Studio Code, attempting doctor checks...
+2026-07-31T13:01:04Z WARNING: No doctor commands defined for Visual Studio Code
+2026-07-31T13:01:04Z INFO: Retrying install for Visual Studio Code...
+2026-07-31T13:01:05Z WARNING: FAILED: brew install --cask visual-studio-code
+2026-07-31T13:01:05Z COMMAND: brew install --cask visual-studio-code
+OUTPUT: ==> Would install 1 cask:
+visual-studio-code
+==> Fetching downloads for: visual-studio-code
+✘ Cask visual-studio-code (1.131.0)
+Error: A `brew install --cask visual-studio-code` process has already locked /Users/anshulyadav/Library/Caches/Homebrew/downloads/04e9c233b4b971cfad8e60b4bd6c6cd95dad3355b4f6979fd73533d221e7280a--VSCode-darwin-arm64.zip.incomplete.
+Please wait for it to finish or terminate it to continue.
+2026-07-31T13:01:05Z ERROR: Installation failed again for Visual Studio Code
+2026-07-31T13:01:29Z WARNING: FAILED: brew install --cask visual-studio-code
+2026-07-31T13:01:29Z COMMAND: brew install --cask visual-studio-code
+OUTPUT: ==> Would install 1 cask:
+visual-studio-code
+==> Fetching downloads for: visual-studio-code
+✔︎ Cask visual-studio-code (1.131.0)
+Error: It seems there is already an App at '/Applications/Visual Studio Code.app'.
+==> Installing Cask visual-studio-code
+==> Purging files for version 1.131.0 of Cask visual-studio-code
+2026-07-31T13:01:29Z WARNING: Install failed for Visual Studio Code, attempting doctor checks...
+2026-07-31T13:01:29Z WARNING: No doctor commands defined for Visual Studio Code
+2026-07-31T13:01:29Z INFO: Retrying install for Visual Studio Code...
+2026-07-31T13:01:38Z WARNING: FAILED: brew install --cask visual-studio-code
+2026-07-31T13:01:38Z COMMAND: brew install --cask visual-studio-code
+OUTPUT: ==> Would install 1 cask:
+visual-studio-code
+==> Fetching downloads for: visual-studio-code
+✔︎ Cask visual-studio-code (1.131.0)
+Error: It seems there is already an App at '/Applications/Visual Studio Code.app'.
+==> Installing Cask visual-studio-code
+==> Purging files for version 1.131.0 of Cask visual-studio-code
+2026-07-31T13:01:38Z ERROR: Installation failed again for Visual Studio Code
+2026-07-31T13:02:13Z INFO: Installing category: common_tools
+2026-07-31T13:02:13Z INFO: PATH is already configured in /Users/anshulyadav/.zshrc
+2026-07-31T13:02:13Z INFO: Updating Homebrew...
+2026-07-31T13:02:15Z INFO: OK: brew update
+2026-07-31T13:02:15Z COMMAND: brew update
+OUTPUT: ==> Updating Homebrew...
+Already up-to-date.
+2026-07-31T13:02:15Z INFO: Installing tool: Visual Studio Code
+2026-07-31T13:02:15Z INFO: Installing Visual Studio Code...
+2026-07-31T13:02:24Z WARNING: FAILED: brew install --cask visual-studio-code
+2026-07-31T13:02:24Z COMMAND: brew install --cask visual-studio-code
+OUTPUT: ==> Would install 1 cask:
+visual-studio-code
+==> Fetching downloads for: visual-studio-code
+✔︎ Cask visual-studio-code (1.131.0)
+Error: It seems there is already an App at '/Applications/Visual Studio Code.app'.
+==> Installing Cask visual-studio-code
+==> Purging files for version 1.131.0 of Cask visual-studio-code
+2026-07-31T13:02:24Z WARNING: Install failed for Visual Studio Code, attempting doctor checks...
+2026-07-31T13:02:24Z WARNING: No doctor commands defined for Visual Studio Code
+2026-07-31T13:02:24Z INFO: Retrying install for Visual Studio Code...
+2026-07-31T13:02:33Z WARNING: FAILED: brew install --cask visual-studio-code
+2026-07-31T13:02:33Z COMMAND: brew install --cask visual-studio-code
+OUTPUT: ==> Would install 1 cask:
+visual-studio-code
+==> Fetching downloads for: visual-studio-code
+✔︎ Cask visual-studio-code (1.131.0)
+Error: It seems there is already an App at '/Applications/Visual Studio Code.app'.
+==> Installing Cask visual-studio-code
+==> Purging files for version 1.131.0 of Cask visual-studio-code
+2026-07-31T13:02:33Z ERROR: Installation failed again for Visual Studio Code
+2026-07-31T13:02:33Z WARNING: Continuing after failed install for Visual Studio Code
+2026-07-31T13:02:33Z INFO: Installing tool: Xcode (macOS)
+2026-07-31T13:02:33Z INFO: Installing Xcode (macOS)...
+2026-07-31T13:02:34Z WARNING: FAILED: brew install --cask xcode
+2026-07-31T13:02:34Z COMMAND: brew install --cask xcode
+OUTPUT: Warning: Cask 'xcode' is unavailable: No Cask with this name exists.
+==> Searching for similarly named casks...
+==> Casks
+codex
+copilot-for-xcode
+github-copilot-for-xcode
+phoenix-code
+swiftformat-for-xcode
+xcodeclangformat
+xcodepilot
+xcodes-app
+xscope
+
+To install codex, run:
+  brew install --cask codex
+2026-07-31T13:02:34Z WARNING: Install failed for Xcode (macOS), attempting doctor checks...
+2026-07-31T13:02:34Z WARNING: No doctor commands defined for Xcode (macOS)
+2026-07-31T13:02:34Z INFO: Retrying install for Xcode (macOS)...
+2026-07-31T13:02:35Z WARNING: FAILED: brew install --cask xcode
+2026-07-31T13:02:35Z COMMAND: brew install --cask xcode
+OUTPUT: Warning: Cask 'xcode' is unavailable: No Cask with this name exists.
+==> Searching for similarly named casks...
+==> Casks
+codex
+copilot-for-xcode
+github-copilot-for-xcode
+phoenix-code
+swiftformat-for-xcode
+xcodeclangformat
+xcodepilot
+xcodes-app
+xscope
+
+To install codex, run:
+  brew install --cask codex
+2026-07-31T13:02:35Z ERROR: Installation failed again for Xcode (macOS)
+2026-07-31T13:02:35Z WARNING: Continuing after failed install for Xcode (macOS)
+2026-07-31T13:02:35Z INFO: Installing tool: Homebrew
+2026-07-31T13:02:35Z INFO: Installing Homebrew...
+2026-07-31T13:02:35Z WARNING: FAILED: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+2026-07-31T13:02:35Z COMMAND: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+OUTPUT: Warning: Running in non-interactive mode because `stdin` is not a TTY.
+==> Checking for `sudo` access (which may request your password)...
+Need sudo access on macOS (e.g. the user anshulyadav needs to be an Administrator)!
+2026-07-31T13:02:35Z WARNING: Install failed for Homebrew, attempting doctor checks...
+2026-07-31T13:02:35Z WARNING: No doctor commands defined for Homebrew
+2026-07-31T13:02:35Z INFO: Retrying install for Homebrew...
+2026-07-31T13:02:36Z WARNING: FAILED: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+2026-07-31T13:02:36Z COMMAND: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+OUTPUT: Warning: Running in non-interactive mode because `stdin` is not a TTY.
+==> Checking for `sudo` access (which may request your password)...
+Need sudo access on macOS (e.g. the user anshulyadav needs to be an Administrator)!
+2026-07-31T13:02:36Z ERROR: Installation failed again for Homebrew
+2026-07-31T13:02:36Z WARNING: Continuing after failed install for Homebrew
+2026-07-31T13:02:36Z INFO: Installing tool: Winget
+2026-07-31T13:02:36Z INFO: Installing Winget...
+2026-07-31T13:02:37Z WARNING: FAILED: brew install winget
+2026-07-31T13:02:37Z COMMAND: brew install winget
+OUTPUT: Warning: No available formula with the name "winget". Did you mean wget or bwidget?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+wget
+bwidget
+
+To install wget, run:
+  brew install wget
+
+==> Casks
+twingate
+
+To install twingate, run:
+  brew install --cask twingate
+2026-07-31T13:02:37Z WARNING: Install failed for Winget, attempting doctor checks...
+2026-07-31T13:02:37Z WARNING: No doctor commands defined for Winget
+2026-07-31T13:02:37Z INFO: Retrying install for Winget...
+2026-07-31T13:02:38Z WARNING: FAILED: brew install winget
+2026-07-31T13:02:38Z COMMAND: brew install winget
+OUTPUT: Warning: No available formula with the name "winget". Did you mean wget or bwidget?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+wget
+bwidget
+
+To install wget, run:
+  brew install wget
+
+==> Casks
+twingate
+
+To install twingate, run:
+  brew install --cask twingate
+2026-07-31T13:02:38Z ERROR: Installation failed again for Winget
+2026-07-31T13:02:38Z WARNING: Continuing after failed install for Winget
+2026-07-31T13:02:38Z INFO: Installing tool: Scoop
+2026-07-31T13:02:39Z INFO: Installing Scoop...
+2026-07-31T13:02:40Z WARNING: FAILED: brew install scoop
+2026-07-31T13:02:40Z COMMAND: brew install scoop
+OUTPUT: Warning: No available formula with the name "scoop". Did you mean scooter?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+scooter
+
+To install scooter, run:
+  brew install scooter
+
+==> Casks
+scoot
+
+To install scoot, run:
+  brew install --cask scoot
+2026-07-31T13:02:40Z WARNING: Install failed for Scoop, attempting doctor checks...
+2026-07-31T13:02:40Z WARNING: No doctor commands defined for Scoop
+2026-07-31T13:02:40Z INFO: Retrying install for Scoop...
+2026-07-31T13:02:41Z WARNING: FAILED: brew install scoop
+2026-07-31T13:02:41Z COMMAND: brew install scoop
+OUTPUT: Warning: No available formula with the name "scoop". Did you mean scooter?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+scooter
+
+To install scooter, run:
+  brew install scooter
+
+==> Casks
+scoot
+
+To install scoot, run:
+  brew install --cask scoot
+2026-07-31T13:02:41Z ERROR: Installation failed again for Scoop
+2026-07-31T13:02:41Z WARNING: Continuing after failed install for Scoop
+2026-07-31T13:02:41Z INFO: Installing tool: Chocolatey
+2026-07-31T13:02:41Z INFO: Installing Chocolatey...
+2026-07-31T13:02:42Z WARNING: FAILED: brew install chocolatey
+2026-07-31T13:02:42Z COMMAND: brew install chocolatey
+OUTPUT: Warning: No available formula with the name "chocolatey". Did you mean chocolate-doom?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+chocolate-doom
+
+To install chocolate-doom, run:
+  brew install chocolate-doom
+
+==> Casks
+choosy
+
+To install choosy, run:
+  brew install --cask choosy
+2026-07-31T13:02:42Z WARNING: Install failed for Chocolatey, attempting doctor checks...
+2026-07-31T13:02:42Z WARNING: No doctor commands defined for Chocolatey
+2026-07-31T13:02:42Z INFO: Retrying install for Chocolatey...
+2026-07-31T13:02:43Z WARNING: FAILED: brew install chocolatey
+2026-07-31T13:02:43Z COMMAND: brew install chocolatey
+OUTPUT: Warning: No available formula with the name "chocolatey". Did you mean chocolate-doom?
+==> Searching for similarly named formulae and casks...
+==> Formulae
+chocolate-doom
+
+To install chocolate-doom, run:
+  brew install chocolate-doom
+
+==> Casks
+choosy
+
+To install choosy, run:
+  brew install --cask choosy
+2026-07-31T13:02:43Z ERROR: Installation failed again for Chocolatey
+2026-07-31T13:02:43Z WARNING: Continuing after failed install for Chocolatey
+2026-07-31T13:02:43Z INFO: Installing tool: npm
+2026-07-31T13:02:43Z INFO: Installing npm...
+2026-07-31T13:02:43Z WARNING: FAILED: npm install -g npm
+2026-07-31T13:02:43Z COMMAND: npm install -g npm
+OUTPUT: bash: npm: command not found
+2026-07-31T13:02:43Z WARNING: Install failed for npm, attempting doctor checks...
+2026-07-31T13:02:43Z WARNING: No doctor commands defined for npm
+2026-07-31T13:02:43Z INFO: Retrying install for npm...
+2026-07-31T13:02:43Z WARNING: FAILED: npm install -g npm
+2026-07-31T13:02:43Z COMMAND: npm install -g npm
+OUTPUT: bash: npm: command not found
+2026-07-31T13:02:43Z ERROR: Installation failed again for npm
+2026-07-31T13:02:43Z WARNING: Continuing after failed install for npm
+2026-07-31T13:02:43Z INFO: Installing tool: nvm
+2026-07-31T13:02:43Z INFO: Installing nvm...
+2026-07-31T13:02:46Z INFO: OK: brew install nvm
+2026-07-31T13:02:46Z COMMAND: brew install nvm
+OUTPUT: ==> Would install 1 formula:
+nvm
+==> Downloading https://ghcr.io/v2/homebrew/core/nvm/manifests/0.40.6
+==> Fetching downloads for: nvm
+✔︎ Bottle nvm (0.40.6)
+==> Pouring nvm--0.40.6.all.bottle.tar.gz
+==> Caveats
+Please note that upstream has asked us to make explicit managing
+nvm via Homebrew is unsupported by them and you should check any
+problems against the standard nvm install method prior to reporting.
+
+You should create NVM's working directory if it doesn't exist:
+  mkdir ~/.nvm
+
+Add the following to your shell profile e.g. ~/.profile or ~/.zshrc:
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+You can set $NVM_DIR to any location, but leaving it unchanged from
+/opt/homebrew/Cellar/nvm/0.40.6 will destroy any nvm-installed Node installations
+upon upgrade/reinstall.
+
+Type `nvm help` for further information.
+==> Summary
+🍺  /opt/homebrew/Cellar/nvm/0.40.6: 10 files, 225.9KB
+==> Running `brew cleanup nvm`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+2026-07-31T13:02:46Z INFO: Installing tool: pip
+2026-07-31T13:02:46Z INFO: Installing pip...
+2026-07-31T13:03:31Z INFO: OK: brew install python
+2026-07-31T13:03:31Z COMMAND: brew install python
+OUTPUT: ==> Would install 1 formula:
+python@3.14
+==> Downloading https://ghcr.io/v2/homebrew/core/python/3.14/manifests/3.14.6-1
+==> Would install 8 dependencies for python@3.14:
+mpdecimal
+ca-certificates
+openssl@3
+readline
+sqlite
+xz
+lz4
+zstd
+==> Fetching downloads for: python@3.14
+✔︎ Bottle Manifest readline (8.3.3)
+✔︎ Bottle Manifest sqlite (3.53.4)
+✔︎ Bottle Manifest mpdecimal (4.0.1)
+✔︎ Bottle Manifest xz (5.8.3)
+✔︎ Bottle Manifest lz4 (1.10.0)
+✔︎ Bottle ca-certificates (2026-07-16)
+✔︎ Bottle Manifest ca-certificates (2026-07-16)
+✔︎ Bottle Manifest zstd (1.5.7_1)
+✔︎ Bottle Manifest openssl@3 (3.6.3)
+✔︎ Bottle mpdecimal (4.0.1)
+✔︎ Bottle lz4 (1.10.0)
+✔︎ Bottle xz (5.8.3)
+✔︎ Bottle readline (8.3.3)
+✔︎ Bottle zstd (1.5.7_1)
+✔︎ Bottle sqlite (3.53.4)
+✔︎ Bottle openssl@3 (3.6.3)
+✔︎ Bottle python@3.14 (3.14.6)
+==> Installing dependencies for python@3.14: mpdecimal, ca-certificates, openssl@3, readline, sqlite, xz, lz4 and zstd
+==> Installing python@3.14 dependency: mpdecimal
+==> Pouring mpdecimal--4.0.1.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/mpdecimal/4.0.1: 22 files, 625.0KB
+==> Installing python@3.14 dependency: ca-certificates
+==> Pouring ca-certificates--2026-07-16.all.bottle.2.tar.gz
+pipx
+Node.js (LTS)
+Python
+C/C++
+Java (JDK)
+Git
+GitHub CLI
+iTerm2
+Windows Terminal
+Docker Desktop
+Google Drive
+🍺  /opt/homebrew/Cellar/ca-certificates/2026-07-16: 5 files, 201.6KB
+==> Installing python@3.14 dependency: openssl@3
+==> Pouring openssl@3--3.6.3.arm64_tahoe.bottle.1.tar.gz
+🍺  /opt/homebrew/Cellar/openssl@3/3.6.3: 7,633 files, 37.6MB
+==> Installing python@3.14 dependency: readline
+==> Pouring readline--8.3.3.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/readline/8.3.3: 56 files, 2.6MB
+==> Installing python@3.14 dependency: sqlite
+==> Pouring sqlite--3.53.4.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/sqlite/3.53.4: 13 files, 5.3MB
+==> Installing python@3.14 dependency: xz
+==> Pouring xz--5.8.3.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/xz/5.8.3: 96 files, 2.6MB
+==> Installing python@3.14 dependency: lz4
+==> Pouring lz4--1.10.0.arm64_tahoe.bottle.1.tar.gz
+🍺  /opt/homebrew/Cellar/lz4/1.10.0: 24 files, 750.5KB
+==> Installing python@3.14 dependency: zstd
+==> Pouring zstd--1.5.7_1.arm64_tahoe.bottle.tar.gz
+🍺  /opt/homebrew/Cellar/zstd/1.5.7_1: 32 files, 2.3MB
+==> Installing python@3.14
+==> Pouring python@3.14--3.14.6.arm64_tahoe.bottle.1.tar.gz
+==> Caveats
+Python is installed as
+  /opt/homebrew/bin/python3
+
+Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+`python3`, `python3-config`, `pip3` etc., respectively, are installed into
+  /opt/homebrew/opt/python@3.14/libexec/bin
+
+`idle3.14` requires tkinter, which is available separately:
+  brew install python-tk@3.14
+
+`dbm.gnu` is available separately:
+  brew install python-gdbm@3.14
+
+For more information about Homebrew and Python, see: https://docs.brew.sh/Homebrew-and-Python
+
+The following python@3.14 executables are shadowed by other commands earlier in your PATH:
+  pip3 (shadowed by /usr/bin/pip3)
+  python3 (shadowed by /usr/bin/python3)
+Running these by name will not invoke the version provided by Homebrew.
+Disable this behaviour by setting `HOMEBREW_NO_PATH_SHADOW_CHECK=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Summary
+🍺  /opt/homebrew/Cellar/python@3.14/3.14.6: 3,746 files, 73.8MB
+==> Running `brew cleanup python@3.14`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> Caveats
+==> python@3.14
+Python is installed as
+  /opt/homebrew/bin/python3
+
+Unversioned symlinks `python`, `python-config`, `pip` etc. pointing to
+`python3`, `python3-config`, `pip3` etc., respectively, are installed into
+  /opt/homebrew/opt/python@3.14/libexec/bin
+
+`idle3.14` requires tkinter, which is available separately:
+  brew install python-tk@3.14
+
+`dbm.gnu` is available separately:
+  brew install python-gdbm@3.14
+
+For more information about Homebrew and Python, see: https://docs.brew.sh/Homebrew-and-Python
+
+The following python@3.14 executables are shadowed by other commands earlier in your PATH:
+  pip3 (shadowed by /usr/bin/pip3)
+  python3 (shadowed by /usr/bin/python3)
+Running these by name will not invoke the version provided by Homebrew.
+Disable this behaviour by setting `HOMEBREW_NO_PATH_SHADOW_CHECK=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+2026-07-31T13:08:52Z INFO: PATH is already configured in /Users/anshulyadav/.zshrc
+2026-07-31T13:08:52Z INFO: Updating Homebrew...
+2026-07-31T13:08:55Z INFO: OK: brew update
+2026-07-31T13:08:55Z COMMAND: brew update
+OUTPUT: ==> Updating Homebrew...
+Already up-to-date.
+2026-07-31T13:08:55Z INFO: Package manager ready: brew
+2026-07-31T13:09:37Z INFO: Installing Google Drive...
+2026-07-31T13:10:54Z INFO: OK: brew install --cask google-drive
+2026-07-31T13:10:54Z COMMAND: brew install --cask google-drive
+OUTPUT: ==> Would install 1 cask:
+google-drive
+==> Fetching downloads for: google-drive
+✔︎ Cask google-drive (129.0.1)
+==> Installing Cask google-drive
+==> Running installer for google-drive with `sudo` (which may request your password)...
+installer: Package name is Google Drive
+installer: Installing at base path /
+installer: The install was successful.
+🍺  google-drive was successfully installed!

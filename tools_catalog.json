@@ -1,0 +1,296 @@
+{
+  "name": "Developer Toolkit Catalog",
+  "version": "1.0",
+  "top_level_categories": [
+    {
+      "id": "common_tools",
+      "title": "Common Tools (Essential)",
+      "subcategories": [
+        {
+          "name": "Browsers",
+          "tools": [
+            "Google Chrome",
+            "Brave",
+            "Mozilla Firefox",
+            "Microsoft Edge"
+          ]
+        },
+        {
+          "name": "Code Editors",
+          "tools": [
+            "Visual Studio Code",
+            "Xcode (macOS)"
+          ]
+        },
+        {
+          "name": "Package Managers",
+          "tools": [
+            "Homebrew",
+            "Winget",
+            "Scoop",
+            "Chocolatey",
+            "npm",
+            "nvm",
+            "pip",
+            "pipx"
+          ]
+        },
+        {
+          "name": "Programming Languages",
+          "tools": [
+            "Node.js (LTS)",
+            "Python",
+            "C/C++",
+            "Java (JDK)"
+          ]
+        },
+        {
+          "name": "Version Control",
+          "tools": [
+            "Git",
+            "GitHub CLI"
+          ]
+        },
+        {
+          "name": "Terminal",
+          "tools": [
+            "iTerm2",
+            "Windows Terminal"
+          ]
+        },
+        {
+          "name": "Containers",
+          "tools": [
+            "Docker Desktop"
+          ]
+        },
+        {
+          "name": "Cloud Storage",
+          "tools": [
+            "Google Drive"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "development_tools",
+      "title": "Development Tools",
+      "subcategories": [
+        {
+          "name": "AI Development",
+          "tools": [
+            "Cursor",
+            "Claude Code",
+            "Codex CLI",
+            "Gemini CLI",
+            "GitHub Copilot"
+          ]
+        },
+        {
+          "name": "Editors & IDEs",
+          "tools": [
+            "Visual Studio Code",
+            "Cursor"
+          ]
+        },
+        {
+          "name": "Java Development",
+          "tools": [
+            "OpenJDK",
+            "Maven",
+            "Gradle"
+          ]
+        },
+        {
+          "name": "Web Development",
+          "subcategories": [
+            {
+              "name": "JavaScript",
+              "tools": ["Node.js","npm","pnpm"]
+            },
+            {
+              "name": "Framework CLIs",
+              "tools": ["Angular CLI","Vue CLI","Create React App","Vite"]
+            },
+            {
+              "name": "Code Quality",
+              "tools": ["ESLint","Prettier","TypeScript"]
+            }
+          ]
+        },
+        {
+          "name": "Backend Development",
+          "tools": ["Prisma CLI","Drizzle Kit","OpenAPI Generator"]
+        },
+        {
+          "name": "API Development",
+          "tools": ["Postman","Bruno","Insomnia","HTTPie"]
+        },
+        {
+          "name": "Cloud Development",
+          "tools": [
+            "AWS CLI","Azure CLI","Google Cloud CLI","Cloudflare Wrangler","Firebase CLI","Supabase CLI","Railway CLI","Neon CLI","Vercel CLI","Netlify CLI"
+          ]
+        },
+        {
+          "name": "Database Tools",
+          "tools": ["TablePlus"]
+        }
+      ]
+    },
+    {
+      "id": "mobile_development",
+      "title": "Mobile Development",
+      "subcategories": [
+        {
+          "name": "Android Development",
+          "tools": ["Android Studio","Android SDK","SDK Manager","Build Tools","Platform Tools","Command-line Tools","Android Emulator","NDK","CMake"]
+        },
+        {
+          "name": "Flutter Development",
+          "tools": ["Flutter SDK","Dart SDK","FVM","Flutter Extension","Dart Extension"]
+        },
+        {
+          "name": "React Native",
+          "tools": ["Node.js","npm","pnpm","Yarn","React Native CLI","Expo CLI","Metro","Watchman"]
+        },
+        {
+          "name": "Apple Development",
+          "tools": ["Xcode","Swift","Swift Package Manager","CocoaPods","iOS Simulator","Instruments","TestFlight"]
+        },
+        {
+          "name": "Mobile Testing",
+          "tools": ["Maestro","Appium","Charles Proxy","mitmproxy"]
+        },
+        {
+          "name": "Mobile Utilities",
+          "tools": ["adb","fastboot","scrcpy"]
+        }
+      ]
+    },
+    {
+      "id": "devops",
+      "title": "DevOps",
+      "subcategories": [
+        {
+          "name": "Containers & Kubernetes",
+          "tools": ["Docker Desktop","kubectl","Helm"]
+        },
+        {
+          "name": "Cloud Platforms",
+          "tools": [
+            "AWS CLI","SAM CLI","CDK","Azure CLI","Azure Developer CLI","Google Cloud CLI","Cloudflare Wrangler","Vercel CLI","Netlify CLI","Firebase CLI","Supabase CLI","Railway CLI","Neon CLI","Flyctl","doctl","OCI CLI"
+          ]
+        },
+        {
+          "name": "CI/CD",
+          "tools": ["GitHub Actions","GitHub CLI","GitLab CLI","Jenkins CLI","CircleCI CLI","Buildkite CLI","act"]
+        }
+      ]
+    },
+    {
+      "id": "extras",
+      "title": "Extras",
+      "subcategories": [
+        {
+          "name": "AI Tools",
+          "tools": ["Continue.dev","Aider","OpenCode AI","Ollama","LM Studio","Open WebUI","MCP Inspector"]
+        },
+        {
+          "name": "IDEs",
+          "tools": ["JetBrains Toolbox","IntelliJ IDEA","PyCharm","WebStorm","GoLand","Rider","CLion","PhpStorm","RubyMine","DataGrip","Fleet","Zed","Neovim","Vim"]
+        },
+        {
+          "name": "Languages",
+          "tools": ["Go","Rust","PHP","Ruby","Kotlin","Scala","Dart","Swift","Perl","Lua","Elixir","Haskell","Zig","R","Kotlin"]
+        },
+        {
+          "name": "Package Managers",
+          "tools": ["Yarn","Bun","Deno","Cargo","SDKMAN","Poetry","uv","Rustup","Go"]
+        },
+        {
+          "name": "Databases",
+          "subcategories": [
+            {
+              "name": "SQL",
+              "tools": ["PostgreSQL","MySQL","MariaDB","SQLite"]
+            },
+            {
+              "name": "NoSQL",
+              "tools": ["MongoDB","Redis","Cassandra","CouchDB","Elasticsearch"]
+            }
+          ]
+        },
+        {
+          "name": "Database Clients",
+          "tools": ["DBeaver","pgAdmin","MongoDB Compass","Redis Insight","MySQL Workbench","Azure Data Studio"]
+        },
+        {
+          "name": "Embedded Development",
+          "tools": ["PlatformIO","Arduino IDE","ESP-IDF","STM32CubeIDE","STM32CubeProgrammer","Zephyr SDK"]
+        },
+        {
+          "name": "Virtualization",
+          "tools": ["OrbStack","Colima","Podman","Lima","Rancher Desktop","VirtualBox","VMware Workstation","VMware Fusion","UTM","QEMU","Multipass","Vagrant"]
+        },
+        {
+          "name": "Kubernetes",
+          "tools": ["Minikube","kind","Kustomize","k9s","Lens","OpenShift CLI"]
+        },
+        {
+          "name": "Infrastructure",
+          "tools": ["Terraform","OpenTofu","Pulumi","Ansible","Packer"]
+        },
+        {
+          "name": "Monitoring",
+          "tools": ["Prometheus","Grafana","Loki","Tempo","Jaeger","OpenTelemetry","Datadog CLI","New Relic CLI","Sentry CLI"]
+        },
+        {
+          "name": "Security",
+          "tools": ["Trivy","Gitleaks","Checkov","tfsec","Syft","Grype","Cosign","SOPS","age","OWASP Dependency Check"]
+        },
+        {
+          "name": "Secret Management",
+          "tools": ["Vault","Doppler","Infisical","1Password CLI"]
+        },
+        {
+          "name": "Networking",
+          "tools": ["NGINX","Caddy","Traefik","HAProxy","ngrok","Cloudflared","Tailscale","WireGuard"]
+        },
+        {
+          "name": "Testing",
+          "tools": ["Playwright","Cypress","Selenium","Vitest","Jest","Mocha","JUnit","NUnit","xUnit","PHPUnit"]
+        },
+        {
+          "name": "Build Tools",
+          "tools": ["CMake","Ninja","Make","Meson","Bazel"]
+        },
+        {
+          "name": "Utilities",
+          "tools": ["jq","yq","ripgrep","fd","fzf","bat","eza","zoxide","tree","btop","htop","tmux","lazygit","lazydocker","just","direnv","entr","watch"]
+        },
+        {
+          "name": "Productivity",
+          "tools": ["Raycast","Rectangle","Alfred","AppCleaner","Notion","Obsidian","Bitwarden","1Password"]
+        },
+        {
+          "name": "Design",
+          "tools": ["Figma","Canva","Blender","GIMP","Inkscape","Krita"]
+        },
+        {
+          "name": "Communication",
+          "tools": ["Slack","Discord","Microsoft Teams","Zoom","Telegram","WhatsApp"]
+        },
+        {
+          "name": "Browsers",
+          "tools": ["Safari","Arc","Opera","Opera GX","Tor Browser"]
+        },
+        {
+          "name": "Cloud Storage",
+          "tools": ["Dropbox","OneDrive","iCloud Drive","MEGA"]
+        }
+      ]
+    }
+  ],
+  "notes": "Generated from user-provided hierarchy; ready for mapping to installer recipes or package metadata."
+}

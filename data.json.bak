@@ -1,0 +1,485 @@
+{
+  "categories": [
+    "devtools",
+    "common",
+    "common_tools",
+    "web",
+    "cloud",
+    "containers",
+    "database",
+    "ai"
+  ],
+
+  "devtools": {
+    "description": "Developer tools and CLI utilities",
+    "tools": [
+      {
+        "name": "Git",
+        "type": "brew",
+        "package": "git",
+        "check": "git --version",
+        "install": "brew install git",
+        "update": "brew upgrade git",
+        "doctor": ["brew doctor"],
+        "required": true
+      },
+      {
+        "name": "GitHub CLI",
+        "type": "brew",
+        "package": "gh",
+        "check": "gh --version",
+        "install": "brew install gh",
+        "update": "brew upgrade gh",
+        "doctor": ["gh auth status"],
+        "required": false
+      },
+      {
+        "name": "jq",
+        "type": "brew",
+        "package": "jq",
+        "check": "jq --version",
+        "install": "brew install jq",
+        "update": "brew upgrade jq",
+        "required": true
+      },
+      {
+        "name": "Java (OpenJDK)",
+        "type": "brew",
+        "package": "openjdk",
+        "check": "java --version",
+        "install": "brew install openjdk",
+        "update": "brew upgrade openjdk",
+        "doctor": ["java --version"],
+        "env": [
+          {
+            "key": "PATH",
+            "value": "$(brew --prefix openjdk)/bin:$PATH",
+            "shell": "zsh"
+          }
+        ]
+      },
+      {
+        "name": "Flutter",
+        "type": "brew",
+        "package": "flutter",
+        "check": "flutter --version",
+        "install": "brew install flutter",
+        "update": "brew upgrade flutter",
+        "doctor": ["flutter doctor"],
+        "required": false
+      }
+    ]
+  },
+
+  "common": {
+    "description": "Common desktop apps and everyday productivity tools",
+    "tools": [
+      {
+        "name": "Google Chrome",
+        "type": "brew",
+        "package": "google-chrome",
+        "check": "open -Ra 'Google Chrome'",
+        "install": "brew install --cask google-chrome",
+        "update": "brew upgrade --cask google-chrome",
+        "required": false
+      },
+      {
+        "name": "Brave Browser",
+        "type": "brew",
+        "package": "brave-browser",
+        "check": "open -Ra 'Brave Browser'",
+        "install": "brew install --cask brave-browser",
+        "update": "brew upgrade --cask brave-browser",
+        "required": false
+      },
+      {
+        "name": "Visual Studio Code",
+        "type": "brew",
+        "package": "visual-studio-code",
+        "check": "open -Ra 'Visual Studio Code'",
+        "install": "brew install --cask visual-studio-code",
+        "update": "brew upgrade --cask visual-studio-code",
+        "required": false
+      },
+      {
+        "name": "Git",
+        "type": "brew",
+        "package": "git",
+        "check": "git --version",
+        "install": "brew install git",
+        "update": "brew upgrade git",
+        "doctor": ["brew doctor"],
+        "required": true
+      },
+      {
+        "name": "GitHub CLI",
+        "type": "brew",
+        "package": "gh",
+        "check": "gh --version",
+        "install": "brew install gh",
+        "update": "brew upgrade gh",
+        "doctor": ["gh auth status"],
+        "required": false
+      },
+      {
+        "name": "Google Drive",
+        "type": "brew",
+        "package": "google-drive",
+        "check": "open -Ra 'Google Drive'",
+        "install": "brew install --cask google-drive",
+        "update": "brew upgrade --cask google-drive",
+        "required": false
+      },
+      {
+        "name": "Microsoft Outlook",
+        "type": "brew",
+        "package": "microsoft-outlook",
+        "check": "open -Ra 'Microsoft Outlook'",
+        "install": "brew install --cask microsoft-outlook",
+        "update": "brew upgrade --cask microsoft-outlook",
+        "required": false
+      },
+      {
+        "name": "Slack",
+        "type": "brew",
+        "package": "slack",
+        "check": "open -Ra 'Slack'",
+        "install": "brew install --cask slack",
+        "update": "brew upgrade --cask slack",
+        "required": false
+      },
+      {
+        "name": "Zoom",
+        "type": "brew",
+        "package": "zoom",
+        "check": "open -Ra 'zoom.us'",
+        "install": "brew install --cask zoom",
+        "update": "brew upgrade --cask zoom",
+        "required": false
+      },
+      {
+        "name": "p7zip",
+        "type": "brew",
+        "package": "p7zip",
+        "check": "7z --help",
+        "install": "brew install p7zip",
+        "update": "brew upgrade p7zip",
+        "required": false
+      }
+    ]
+  },
+
+  "common_tools": {
+    "description": "Common browsers, development tools, runtimes, and desktop applications",
+    "tools": [
+      {
+        "name": "Google Chrome",
+        "type": "brew",
+        "package": "google-chrome",
+        "check": "open -Ra 'Google Chrome'",
+        "install": "brew install --cask google-chrome",
+        "update": "brew upgrade --cask google-chrome",
+        "required": false
+      },
+      {
+        "name": "Firefox",
+        "type": "brew",
+        "package": "firefox",
+        "check": "open -Ra Firefox",
+        "install": "brew install --cask firefox",
+        "update": "brew upgrade --cask firefox",
+        "required": false
+      },
+      {
+        "name": "Microsoft Edge",
+        "type": "brew",
+        "package": "microsoft-edge",
+        "check": "open -Ra 'Microsoft Edge'",
+        "install": "brew install --cask microsoft-edge",
+        "update": "brew upgrade --cask microsoft-edge",
+        "required": false
+      },
+      {
+        "name": "Visual Studio Code",
+        "type": "brew",
+        "package": "visual-studio-code",
+        "check": "open -Ra 'Visual Studio Code'",
+        "install": "brew install --cask visual-studio-code",
+        "update": "brew upgrade --cask visual-studio-code",
+        "required": false
+      },
+      {
+        "name": "Xcode",
+        "type": "brew",
+        "package": "xcode",
+        "check": "xcodebuild -version",
+        "install": "brew install --cask xcode",
+        "update": "brew upgrade --cask xcode",
+        "doctor": ["xcode-select -p", "xcodebuild -checkFirstLaunchStatus"],
+        "required": true
+      },
+      {
+        "name": "Git",
+        "type": "brew",
+        "package": "git",
+        "check": "git --version",
+        "install": "brew install git",
+        "update": "brew upgrade git",
+        "doctor": ["git --version"],
+        "required": true
+      },
+      {
+        "name": "Homebrew",
+        "type": "brew",
+        "package": "brew",
+        "check": "brew --version",
+        "install": "/bin/bash -c \"$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)\"",
+        "update": "brew update",
+        "required": true
+      },
+      {
+        "name": "Docker Desktop",
+        "type": "brew",
+        "package": "docker",
+        "check": "open -Ra Docker",
+        "install": "brew install --cask docker",
+        "update": "brew upgrade --cask docker",
+        "doctor": ["docker --version"],
+        "required": false
+      },
+      {
+        "name": "Google Drive",
+        "type": "brew",
+        "package": "google-drive",
+        "check": "open -Ra 'Google Drive'",
+        "install": "brew install --cask google-drive",
+        "update": "brew upgrade --cask google-drive",
+        "required": false
+      },
+      {
+        "name": "Node.js",
+        "type": "brew",
+        "package": "node",
+        "check": "node --version",
+        "install": "brew install node",
+        "update": "brew upgrade node",
+        "doctor": ["npm doctor"],
+        "required": true
+      },
+      {
+        "name": "npm",
+        "type": "npm",
+        "package": "npm",
+        "check": "npm --version",
+        "install": "brew install node",
+        "update": "brew upgrade node",
+        "required": true
+      },
+      {
+        "name": "nvm",
+        "type": "brew",
+        "package": "nvm",
+        "check": "command -v nvm",
+        "install": "brew install nvm",
+        "update": "brew upgrade nvm",
+        "env": [
+          {
+            "key": "NVM_DIR",
+            "value": "$HOME/.nvm",
+            "shell": "zsh"
+          },
+          {
+            "key": "PATH",
+            "value": "$HOME/.nvm:$PATH",
+            "shell": "zsh"
+          }
+        ],
+        "required": false
+      },
+      {
+        "name": "iTerm2",
+        "type": "brew",
+        "package": "iterm2",
+        "check": "open -Ra iTerm",
+        "install": "brew install --cask iterm2",
+        "update": "brew upgrade --cask iterm2",
+        "required": false
+      },
+      {
+        "name": "GitHub CLI",
+        "type": "brew",
+        "package": "gh",
+        "check": "gh --version",
+        "install": "brew install gh",
+        "update": "brew upgrade gh",
+        "doctor": ["gh auth status"],
+        "required": false
+      },
+      {
+        "name": "Python",
+        "type": "brew",
+        "package": "python",
+        "check": "python3 --version",
+        "install": "brew install python",
+        "update": "brew upgrade python",
+        "required": true
+      },
+      {
+        "name": "C++",
+        "type": "brew",
+        "package": "llvm",
+        "check": "clang++ --version",
+        "install": "brew install llvm",
+        "update": "brew upgrade llvm",
+        "env": [
+          {
+            "key": "PATH",
+            "value": "$(brew --prefix llvm)/bin:$PATH",
+            "shell": "zsh"
+          }
+        ],
+        "required": true
+      }
+    ]
+  },
+
+  "web": {
+    "description": "Web development runtime, package managers, and CLIs",
+    "tools": [
+      {
+        "name": "Node.js",
+        "type": "brew",
+        "package": "node",
+        "check": "node --version",
+        "install": "brew install node",
+        "update": "brew upgrade node",
+        "doctor": ["npm doctor"],
+        "env": [
+          {
+            "key": "PATH",
+            "value": "$HOME/.npm-global/bin",
+            "shell": "zsh"
+          }
+        ],
+        "required": true
+      },
+      {
+        "name": "Vercel CLI",
+        "type": "npm",
+        "package": "vercel",
+        "check": "vercel --version",
+        "install": "npm install -g vercel",
+        "update": "npm update -g vercel",
+        "doctor": ["vercel --help"]
+      },
+      {
+        "name": "Netlify CLI",
+        "type": "npm",
+        "package": "netlify-cli",
+        "check": "netlify --version",
+        "install": "npm install -g netlify-cli",
+        "update": "npm update -g netlify-cli",
+        "doctor": ["netlify status"]
+      }
+    ]
+  },
+
+  "cloud": {
+    "description": "Cloud CLI tools and SDKs",
+    "tools": [
+      {
+        "name": "AWS CLI",
+        "type": "brew",
+        "package": "awscli",
+        "check": "aws --version",
+        "install": "brew install awscli",
+        "update": "brew upgrade awscli",
+        "doctor": ["aws configure list"]
+      },
+      {
+        "name": "Google Cloud CLI",
+        "type": "brew",
+        "package": "google-cloud-sdk",
+        "check": "gcloud --version",
+        "install": "brew install --cask google-cloud-sdk",
+        "update": "brew upgrade --cask google-cloud-sdk",
+        "doctor": ["gcloud info"],
+        "env": [
+          {
+            "key": "PATH",
+            "value": "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin",
+            "shell": "zsh"
+          }
+        ]
+      }
+    ]
+  },
+
+  "containers": {
+    "description": "Containers, orchestration and runtime tools",
+    "tools": [
+      {
+        "name": "Docker CLI",
+        "type": "brew",
+        "package": "docker",
+        "check": "docker --version",
+        "install": "brew install --cask docker",
+        "update": "brew upgrade --cask docker",
+        "doctor": ["docker version"]
+      },
+      {
+        "name": "Kubernetes kubectl",
+        "type": "brew",
+        "package": "kubectl",
+        "check": "kubectl version --client",
+        "install": "brew install kubectl",
+        "update": "brew upgrade kubectl"
+      }
+    ]
+  },
+
+  "database": {
+    "description": "Database servers and client tools",
+    "tools": [
+      {
+        "name": "PostgreSQL",
+        "type": "brew",
+        "package": "postgresql",
+        "check": "psql --version",
+        "install": "brew install postgresql",
+        "update": "brew upgrade postgresql",
+        "doctor": ["brew services list"]
+      },
+      {
+        "name": "Redis",
+        "type": "brew",
+        "package": "redis",
+        "check": "redis-cli --version",
+        "install": "brew install redis",
+        "update": "brew upgrade redis"
+      }
+    ]
+  },
+
+  "ai": {
+    "description": "AI/LLM and developer AI tools",
+    "tools": [
+      {
+        "name": "OpenAI CLI",
+        "type": "npm",
+        "package": "openai",
+        "check": "openai --version",
+        "install": "npm install -g openai",
+        "update": "npm update -g openai"
+      },
+      {
+        "name": "Hugging Face CLI",
+        "type": "pipx",
+        "package": "huggingface_hub",
+        "check": "huggingface-cli --version",
+        "install": "pipx install huggingface_hub",
+        "update": "pipx upgrade huggingface_hub"
+      }
+    ]
+  }
+}
