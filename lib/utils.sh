@@ -73,6 +73,51 @@ run_cmd_live() {
   return "$exit_code"
 }
 
+run_cmd_with_timer() {
+  local cmd="$1"
+  local label="${2:-Installing}"
+  local output_file
+  local output
+  local exit_code
+  local start_time
+  local elapsed
+  local pid
+
+  output_file="$(mktemp "${TMPDIR:-/tmp}/setupx-output.XXXXXX")"
+  start_time="$(date +%s)"
+  log_info "Starting: $cmd"
+
+  set +e
+  bash -lc "$cmd" >"$output_file" 2>&1 &
+  pid=$!
+  while kill -0 "$pid" 2>/dev/null; do
+    sleep 1
+    elapsed=$(( $(date +%s) - start_time ))
+    printf '\r%s (%ss elapsed)...' "$label" "$elapsed"
+  done
+  wait "$pid"
+  exit_code=$?
+  set -e
+
+  printf '\n'
+  output="$(<"$output_file")"
+  rm -f "$output_file"
+
+  if [[ $exit_code -eq 0 ]]; then
+    log_info "OK: $cmd"
+    if [[ -n "${LOG_FILE:-}" ]]; then
+      printf '%s COMMAND: %s\nOUTPUT: %s\n' "$(date -u +'%Y-%m-%dT%H:%M:%SZ')" "$cmd" "$output" >>"$LOG_FILE"
+    fi
+    return 0
+  fi
+
+  log_warn "FAILED: $cmd"
+  if [[ -n "${LOG_FILE:-}" ]]; then
+    printf '%s COMMAND: %s\nOUTPUT: %s\n' "$(date -u +'%Y-%m-%dT%H:%M:%SZ')" "$cmd" "$output" >>"$LOG_FILE"
+  fi
+  return "$exit_code"
+}
+
 run_cmd_as_admin() {
   local cmd="$1"
   if [[ "$(uname -s)" == "Darwin" && -x "$(command -v osascript 2>/dev/null)" ]]; then

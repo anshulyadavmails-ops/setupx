@@ -116,14 +116,29 @@ install_tool() {
     return 1
   fi
 
+  local use_timer
+  use_timer="$(get_tool_attribute "$category" "$tool_name" "download_timer" 2>/dev/null || true)"
+
   log_info "Installing $tool_name..."
-  if ! run_cmd "$install_cmd"; then
-    log_warn "Install failed for $tool_name, attempting doctor checks..."
-    doctor_tool "$category" "$tool_name"
-    log_info "Retrying install for $tool_name..."
+  if [[ "$use_timer" == "true" || "$use_timer" == "1" ]]; then
+    if ! run_cmd_with_timer "$install_cmd" "$tool_name"; then
+      log_warn "Install failed for $tool_name, attempting doctor checks..."
+      doctor_tool "$category" "$tool_name"
+      log_info "Retrying install for $tool_name..."
+      if ! run_cmd_with_timer "$install_cmd" "$tool_name"; then
+        log_error "Installation failed again for $tool_name"
+        return 1
+      fi
+    fi
+  else
     if ! run_cmd "$install_cmd"; then
-      log_error "Installation failed again for $tool_name"
-      return 1
+      log_warn "Install failed for $tool_name, attempting doctor checks..."
+      doctor_tool "$category" "$tool_name"
+      log_info "Retrying install for $tool_name..."
+      if ! run_cmd "$install_cmd"; then
+        log_error "Installation failed again for $tool_name"
+        return 1
+      fi
     fi
   fi
 

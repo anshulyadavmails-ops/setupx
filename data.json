@@ -387,6 +387,7 @@
         "check": "open -Ra 'Android Studio'",
         "install": "brew install --cask android-studio",
         "update": "brew upgrade --cask android-studio",
+        "download_timer": true,
         "required": false
       },
       {
@@ -405,6 +406,7 @@
         "check": "flutter --version",
         "install": "brew install --cask flutter",
         "update": "brew upgrade --cask flutter",
+        "download_timer": true,
         "required": false
       },
       {
