@@ -1958,3 +1958,52 @@ To reinstall 3.14.6, run:
   brew reinstall python@3.14
 2026-07-31T13:17:09Z INFO: Installing tool: C/C++
 2026-07-31T13:17:09Z INFO: Installing C/C++...
+2026-07-31T13:48:51Z INFO: OK: npm install -g next
+2026-07-31T13:48:51Z COMMAND: npm install -g next
+OUTPUT: 
+added 22 packages in 1m
+
+6 packages are looking for funding
+  run `npm fund` for details
+npm warn install-scripts 1 package had install scripts blocked because they are not covered by allowScripts:
+npm warn install-scripts   sharp@0.34.5 (install: node install/check.js || npm run build)
+npm warn install-scripts
+npm warn install-scripts Run `npm install -g --allow-scripts=sharp` to allow these scripts once, or `npm config set allow-scripts=sharp --location=user` to allow them for all global installs.
+2026-07-31T13:48:52Z INFO: Installing tool: Tailwind CSS
+2026-07-31T13:48:52Z INFO: Installing Tailwind CSS...
+2026-07-31T13:48:54Z INFO: OK: npm install -g tailwindcss
+2026-07-31T13:48:54Z COMMAND: npm install -g tailwindcss
+OUTPUT: 
+added 1 package in 2s
+2026-07-31T13:48:54Z WARNING: Tailwind CSS was installed but still is not visible on PATH.
+2026-07-31T13:48:54Z WARNING: Tailwind CSS still failed its post-install check.
+2026-07-31T13:48:54Z INFO: Installing tool: Postman
+2026-07-31T13:48:54Z INFO: Installing Postman...
+2026-07-31T13:50:17Z INFO: OK: brew install --cask postman
+2026-07-31T13:50:17Z COMMAND: brew install --cask postman
+OUTPUT: ==> Would install 1 cask:
+postman
+==> Fetching downloads for: postman
+✔︎ Cask postman (12.21.8)
+==> Installing Cask postman
+==> Moving App 'Postman.app' to '/Applications/Postman.app'
+🍺  postman was successfully installed!
+2026-07-31T13:50:17Z WARNING: Postman was installed but still is not visible on PATH.
+2026-07-31T13:50:17Z WARNING: Postman still failed its post-install check.
+2026-07-31T13:50:17Z INFO: Installing category: mobile_development
+2026-07-31T13:50:17Z INFO: PATH is already configured in /Users/anshulyadav/.zshrc
+2026-07-31T13:50:17Z INFO: Updating Homebrew...
+2026-07-31T13:50:52Z INFO: OK: brew update
+2026-07-31T13:50:52Z COMMAND: brew update
+OUTPUT: ==> Updating Homebrew...
+==> Homebrew collects anonymous analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics have been recorded yet (nor will be during this `brew` run).
+
+==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+  https://github.com/Homebrew/brew#-donations
+
+Already up-to-date.
+2026-07-31T13:50:52Z INFO: Installing tool: Android Studio
+2026-07-31T13:50:52Z INFO: Installing Android Studio...
