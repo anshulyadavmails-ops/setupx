@@ -3,6 +3,7 @@
     "common_tools",
     "development_tools",
     "mobile_development",
+    "web_development",
     "devops",
     "extras"
   ],
@@ -380,6 +381,24 @@
     "description": "Mobile Development",
     "tools": [
       {
+        "name": "Android Studio",
+        "type": "brew",
+        "package": "android-studio",
+        "check": "open -Ra 'Android Studio'",
+        "install": "brew install --cask android-studio",
+        "update": "brew upgrade --cask android-studio",
+        "required": false
+      },
+      {
+        "name": "Xcode",
+        "type": "brew",
+        "package": "xcode",
+        "check": "xcodebuild -version",
+        "install": "brew install --cask xcode",
+        "update": "brew upgrade --cask xcode",
+        "required": false
+      },
+      {
         "name": "Flutter SDK",
         "type": "brew",
         "package": "flutter",
@@ -393,8 +412,8 @@
         "type": "brew",
         "package": "dart",
         "check": "dart --version",
-        "install": "brew install --cask dart",
-        "update": "brew upgrade --cask dart",
+        "install": "brew install dart",
+        "update": "brew upgrade dart",
         "required": false
       },
       {
@@ -407,28 +426,19 @@
         "required": false
       },
       {
-        "name": "Flutter Extension",
+        "name": "Java (JDK)",
         "type": "brew",
-        "package": "flutter_extension",
-        "check": "command -v flutter_extension",
-        "install": "brew install flutter_extension",
-        "update": "brew upgrade flutter_extension",
+        "package": "openjdk",
+        "check": "java --version",
+        "install": "brew install openjdk",
+        "update": "brew upgrade openjdk",
         "required": false
       },
       {
-        "name": "Dart Extension",
-        "type": "brew",
-        "package": "dart_extension",
-        "check": "command -v dart_extension",
-        "install": "brew install dart_extension",
-        "update": "brew upgrade dart_extension",
-        "required": false
-      },
-      {
-        "name": "Node.js",
+        "name": "Node.js (LTS)",
         "type": "brew",
         "package": "node",
-        "check": "command -v node",
+        "check": "node --version",
         "install": "brew install node",
         "update": "brew upgrade node",
         "required": false
@@ -455,7 +465,7 @@
         "name": "Yarn",
         "type": "npm",
         "package": "yarn",
-        "check": "command -v yarn",
+        "check": "yarn --version",
         "install": "npm install -g yarn",
         "update": "npm update -g yarn",
         "required": false
@@ -463,154 +473,55 @@
       {
         "name": "React Native CLI",
         "type": "npm",
-        "package": "react_native_cli",
-        "check": "command -v react_native_cli",
-        "install": "npm install -g react_native_cli",
-        "update": "npm update -g react_native_cli",
+        "package": "react-native-cli",
+        "check": "npx react-native --version",
+        "install": "npm install -g react-native-cli",
+        "update": "npm update -g react-native-cli",
         "required": false
       },
       {
         "name": "Expo CLI",
         "type": "npm",
-        "package": "expo_cli",
-        "check": "command -v expo_cli",
-        "install": "npm install -g expo_cli",
-        "update": "npm update -g expo_cli",
-        "required": false
-      },
-      {
-        "name": "Metro",
-        "type": "brew",
-        "package": "metro",
-        "check": "command -v metro",
-        "install": "brew install metro",
-        "update": "brew upgrade metro",
-        "required": false
-      },
-      {
-        "name": "Watchman",
-        "type": "brew",
-        "package": "watchman",
-        "check": "command -v watchman",
-        "install": "brew install watchman",
-        "update": "brew upgrade watchman",
-        "required": false
-      },
-      {
-        "name": "Xcode",
-        "type": "brew",
-        "package": "xcode",
-        "check": "xcodebuild -version",
-        "install": "brew install --cask xcode",
-        "update": "brew upgrade --cask xcode",
-        "required": false
-      },
-      {
-        "name": "Swift",
-        "type": "brew",
-        "package": "swift",
-        "check": "command -v swift",
-        "install": "brew install swift",
-        "update": "brew upgrade swift",
-        "required": false
-      },
-      {
-        "name": "Swift Package Manager",
-        "type": "brew",
-        "package": "swift_package_manager",
-        "check": "command -v swift_package_manager",
-        "install": "brew install swift_package_manager",
-        "update": "brew upgrade swift_package_manager",
+        "package": "expo-cli",
+        "check": "npx expo --version",
+        "install": "npm install -g expo-cli",
+        "update": "npm update -g expo-cli",
         "required": false
       },
       {
         "name": "CocoaPods",
         "type": "brew",
         "package": "cocoapods",
-        "check": "command -v cocoapods",
+        "check": "pod --version",
         "install": "brew install cocoapods",
         "update": "brew upgrade cocoapods",
         "required": false
       },
       {
-        "name": "iOS Simulator",
+        "name": "Fastlane",
         "type": "brew",
-        "package": "ios_simulator",
-        "check": "command -v ios_simulator",
-        "install": "brew install ios_simulator",
-        "update": "brew upgrade ios_simulator",
+        "package": "fastlane",
+        "check": "fastlane --version",
+        "install": "brew install fastlane",
+        "update": "brew upgrade fastlane",
         "required": false
       },
       {
-        "name": "Instruments",
+        "name": "Watchman",
         "type": "brew",
-        "package": "instruments",
-        "check": "command -v instruments",
-        "install": "brew install instruments",
-        "update": "brew upgrade instruments",
-        "required": false
-      },
-      {
-        "name": "TestFlight",
-        "type": "brew",
-        "package": "testflight",
-        "check": "command -v testflight",
-        "install": "brew install testflight",
-        "update": "brew upgrade testflight",
-        "required": false
-      },
-      {
-        "name": "Maestro",
-        "type": "brew",
-        "package": "maestro",
-        "check": "command -v maestro",
-        "install": "brew install maestro",
-        "update": "brew upgrade maestro",
-        "required": false
-      },
-      {
-        "name": "Appium",
-        "type": "brew",
-        "package": "appium",
-        "check": "command -v appium",
-        "install": "brew install appium",
-        "update": "brew upgrade appium",
-        "required": false
-      },
-      {
-        "name": "Charles Proxy",
-        "type": "brew",
-        "package": "charles_proxy",
-        "check": "command -v charles_proxy",
-        "install": "brew install charles_proxy",
-        "update": "brew upgrade charles_proxy",
-        "required": false
-      },
-      {
-        "name": "mitmproxy",
-        "type": "brew",
-        "package": "mitmproxy",
-        "check": "command -v mitmproxy",
-        "install": "brew install mitmproxy",
-        "update": "brew upgrade mitmproxy",
+        "package": "watchman",
+        "check": "watchman --version",
+        "install": "brew install watchman",
+        "update": "brew upgrade watchman",
         "required": false
       },
       {
         "name": "adb",
         "type": "brew",
-        "package": "adb",
+        "package": "android-platform-tools",
         "check": "adb --version",
-        "install": "brew install adb",
-        "update": "brew upgrade adb",
-        "required": false
-      },
-      {
-        "name": "fastboot",
-        "type": "brew",
-        "package": "fastboot",
-        "check": "fastboot --version",
-        "install": "brew install fastboot",
-        "update": "brew upgrade fastboot",
+        "install": "brew install --cask android-platform-tools",
+        "update": "brew upgrade --cask android-platform-tools",
         "required": false
       },
       {
@@ -620,6 +531,128 @@
         "check": "scrcpy --version",
         "install": "brew install scrcpy",
         "update": "brew upgrade scrcpy",
+        "required": false
+      },
+      {
+        "name": "Appium",
+        "type": "brew",
+        "package": "appium",
+        "check": "appium --version",
+        "install": "brew install appium",
+        "update": "brew upgrade appium",
+        "required": false
+      },
+      {
+        "name": "Maestro",
+        "type": "brew",
+        "package": "maestro",
+        "check": "maestro --version",
+        "install": "brew install maestro",
+        "update": "brew upgrade maestro",
+        "required": false
+      }
+    ]
+  },
+  "web_development": {
+    "description": "Web Development",
+    "tools": [
+      {
+        "name": "Visual Studio Code",
+        "type": "brew",
+        "package": "visual-studio-code",
+        "check": "open -Ra 'Visual Studio Code'",
+        "install": "brew install --cask visual-studio-code",
+        "update": "brew upgrade --cask visual-studio-code",
+        "required": false
+      },
+      {
+        "name": "Node.js (LTS)",
+        "type": "brew",
+        "package": "node",
+        "check": "node --version",
+        "install": "brew install node",
+        "update": "brew upgrade node",
+        "required": false
+      },
+      {
+        "name": "npm",
+        "type": "npm",
+        "package": "npm",
+        "check": "npm --version",
+        "install": "npm install -g npm",
+        "update": "npm update -g npm",
+        "required": false
+      },
+      {
+        "name": "pnpm",
+        "type": "brew",
+        "package": "pnpm",
+        "check": "command -v pnpm",
+        "install": "brew install pnpm",
+        "update": "brew upgrade pnpm",
+        "required": false
+      },
+      {
+        "name": "Yarn",
+        "type": "npm",
+        "package": "yarn",
+        "check": "yarn --version",
+        "install": "npm install -g yarn",
+        "update": "npm update -g yarn",
+        "required": false
+      },
+      {
+        "name": "Vite",
+        "type": "npm",
+        "package": "vite",
+        "check": "vite --version",
+        "install": "npm install -g vite",
+        "update": "npm update -g vite",
+        "required": false
+      },
+      {
+        "name": "Angular CLI",
+        "type": "npm",
+        "package": "@angular/cli",
+        "check": "ng version",
+        "install": "npm install -g @angular/cli",
+        "update": "npm update -g @angular/cli",
+        "required": false
+      },
+      {
+        "name": "Vue CLI",
+        "type": "npm",
+        "package": "@vue/cli",
+        "check": "vue --version",
+        "install": "npm install -g @vue/cli",
+        "update": "npm update -g @vue/cli",
+        "required": false
+      },
+      {
+        "name": "Next.js",
+        "type": "npm",
+        "package": "next",
+        "check": "next --version",
+        "install": "npm install -g next",
+        "update": "npm update -g next",
+        "required": false
+      },
+      {
+        "name": "Tailwind CSS",
+        "type": "npm",
+        "package": "tailwindcss",
+        "check": "tailwindcss --version",
+        "install": "npm install -g tailwindcss",
+        "update": "npm update -g tailwindcss",
+        "required": false
+      },
+      {
+        "name": "Postman",
+        "type": "brew",
+        "package": "postman",
+        "check": "open -Ra Postman",
+        "install": "brew install --cask postman",
+        "update": "brew upgrade --cask postman",
         "required": false
       }
     ]
